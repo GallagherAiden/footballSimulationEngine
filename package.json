@@ -1,0 +1,14 @@
+{
+  "name": "footballsimulationengine",
+  "version": "1.0.0",
+  "description": "an engine for simulating football matches",
+  "main": "engine.js",
+  "scripts": {
+    "start": "node engine.js"
+  },
+  "author": "Aiden Gallagher <windymiller.aiden@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0"
+  }
+}
