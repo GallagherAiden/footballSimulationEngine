@@ -2,12 +2,12 @@
 ---
 ## Overview
 This module was designed to allow the simulation of football (soccer) matches between two teams. It consists of three functions that
- - Initate a match
+ - Initiate a match
  - complete an iteration / movement
  - switch team sides / start second half
 ---
-## Install *(not currently)*
-```npm install footballsimulationengine```
+## Install
+```npm install --save footballsimulationengine```
 
 ---
 ## Initiate Game
@@ -149,5 +149,5 @@ startSecondHalf(matchDetails).then(function (matchDetails) {
 * Uncomment console.log(output) to receive iteration by iteration information of each players iteration action, movement, original position and final position (start POS).
 
 ## Additional Information
-* Get in touch with any questions [email](mailto:windymiller.aiden@gmail.com)
-* See a match example [here](youtube.com)
+* Get in touch with any questions [email](mailto:aiden.g@live.co.uk)
+* See a match example [here](https://youtu.be/yxTXFrAZCdY)
