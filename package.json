@@ -1,6 +1,6 @@
 {
   "name": "footballsimulationengine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "an engine for simulating football matches",
   "main": "engine.js",
   "scripts": {
@@ -10,6 +10,16 @@
   { "type" : "git",
     "url" : "https://github.com/GallagherAiden/footballSimulationEngine"
   },
+  "keywords": [
+        "football",
+        "football simulation",
+        "football engine",
+        "football simulation engine",
+        "soccer",
+        "soccer simulation",
+        "soccer engine",
+        "soccer simulation engine"
+    ],
   "author": "Aiden Gallagher <aiden.g@live.co.uk>",
   "license": "ISC",
   "dependencies": {
