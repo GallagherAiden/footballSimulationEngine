@@ -75,8 +75,8 @@ function playIteration(matchDetails) {
 		matchDetails.iterationLog = [];
 		kickOffTeam = matchDetails.kickOffTeam;
 		secondTeam = matchDetails.secondTeam;
-		matchInjury(kickOffTeam);
-		matchInjury(secondTeam);
+		matchInjury(matchDetails, kickOffTeam);
+		matchInjury(matchDetails, secondTeam);
 		closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails).then(function () {
 			closestPlayerToBall(closestPlayerB, secondTeam, matchDetails).then(function () {
 				// console.log("-----team1-----");
@@ -2462,7 +2462,7 @@ function matchInjury(team) {
 	var player = team.players[getRandomNumber(0, 10)];
 	if (isInjured(10000) === true) {
 		player.injured = true;
-		iterationLog.push("Player Injured - " + player.name);
+		matchDetails.iterationLog.push("Player Injured - " + player.name);
 	}
 }
 
