@@ -6,6 +6,14 @@ This module was designed to allow the simulation of football (soccer) matches be
  - complete an iteration / movement
  - switch team sides / start second half
 ---
+## Latest Version
+- Created libraries to better display the Functions
+- Added validation of input parameters
+- fixed minor bugs
+---
+## Planned for V2 release
+Plans for version 2 can be found [here](https://github.com/GallagherAiden/footballSimulationEngine/milestone/1)
+---
 ## Install
 ```npm install --save footballsimulationengine```
 
