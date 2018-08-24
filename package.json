@@ -29,7 +29,7 @@
     "async": "^2.5.0"
   },
   "devDependencies": {
-    "eslint": "^5.4.0",
+    "eslint": "^4.9.0",
     "eslint-config-unu": "^1.2.4"
   }
 }
