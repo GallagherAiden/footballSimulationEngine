@@ -1,11 +1,11 @@
 //------------------------
 //    NPM Modules
 //------------------------
-var common = require('./lib/common')
-var setPositions = require('./lib/setPositions')
-var setVariables = require('./lib/setVariables')
-var playerMovement = require('./lib/playerMovement')
-var validate = require('./lib/validate')
+const common = require('./lib/common')
+const setPositions = require('./lib/setPositions')
+const setVariables = require('./lib/setVariables')
+const playerMovement = require('./lib/playerMovement')
+const validate = require('./lib/validate')
 
 //------------------------
 //    Functions
