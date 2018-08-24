@@ -10,112 +10,60 @@ var validate = require('./lib/validate')
 //------------------------
 //    Functions
 //------------------------
-function initiateGame(team1, team2, pitchDetails) {
-  return new Promise(function(resolve, reject) {
-    validate.validateArguments(team1, team2, pitchDetails).then(function() {
-      validate.validateTeam(team1).then(function() {
-        validate.validateTeam(team2).then(function() {
-          validate.validatePitch(pitchDetails).then(function() {
-            setVariables.populateMatchDetails(team1, team2, pitchDetails).then(function(matchDetails) {
-              setVariables.setGameVariables(matchDetails.kickOffTeam).then(function(kickOffTeam) {
-                setVariables.setGameVariables(matchDetails.secondTeam).then(function(secondTeam) {
-                  setVariables.koDecider(kickOffTeam, matchDetails).then(function(kickOffTeam) {
-                    matchDetails.iterationLog.push(`Team to kick off - ${kickOffTeam.name}`)
-                    matchDetails.iterationLog.push(`Second team - ${secondTeam.name}`)
-                    setPositions.switchSide(secondTeam, matchDetails).then(function(secondTeam) {
-                      matchDetails.kickOffTeam = kickOffTeam
-                      matchDetails.secondTeam = secondTeam
-                      resolve(matchDetails)
-                    }).catch(function(error) {
-                      console.error('Error: ', error)
-                    })
-                  }).catch(function(error) {
-                    console.error('Error: ', error)
-                  })
-                }).catch(function(error) {
-                  console.error('Error: ', error)
-                })
-              }).catch(function(error) {
-                console.error('Error: ', error)
-              })
-            }).catch(function(error) {
-              console.error('Error: ', error)
-            })
-          }).catch(function(error) {
-            console.error('Error: ', error)
-          })
-        }).catch(function(error) {
-          console.error('Error: ', error)
-        })
-      }).catch(function(error) {
-        console.error('Error: ', error)
-      })
-    }).catch(function(error) {
-      console.error('Error: ', error)
-    })
-  })
+async function initiateGame(team1, team2, pitchDetails) {
+  await validate.validateArguments(team1, team2, pitchDetails)
+  await validate.validateTeam(team1)
+  await validate.validateTeam(team2)
+  await validate.validatePitch(pitchDetails)
+
+  const matchDetails = await setVariables.populateMatchDetails(team1, team2, pitchDetails)
+  matchDetails.kickOffTeam = await setVariables.setGameVariables(matchDetails.kickOffTeam)
+  matchDetails.secondTeam = await setVariables.setGameVariables(matchDetails.secondTeam)
+
+  matchDetails.kickOffTeam = await setVariables.koDecider(matchDetails.kickOffTeam, matchDetails)
+  matchDetails.iterationLog.push(`Team to kick off - ${matchDetails.kickOffTeam.name}`)
+  matchDetails.iterationLog.push(`Second team - ${matchDetails.secondTeam.name}`)
+  matchDetails.secondTeam = await setPositions.switchSide(matchDetails.secondTeam, matchDetails)
+
+  return matchDetails
 }
 
-function playIteration(matchDetails) {
-  return new Promise(function(resolve, reject) {
-    var closestPlayerA = {
-      'name': '',
-      'position': 10000
-    }
-    var closestPlayerB = {
-      'name': '',
-      'position': 10000
-    }
-    validate.validateMatchDetails(matchDetails).then(function() {
-      matchDetails.iterationLog = []
-      kickOffTeam = matchDetails.kickOffTeam
-      secondTeam = matchDetails.secondTeam
-      common.matchInjury(matchDetails, kickOffTeam)
-      common.matchInjury(matchDetails, secondTeam)
-      playerMovement.closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails).then(function() {
-        playerMovement.closestPlayerToBall(closestPlayerB, secondTeam, matchDetails).then(function() {
-          playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails).then(function(kickOffTeam) {
-            playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails).then(function(secondTeam) {
-              matchDetails.kickOffTeam = kickOffTeam
-              matchDetails.secondTeam = secondTeam
-              resolve(matchDetails)
-            }).catch(function(error) {
-              console.error('Error: ', error)
-            })
-          }).catch(function(error) {
-            console.error('Error: ', error)
-          })
-        }).catch(function(error) {
-          console.error('Error: ', error)
-        })
-      }).catch(function(error) {
-        console.error('Error: ', error)
-      })
-    }).catch(function(error) {
-      console.error('Error: ', error)
-    })
-  })
+async function playIteration(matchDetails) {
+  const closestPlayerA = {
+    'name': '',
+    'position': 10000
+  }
+  const closestPlayerB = {
+    'name': '',
+    'position': 10000
+  }
+
+  await validate.validateMatchDetails(matchDetails)
+
+  matchDetails.iterationLog = []
+  common.matchInjury(matchDetails, matchDetails.kickOffTeam)
+  common.matchInjury(matchDetails, matchDetails.secondTeam)
+
+  await playerMovement.closestPlayerToBall(closestPlayerA, matchDetails.kickOffTeam, matchDetails)
+  await playerMovement.closestPlayerToBall(closestPlayerB, matchDetails.secondTeam, matchDetails)
+
+  matchDetails.kickOffTeam = await playerMovement.decideMovement(closestPlayerA, matchDetails.kickOffTeam, matchDetails.secondTeam, matchDetails)
+  matchDetails.secondTeam = await playerMovement.decideMovement(closestPlayerB, matchDetails.secondTeam, matchDetails.kickOffTeam, matchDetails)
+
+  return matchDetails
 }
 
-function startSecondHalf(matchDetails) {
-  return new Promise(function(resolve, reject) {
-    validate.validateMatchDetails(matchDetails).then(function() {
-      kickOffTeam = matchDetails.kickOffTeam
-      secondTeam = matchDetails.secondTeam
-      setPositions.switchSide(kickOffTeam, matchDetails).then(function(kickOffTeam) {
-        setPositions.switchSide(secondTeam, matchDetails).then(function(secondTeam) {
-          setPositions.setGoalScored(secondTeam, kickOffTeam, matchDetails).then(function() {
-            matchDetails.half++
-            matchDetails.kickOffTeam = kickOffTeam
-            matchDetails.secondTeam = secondTeam
-            resolve(matchDetails)
-          })
-        })
-      })
-    }).catch(function(error) {
-      console.error('Error: ', error)
-    })
-  })
+async function startSecondHalf(matchDetails) {
+  await validate.validateMatchDetails(matchDetails)
+
+  matchDetails.kickOffTeam = await setPositions.switchSide(matchDetails.kickOffTeam, matchDetails)
+  matchDetails.secondTeam = await setPositions.switchSide(matchDetails.secondTeam, matchDetails)
+
+  await setPositions.setGoalScored(matchDetails.secondTeam, matchDetails.kickOffTeam, matchDetails)
+
+  matchDetails.half++
+
+  return matchDetails
 }
 
 module.exports = {
