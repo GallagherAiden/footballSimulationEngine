@@ -11,10 +11,10 @@ var validate = require('./lib/validate')
 //    Functions
 //------------------------
 async function initiateGame(team1, team2, pitchDetails) {
-  await validate.validateArguments(team1, team2, pitchDetails)
-  await validate.validateTeam(team1)
-  await validate.validateTeam(team2)
-  await validate.validatePitch(pitchDetails)
+  validate.validateArguments(team1, team2, pitchDetails)
+  validate.validateTeam(team1)
+  validate.validateTeam(team2)
+  validate.validatePitch(pitchDetails)
 
   const matchDetails = await setVariables.populateMatchDetails(team1, team2, pitchDetails)
   matchDetails.kickOffTeam = await setVariables.setGameVariables(matchDetails.kickOffTeam)
@@ -38,7 +38,7 @@ async function playIteration(matchDetails) {
     'position': 10000
   }
 
-  await validate.validateMatchDetails(matchDetails)
+  validate.validateMatchDetails(matchDetails)
 
   matchDetails.iterationLog = []
   common.matchInjury(matchDetails, matchDetails.kickOffTeam)
@@ -54,7 +54,7 @@ async function playIteration(matchDetails) {
 }
 
 async function startSecondHalf(matchDetails) {
-  await validate.validateMatchDetails(matchDetails)
+  validate.validateMatchDetails(matchDetails)
 
   matchDetails.kickOffTeam = await setPositions.switchSide(matchDetails.kickOffTeam, matchDetails)
   matchDetails.secondTeam = await setPositions.switchSide(matchDetails.secondTeam, matchDetails)
