@@ -7,12 +7,8 @@ This module was designed to allow the simulation of football (soccer) matches be
  - switch team sides / start second half
 ---
 ## Latest Version
-- Created libraries to better display the Functions
-- Added validation of input parameters
-- fixed minor bugs
----
-## Planned for V2 release
-Plans for version 2 can be found [here](https://github.com/GallagherAiden/footballSimulationEngine/milestone/1)
+- Added to allow more tackles and fouls
+- Added fitness measure (currently has no affect on the game - see later versions)
 ---
 ## Install
 ```npm install --save footballsimulationengine```
@@ -52,6 +48,7 @@ Teams must have the following information and must have 11 players included in i
         "jumping": "300"
       },
       "startPOS": [60,0],
+      "fitness": 100,
       "injured": false
     }...],
   "manager": "Aiden"
@@ -62,8 +59,8 @@ Teams must have the following information and must have 11 players included in i
 Pitch currently requires a width and a height as shown in the below example.
 ```
 {
-	"pitchWidth": 120,
-	"pitchHeight": 600
+	"pitchWidth": 300,
+	"pitchHeight": 450
 }
 ```
 ---
