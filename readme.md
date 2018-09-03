@@ -11,6 +11,8 @@ This module was designed to allow the simulation of football (soccer) matches be
 - Added fitness measure (currently has no affect on the game - see later versions)
 ---
 ## Install
+Make sure your version of Node.js is at least 7.6.0.
+
 ```npm install --save footballsimulationengine```
 
 ---

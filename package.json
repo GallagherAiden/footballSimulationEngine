@@ -4,7 +4,8 @@
   "description": "an engine for simulating football matches",
   "main": "engine.js",
   "scripts": {
-    "start": "node engine.js"
+    "start": "node engine.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,14 @@
   ],
   "author": "Aiden Gallagher <aiden.g@live.co.uk>",
   "license": "ISC",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "dependencies": {
     "async": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-unu": "^1.2.4"
   }
 }
