@@ -25,6 +25,9 @@
   ],
   "author": "Aiden Gallagher <aiden.g@live.co.uk>",
   "license": "ISC",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "dependencies": {
     "async": "^2.5.0"
   },
