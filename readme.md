@@ -77,7 +77,7 @@ playIteration(matchDetails).then(function (matchDetails) {
 }
 ```
 #### Example Match Details
-Pitch currently requires a width and a height as shown in the below example.
+v2.1.0 - ball movement added so that a kicked ball makes movements over time. This can be seen in 'ball.ballOverIterations'. If empty, no new ball movements will occur. Deflections may occur as players move over iterations. 
 ```
 { kickOffTeam:
    { name: 'Team1',
@@ -113,11 +113,12 @@ Pitch currently requires a width and a height as shown in the below example.
      intent: 'attack' },
   pitchSize: [ 120, 600 ],
   ball:
-   { position: [ 76, 314 ],
+   { position: [ 76, 314, 0 ],
      withPlayer: true,
      Player: 'Joe Bloggs',
      withTeam: 'Team2',
      direction: 'south' },
+     ballOverIterations: []
   half: 1,
   kickOffTeamStatistics:
    { goals: 0,

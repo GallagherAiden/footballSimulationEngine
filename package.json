@@ -1,6 +1,6 @@
 {
   "name": "footballsimulationengine",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "an engine for simulating football matches",
   "main": "engine.js",
   "scripts": {
