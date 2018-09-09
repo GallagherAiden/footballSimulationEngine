@@ -5,6 +5,7 @@ const common = require('./lib/common')
 const setPositions = require('./lib/setPositions')
 const setVariables = require('./lib/setVariables')
 const playerMovement = require('./lib/playerMovement')
+const ballMovement = require('./lib/ballMovement')
 const validate = require('./lib/validate')
 
 //------------------------
@@ -79,6 +80,7 @@ function playIteration(matchDetails) {
 							playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails).then(function (secondTeam) {
 								matchDetails.kickOffTeam = kickOffTeam
 								matchDetails.secondTeam = secondTeam
+								// console.log(matchDetails)
 								resolve(matchDetails)
 							}).catch(function (error) {
 								console.error('Error: ', error)

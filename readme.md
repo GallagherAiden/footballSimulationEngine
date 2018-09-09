@@ -77,7 +77,7 @@ playIteration(matchDetails).then(function (matchDetails) {
 }
 ```
 #### Example Match Details
-v2.1.0 - ball movement added so that a kicked ball makes movements over time. This can be seen in 'ball.ballOverIterations'. If empty, no new ball movements will occur. Deflections may occur as players move over iterations. 
+v2.1.0 - ball movement added so that a kicked ball makes movements over time. This can be seen in 'ball.ballOverIterations'. If empty, no new ball movements will occur. Deflections may occur as players move over iterations.
 ```
 { kickOffTeam:
    { name: 'Team1',
@@ -137,6 +137,31 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
   iterationLog:
    [ 'Closest Player to ball: Aiden Gallagher',
      'Closest Player to ball: Joe Bloggs' ] }
+```
+Example Player JSON:
+Any and all player objects may be altered between iterations. Including the relative position, origin position and action.
+Action should be - 'null' if the simulation is to be run normally. This can be overriden with any of the following actions:
+'shoot', 'throughBall', 'pass', 'cross', 'tackle', 'intercept', 'slide', 'run', 'sprint', 'cleared', 'boot'. The player must have the ball in order to complete ball specific actions like 'shoot'. Any invalid actions will result in the simulation running as normal. 
+```
+{ name: 'Louise Johnson',
+    position: 'ST',
+    rating: '88',
+    skill:
+     { passing: '20',
+       shooting: '20',
+       tackling: '20',
+       saving: '20',
+       agility: '20',
+       strength: '20',
+       penalty_taking: '20',
+       jumping: '280' },
+    startPOS: [ 60, 300 ],
+    fitness: 100,
+    injured: false,
+    originPOS: [ 70, 270 ],
+    relativePOS: [ 70, 270 ],
+    action: 'none',
+    hasBall: true }
 ```
 ---
 ## Start Second Half (Switch Sides)
