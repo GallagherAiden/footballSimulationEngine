@@ -138,7 +138,7 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
    [ 'Closest Player to ball: Aiden Gallagher',
      'Closest Player to ball: Joe Bloggs' ] }
 ```
-Example Player JSON (after game initiated): 
+Example Player JSON (after game initiated):
 Any and all player objects may be altered between iterations. Including the relative position, origin position and action.
 Action should be - 'null' if the simulation is to be run normally. This can be overriden with any of the following actions:
 'shoot', 'throughBall', 'pass', 'cross', 'tackle', 'intercept', 'slide', 'run', 'sprint', 'cleared', 'boot'. The player must have the ball in order to complete ball specific actions like 'shoot'. Any invalid actions will result in the simulation running as normal.
@@ -161,6 +161,7 @@ Action should be - 'null' if the simulation is to be run normally. This can be o
     originPOS: [ 70, 270 ],
     relativePOS: [ 70, 270 ],
     action: 'none',
+    offside: false,
     hasBall: true }
 ```
 ---
