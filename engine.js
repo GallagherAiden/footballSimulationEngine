@@ -80,8 +80,16 @@ function playIteration(matchDetails) {
 							playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails).then(function (secondTeam) {
 								matchDetails.kickOffTeam = kickOffTeam
 								matchDetails.secondTeam = secondTeam
+								if (matchDetails.ball.ballOverIterations.length == 0 || matchDetails.ball.withTeam != '') {
+									playerMovement.checkOffside(kickOffTeam, secondTeam, matchDetails).then(function () {
+										resolve(matchDetails)
+									}).catch(function (error) {
+										reject(error)
+									})
+								} else {
+									resolve(matchDetails)
+								}
 								// console.log(matchDetails)
-								resolve(matchDetails)
 							}).catch(function (error) {
 								console.error('Error: ', error)
 							})
