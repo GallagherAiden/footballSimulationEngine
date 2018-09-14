@@ -162,6 +162,10 @@ Action should be - 'null' if the simulation is to be run normally. This can be o
     relativePOS: [ 70, 270 ],
     action: 'none',
     offside: false,
+    cards: {
+      yellow: 0,
+      red: 0
+    }
     hasBall: true }
 ```
 ---
