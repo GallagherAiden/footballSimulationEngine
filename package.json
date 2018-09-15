@@ -5,7 +5,8 @@
   "main": "engine.js",
   "scripts": {
     "start": "node engine.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
