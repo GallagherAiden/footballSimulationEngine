@@ -1,5 +1,5 @@
-const common = require('../lib/common')
-const engine = require('../engine')
+const common = require('../../lib/common')
+const engine = require('../../engine')
 
 async function initGame(t1, t2, p) {
   try {

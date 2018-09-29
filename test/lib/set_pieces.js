@@ -1,5 +1,5 @@
-const common = require('../lib/common')
-const setPos = require('../lib/setPositions')
+const common = require('../../lib/common')
+const setPos = require('../../lib/setPositions')
 
 async function setupPenalty(iterationFile, side) {
   let matchDetails = await common.readFile(iterationFile)
