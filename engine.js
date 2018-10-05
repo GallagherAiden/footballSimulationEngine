@@ -43,6 +43,7 @@ async function playIteration(matchDetails) {
       'position': 10000
     }
     validate.validateMatchDetails(matchDetails)
+    validate.validatePlayerPositions(matchDetails)
     matchDetails.iterationLog = []
     let { kickOffTeam, secondTeam } = matchDetails
     common.matchInjury(matchDetails, kickOffTeam)
