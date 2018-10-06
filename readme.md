@@ -61,6 +61,24 @@ startSecondHalf(matchDetails).then(function (matchDetails) {
 }
 ```
 ---
+## Recommendations
+* Users can determine how many iterations make a half
+* Test data found in 'init_config' is the data used for testing
+* Iteration Logs give an overview of what has happened in the iteration
+* Uncomment console.log(output) to receive iteration by iteration information of each players iteration action, movement, original position and final position (start POS).
+
+## Additional Information
+* Get in touch with any questions [email](mailto:aiden.g@live.co.uk)
+* See a match example [here](https://youtu.be/yxTXFrAZCdY)
+* Raise issues in [github](https://github.com/GallagherAiden/footballSimulationEngine/issues)
+---
+# Examples:
+Examples are baked into the file system (v2.1.0) in the 'init_config' directory:
+ - index.js : example function usages
+ - team1.json : example json for a primary team
+ - team2.json : example json for a secondary team
+ - pitch.json : example json for pitch details
+ - iteration.json : shows what the overall output given for each iteration
 
 #### Example Team JSON
 Teams must have the following information and must have 11 players included in it.
@@ -100,25 +118,6 @@ Pitch has been tested for width of 120 - 680 and height of 600 - 1050. The below
 	"pitchHeight": 1050
 }
 ```
----
-## Recommendations
-* Users can determine how many iterations make a half
-* Test data found in 'init_config' is the data used for testing
-* Iteration Logs give an overview of what has happened in the iteration
-* Uncomment console.log(output) to receive iteration by iteration information of each players iteration action, movement, original position and final position (start POS).
-
-## Additional Information
-* Get in touch with any questions [email](mailto:aiden.g@live.co.uk)
-* See a match example [here](https://youtu.be/yxTXFrAZCdY)
-* Raise issues in [github](https://github.com/GallagherAiden/footballSimulationEngine/issues)
----
-# Examples:
-Examples are baked into the file system (v2.1.0) in the 'init_config' directory:
- - index.js : example function usages
- - team1.json : example json for a primary team
- - team2.json : example json for a secondary team
- - pitch.json : example json for pitch details
- - iteration.json : shows what the overall output given for each iteration
 
 #### Example Match Details
 v2.1.0 - ball movement added so that a kicked ball makes movements over time. This can be seen in 'ball.ballOverIterations'. If empty, no new ball movements will occur. Deflections may occur as players move over iterations.
