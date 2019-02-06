@@ -82,7 +82,7 @@ Examples are baked into the file system (v2.1.0) in the 'init_config' directory:
 
 #### Example Team JSON
 Teams must have the following information and must have 11 players included in it.
-* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The currentPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
+* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The startPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
 * skills should not exceed 100
 * skill.jumping refers to height a player can jump in centimetres (so can and probably should be greater than 100).
 ```
@@ -102,7 +102,7 @@ Teams must have the following information and must have 11 players included in i
         "penalty_taking": "99",
         "jumping": "300"
       },
-      "currentPOS": [60,0],
+      "startPOS": [60,0],
       "fitness": 100,
       "injured": false
     }...],
@@ -198,11 +198,11 @@ Action should be - 'null' if the simulation is to be run normally. This can be o
        strength: '20',
        penalty_taking: '20',
        jumping: '280' },
-    currentPOS: [ 60, 300 ],
+    startPOS: [ 60, 300 ],
     fitness: 100,
     injured: false,
     originPOS: [ 70, 270 ],
-    intendedPOS: [ 70, 270 ],
+    relativePOS: [ 70, 270 ],
     action: 'none',
     offside: false,
     cards: {
