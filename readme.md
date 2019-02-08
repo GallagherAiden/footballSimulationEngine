@@ -6,7 +6,7 @@ This module was designed to allow the simulation of football (soccer) matches be
  - complete an iteration / movement
  - switch team sides / start second half
 ---
-## Latest Version (2.1.0)
+## Latest Version (2.1.2)
 - Added to allow more tackles and fouls
 - Added fitness measure (currently has no affect on the game - see later versions)
 - Remove promises from the internal functions (still required for three main functions as above)
@@ -19,6 +19,9 @@ This module was designed to allow the simulation of football (soccer) matches be
 - Allow interception of the ball whilst in transit
 - Included ability to set a players action for each iteration to enforce a specific move
 - Added Offside logic
+- security fix for https://nvd.nist.gov/vuln/detail/CVE-2018-16487
+- limit ability for players to become 'stuck'
+- checks to reduce occurances of players.hasBall = true when the ball is not with the player
 ---
 ## Install
 Make sure your version of Node.js is at least 7.6.0. (The 'async/await' function is used)
