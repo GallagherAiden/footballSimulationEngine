@@ -1,0 +1,1121 @@
+{
+    "kickOffTeam": {
+        "name": "Team10",
+        "rating": 88,
+        "players": [
+            {
+                "name": "Bill Johnson",
+                "position": "GK",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "12",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "43",
+                    "jumping": "300"
+                },
+                "startPOS": [
+                    340,
+                    0
+                ],
+                "fitness": 87.535,
+                "injured": false,
+                "originPOS": [
+                    340,
+                    0
+                ],
+                "relativePOS": [
+                    340,
+                    0
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Fred Johnson",
+                "position": "LB",
+                "rating": "90",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "saving": "20",
+                    "tackling": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    81,
+                    150
+                ],
+                "fitness": 89.15,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    80
+                ],
+                "relativePOS": [
+                    80,
+                    154
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "George Johnson",
+                "position": "CB",
+                "rating": "84",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "212"
+                },
+                "startPOS": [
+                    231,
+                    133
+                ],
+                "fitness": 88.105,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    80
+                ],
+                "relativePOS": [
+                    230,
+                    80
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Jim Johnson",
+                "position": "CB",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "21",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    407,
+                    154
+                ],
+                "fitness": 88.52,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    80
+                ],
+                "relativePOS": [
+                    407,
+                    154
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Georgina Johnson",
+                "position": "RB",
+                "rating": "82",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "23",
+                    "penalty_taking": "20",
+                    "jumping": "299"
+                },
+                "startPOS": [
+                    600,
+                    150
+                ],
+                "fitness": 88.865,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    80
+                ],
+                "relativePOS": [
+                    600,
+                    154
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Lucy Johnson",
+                "position": "LM",
+                "rating": "87",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "250"
+                },
+                "startPOS": [
+                    106,
+                    341
+                ],
+                "fitness": 88.04,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    270
+                ],
+                "relativePOS": [
+                    105,
+                    344
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Arthur Johnson",
+                "position": "CM",
+                "rating": "41",
+                "skill": {
+                    "passing": "33",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "1",
+                    "jumping": "120"
+                },
+                "startPOS": [
+                    230,
+                    340
+                ],
+                "fitness": 87.9,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    270
+                ],
+                "relativePOS": [
+                    230,
+                    344
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Cameron Johnson",
+                "position": "CM",
+                "rating": "99",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "175"
+                },
+                "startPOS": [
+                    420,
+                    337
+                ],
+                "fitness": 88.77,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    270
+                ],
+                "relativePOS": [
+                    420,
+                    344
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Gill Johnson",
+                "position": "RM",
+                "rating": "79",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "288"
+                },
+                "startPOS": [
+                    600,
+                    341
+                ],
+                "fitness": 88.775,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    270
+                ],
+                "relativePOS": [
+                    600,
+                    344
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Peter Johnson",
+                "position": "ST",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "291"
+                },
+                "startPOS": [
+                    280,
+                    568
+                ],
+                "fitness": 88.84,
+                "injured": false,
+                "originPOS": [
+                    280,
+                    500
+                ],
+                "relativePOS": [
+                    280,
+                    574
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Louise Johnson",
+                "position": "ST",
+                "rating": "88",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    441,
+                    563
+                ],
+                "fitness": 89.18,
+                "injured": false,
+                "originPOS": [
+                    440,
+                    500
+                ],
+                "relativePOS": [
+                    440,
+                    574
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            }
+        ],
+        "intent": "attack"
+    },
+    "secondTeam": {
+        "name": "Team2",
+        "rating": 88,
+        "players": [
+            {
+                "name": "Ian Smith",
+                "position": "GK",
+                "rating": "75",
+                "skill": {
+                    "passing": "78",
+                    "shooting": "12",
+                    "tackling": "75",
+                    "saving": "75",
+                    "agility": "70",
+                    "strength": "60",
+                    "penalty_taking": "45",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    340,
+                    1050
+                ],
+                "fitness": 87.37,
+                "injured": false,
+                "originPOS": [
+                    340,
+                    1050
+                ],
+                "relativePOS": [
+                    340,
+                    1050
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Fred Smith",
+                "position": "LB",
+                "rating": "90",
+                "skill": {
+                    "passing": "83",
+                    "shooting": "40",
+                    "tackling": "32",
+                    "saving": "10",
+                    "agility": "30",
+                    "strength": "30",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    80,
+                    923
+                ],
+                "fitness": 88.49,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    970
+                ],
+                "relativePOS": [
+                    80,
+                    915
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Emma Smith",
+                "position": "CB",
+                "rating": "84",
+                "skill": {
+                    "passing": "78",
+                    "shooting": "37",
+                    "tackling": "21",
+                    "saving": "10",
+                    "agility": "76",
+                    "strength": "59",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    230,
+                    970
+                ],
+                "fitness": 89.04,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    970
+                ],
+                "relativePOS": [
+                    230,
+                    970
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Jim Smith",
+                "position": "CB",
+                "rating": "75",
+                "skill": {
+                    "passing": "33",
+                    "shooting": "76",
+                    "tackling": "76",
+                    "saving": "10",
+                    "agility": "83",
+                    "strength": "73",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    420,
+                    970
+                ],
+                "fitness": 89.39,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    970
+                ],
+                "relativePOS": [
+                    420,
+                    970
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Emily Smith",
+                "position": "RB",
+                "rating": "82",
+                "skill": {
+                    "passing": "66",
+                    "shooting": "65",
+                    "tackling": "81",
+                    "saving": "10",
+                    "agility": "70",
+                    "strength": "90",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    598,
+                    927
+                ],
+                "fitness": 88.93,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    970
+                ],
+                "relativePOS": [
+                    600,
+                    915
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Gregory Smith",
+                "position": "LM",
+                "rating": "87",
+                "skill": {
+                    "passing": "51",
+                    "shooting": "88",
+                    "tackling": "81",
+                    "saving": "10",
+                    "agility": "65",
+                    "strength": "85",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    80,
+                    747
+                ],
+                "fitness": 88.14,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    780
+                ],
+                "relativePOS": [
+                    80,
+                    725
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Arthur Smith",
+                "position": "CM",
+                "rating": "41",
+                "skill": {
+                    "passing": "33",
+                    "shooting": "66",
+                    "tackling": "55",
+                    "saving": "10",
+                    "agility": "70",
+                    "strength": "40",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    233,
+                    746
+                ],
+                "fitness": 88.74,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    780
+                ],
+                "relativePOS": [
+                    230,
+                    725
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Diane Smith",
+                "position": "CM",
+                "rating": "99",
+                "skill": {
+                    "passing": "88",
+                    "shooting": "95",
+                    "tackling": "91",
+                    "saving": "10",
+                    "agility": "90",
+                    "strength": "75",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    419,
+                    738
+                ],
+                "fitness": 88.925,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    780
+                ],
+                "relativePOS": [
+                    420,
+                    725
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Colin Smith",
+                "position": "RM",
+                "rating": "79",
+                "skill": {
+                    "passing": "56",
+                    "shooting": "79",
+                    "tackling": "74",
+                    "saving": "10",
+                    "agility": "40",
+                    "strength": "40",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    599,
+                    746
+                ],
+                "fitness": 89.095,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    780
+                ],
+                "relativePOS": [
+                    600,
+                    725
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Wayne Smith",
+                "position": "ST",
+                "rating": "75",
+                "skill": {
+                    "passing": "83",
+                    "shooting": "88",
+                    "tackling": "59",
+                    "saving": "10",
+                    "agility": "43",
+                    "strength": "76",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    268,
+                    494
+                ],
+                "fitness": 86.865,
+                "injured": false,
+                "originPOS": [
+                    280,
+                    550
+                ],
+                "relativePOS": [
+                    269,
+                    495
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Aiden Smith",
+                "position": "ST",
+                "rating": "88",
+                "skill": {
+                    "passing": "73",
+                    "shooting": "61",
+                    "tackling": "44",
+                    "saving": "10",
+                    "agility": "43",
+                    "strength": "88",
+                    "penalty_taking": "77",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    440,
+                    511
+                ],
+                "fitness": 88.685,
+                "injured": false,
+                "originPOS": [
+                    440,
+                    550
+                ],
+                "relativePOS": [
+                    440,
+                    495
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            }
+        ],
+        "intent": "attack"
+    },
+    "pitchSize": [
+        680,
+        1050
+    ],
+    "ball": {
+        "position": [
+            261,
+            274
+        ],
+        "withPlayer": false,
+        "Player": "",
+        "withTeam": "",
+        "direction": "northwest",
+        "ballOverIterations": [
+            [
+                260,
+                277,
+                1
+            ],
+            [
+                259,
+                280,
+                1
+            ],
+            [
+                258,
+                283,
+                1
+            ],
+            [
+                257,
+                286,
+                1
+            ],
+            [
+                256,
+                289,
+                1
+            ],
+            [
+                255,
+                292,
+                1
+            ],
+            [
+                254,
+                295,
+                1
+            ],
+            [
+                253,
+                297,
+                1
+            ],
+            [
+                252,
+                299,
+                1
+            ],
+            [
+                251,
+                301,
+                1
+            ],
+            [
+                250,
+                303,
+                1
+            ],
+            [
+                249,
+                305,
+                1
+            ],
+            [
+                248,
+                307,
+                1
+            ],
+            [
+                247,
+                309,
+                1
+            ],
+            [
+                246,
+                311,
+                1
+            ],
+            [
+                245,
+                313,
+                0
+            ],
+            [
+                244,
+                315,
+                0
+            ],
+            [
+                243,
+                317,
+                0
+            ],
+            [
+                242,
+                319,
+                0
+            ],
+            [
+                241,
+                321,
+                0
+            ],
+            [
+                240,
+                323,
+                0
+            ],
+            [
+                239,
+                325,
+                0
+            ],
+            [
+                238,
+                327,
+                0
+            ],
+            [
+                237,
+                329,
+                0
+            ],
+            [
+                237,
+                331,
+                0
+            ],
+            [
+                237,
+                333,
+                0
+            ],
+            [
+                237,
+                334,
+                0
+            ],
+            [
+                237,
+                335,
+                0
+            ],
+            [
+                237,
+                336,
+                0
+            ],
+            [
+                237,
+                337,
+                0
+            ],
+            [
+                237,
+                338,
+                0
+            ],
+            [
+                237,
+                339,
+                0
+            ],
+            [
+                237,
+                340,
+                0
+            ],
+            [
+                237,
+                341,
+                0
+            ],
+            [
+                237,
+                342,
+                0
+            ],
+            [
+                237,
+                343,
+                0
+            ],
+            [
+                237,
+                344,
+                0
+            ],
+            [
+                237,
+                345,
+                0
+            ],
+            [
+                237,
+                346,
+                0
+            ],
+            [
+                237,
+                347,
+                0
+            ],
+            [
+                237,
+                348,
+                0
+            ],
+            [
+                237,
+                349,
+                0
+            ],
+            [
+                237,
+                350,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ],
+            [
+                237,
+                351,
+                0
+            ]
+        ],
+        "info": {
+            "itStartPOS": [
+                263,
+                268
+            ],
+            "staticCount": 0
+        }
+    },
+    "half": 1,
+    "kickOffTeamStatistics": {
+        "goals": 1,
+        "shots": 1,
+        "corners": 0,
+        "freekicks": 5,
+        "penalties": 0,
+        "fouls": 0
+    },
+    "secondTeamStatistics": {
+        "goals": 0,
+        "shots": 9,
+        "corners": 0,
+        "freekicks": 2,
+        "penalties": 0,
+        "fouls": 0
+    },
+    "iterationLog": [
+        "Closest Player to ball: Jim Johnson",
+        "Closest Player to ball: Wayne Smith",
+        "ball still moving from previous kick: 263,268",
+        "ball still moving from previous kick: 262,271",
+        "ball still moving from previous kick: 261,274",
+        "Closest Player to ball: Jim Johnson"
+    ]
+}

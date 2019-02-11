@@ -34,11 +34,11 @@ async function initiateGame(team1, team2, pitchDetails) {
 
 async function playIteration(matchDetails) {
   try {
-    var closestPlayerA = {
+    let closestPlayerA = {
       'name': '',
       'position': 10000
     }
-    var closestPlayerB = {
+    let closestPlayerB = {
       'name': '',
       'position': 10000
     }
@@ -48,9 +48,9 @@ async function playIteration(matchDetails) {
     let { kickOffTeam, secondTeam } = matchDetails
     common.matchInjury(matchDetails, kickOffTeam)
     common.matchInjury(matchDetails, secondTeam)
+    matchDetails = ballMovement.moveBall(matchDetails)
     playerMovement.closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails)
     playerMovement.closestPlayerToBall(closestPlayerB, secondTeam, matchDetails)
-    matchDetails = ballMovement.moveBall(matchDetails)
     kickOffTeam = await playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
     secondTeam = await playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails)
     matchDetails.kickOffTeam = kickOffTeam
