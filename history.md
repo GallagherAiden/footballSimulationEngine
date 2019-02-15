@@ -1,5 +1,7 @@
 # History of footballSimulationEngine
 
+## Version 1.x
+- initial creation of the FSE node module
 ---
 ## Version 2.1.0
 - Added to allow more tackles and fouls
@@ -15,10 +17,15 @@
 - Included ability to set a players action for each iteration to enforce a specific move
 - Added Offside logic
 ---
-## Version 2.1.1
-
----
 ## Version 2.1.2
 - security fix for https://nvd.nist.gov/vuln/detail/CVE-2018-16487
 - limit ability for players to become 'stuck'
 - checks to reduce occurances of players.hasBall = true when the ball is not with the player
+---
+## Version 2.2.0
+- fix closestPlayer Report
+- enhance test cases
+- keep ball with player when they run or sprint
+- improve run/sprint direction
+- improve passing
+- improve Error reporting
