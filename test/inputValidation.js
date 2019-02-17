@@ -28,6 +28,17 @@ function runTest() {
       expect(shJSON).to.be.an('object')
     })
   })
+  mocha.describe('testValidationOfBadInputData()', function() {
+    mocha.it('init game fails on pitch height', async() => {
+      // let t1location = './init_config/team1.json'
+      // let t2location = './init_config/team2.json'
+      // let plocation = './test/input/badInput/badPitchHeight.json'
+      // // let badFn = await validation.initGame(t1location, t2location, plocation)
+
+      // expect(await validation.initGame(t1location, t2location, plocation)).to.throw(Error,
+      // 'Please provide pitchWidth and pitchHeight')
+    })
+  })
 }
 
 module.exports = {
