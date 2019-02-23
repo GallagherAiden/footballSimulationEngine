@@ -4,7 +4,6 @@
       "rating": 88,
       "players": [
          {
-            "name": "Bill Johnson",
             "position": "GK",
             "rating": "75",
             "skill": {

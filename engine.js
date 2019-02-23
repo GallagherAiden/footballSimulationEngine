@@ -31,13 +31,15 @@ async function initiateGame(team1, team2, pitchDetails) {
 async function playIteration(matchDetails) {
   let closestPlayerA = {
     'name': '',
-    'position': 10000
+    'position': 100000
   }
   let closestPlayerB = {
     'name': '',
-    'position': 10000
+    'position': 100000
   }
   validate.validateMatchDetails(matchDetails)
+  validate.validateTeamSecondHalf(matchDetails.kickOffTeam)
+  validate.validateTeamSecondHalf(matchDetails.secondTeam)
   validate.validatePlayerPositions(matchDetails)
   matchDetails.iterationLog = []
   let { kickOffTeam, secondTeam } = matchDetails
@@ -46,23 +48,25 @@ async function playIteration(matchDetails) {
   matchDetails = ballMovement.moveBall(matchDetails)
   playerMovement.closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails)
   playerMovement.closestPlayerToBall(closestPlayerB, secondTeam, matchDetails)
-  kickOffTeam = await playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
-  secondTeam = await playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails)
+  kickOffTeam = playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
+  secondTeam = playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails)
   matchDetails.kickOffTeam = kickOffTeam
   matchDetails.secondTeam = secondTeam
   if (matchDetails.ball.ballOverIterations.length == 0 || matchDetails.ball.withTeam != '') {
     playerMovement.checkOffside(kickOffTeam, secondTeam, matchDetails)
   }
-  ballMovement.checkBall(matchDetails.ball)
   return matchDetails
 }
 
 async function startSecondHalf(matchDetails) {
   validate.validateMatchDetails(matchDetails)
+  validate.validateTeamSecondHalf(matchDetails.kickOffTeam)
+  validate.validateTeamSecondHalf(matchDetails.secondTeam)
+  validate.validatePlayerPositions(matchDetails)
   let { kickOffTeam, secondTeam } = matchDetails
   kickOffTeam = setPositions.switchSide(kickOffTeam, matchDetails)
   secondTeam = setPositions.switchSide(secondTeam, matchDetails)
-  await setPositions.setGoalScored(secondTeam, kickOffTeam, matchDetails)
+  setPositions.setGoalScored(secondTeam, kickOffTeam, matchDetails)
   matchDetails.half++
   matchDetails.kickOffTeam = kickOffTeam
   matchDetails.secondTeam = secondTeam

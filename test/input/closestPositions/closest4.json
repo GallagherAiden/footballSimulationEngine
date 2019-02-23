@@ -818,14 +818,7 @@
         "Player": "",
         "withTeam": "",
         "direction": "northwest",
-        "ballOverIterations": [],
-        "info": {
-            "itStartPOS": [
-                0,
-                0
-            ],
-            "staticCount": 0
-        }
+        "ballOverIterations": []
     },
     "half": 1,
     "kickOffTeamStatistics": {

@@ -35,8 +35,7 @@
             "offside": false,
             "hasBall": false,
             "cards": {
-               "yellow": 0,
-               "red": 0
+               "yellow": 0
             }
          },
          {

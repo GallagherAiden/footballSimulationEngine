@@ -1,0 +1,236 @@
+{
+  "rating": 88,
+  "players": [
+    {
+      "name": "Bill Johnson",
+      "position": "GK",
+      "rating": "75",
+      "skill": {
+        "passing": "20",
+        "shooting": "12",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "43",
+        "jumping": "300"
+      },
+      "startPOS": [
+        340,
+        0
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Fred Johnson",
+      "position": "LB",
+      "rating": "90",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "235"
+      },
+      "startPOS": [
+        80,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "George Johnson",
+      "position": "CB",
+      "rating": "84",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "212"
+      },
+      "startPOS": [
+        230,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Jim Johnson",
+      "position": "CB",
+      "rating": "75",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "21",
+        "jumping": "280"
+      },
+      "startPOS": [
+        420,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Georgina Johnson",
+      "position": "RB",
+      "rating": "82",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "23",
+        "penalty_taking": "20",
+        "jumping": "299"
+      },
+      "startPOS": [
+        600,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Lucy Johnson",
+      "position": "LM",
+      "rating": "87",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "250"
+      },
+      "startPOS": [
+        80,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Arthur Johnson",
+      "position": "CM",
+      "rating": "41",
+      "skill": {
+        "passing": "33",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "1",
+        "jumping": "120"
+      },
+      "startPOS": [
+        230,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Cameron Johnson",
+      "position": "CM",
+      "rating": "99",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "175"
+      },
+      "startPOS": [
+        420,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Gill Johnson",
+      "position": "RM",
+      "rating": "79",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "288"
+      },
+      "startPOS": [
+        600,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Peter Johnson",
+      "position": "ST",
+      "rating": "75",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "291"
+      },
+      "startPOS": [
+        280,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Louise Johnson",
+      "position": "ST",
+      "rating": "88",
+      "skill": {
+        "passing": "20",
+        "shooting": "20",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "20",
+        "jumping": "280"
+      },
+      "startPOS": [
+        440,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
+    }
+  ]
+}

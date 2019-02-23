@@ -821,7 +821,6 @@
       "direction": "south",
       "ballOverIterations": []
    },
-   "half": 1,
    "kickOffTeamStatistics": {
       "goals": 0,
       "shots": 0,

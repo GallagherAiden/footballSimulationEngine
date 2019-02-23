@@ -817,7 +817,6 @@
       ],
       "withPlayer": true,
       "Player": "Peter Johnson",
-      "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },

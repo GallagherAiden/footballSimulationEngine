@@ -1,0 +1,236 @@
+{
+  "name": "ThatTeam",
+  "rating": 88,
+  "players": [
+    {
+      "name": "Ian Smith",
+      "position": "GK",
+      "rating": "75",
+      "skill": {
+        "passing": "78",
+        "shooting": "12",
+        "tackling": "75",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "45",
+        "jumping": "235"
+      },
+      "startPOS": [
+        340,
+        0
+      ],
+      "fitness": 100
+    },
+    {
+      "name": "Fred Smith",
+      "position": "LB",
+      "rating": "90",
+      "skill": {
+        "passing": "83",
+        "shooting": "40",
+        "tackling": "32",
+        "saving": "10",
+        "agility": "30",
+        "strength": "30",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        80,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Emma Smith",
+      "position": "CB",
+      "rating": "84",
+      "skill": {
+        "passing": "78",
+        "shooting": "37",
+        "tackling": "21",
+        "saving": "10",
+        "agility": "76",
+        "strength": "59",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        230,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Jim Smith",
+      "position": "CB",
+      "rating": "75",
+      "skill": {
+        "passing": "33",
+        "shooting": "76",
+        "tackling": "76",
+        "saving": "10",
+        "agility": "83",
+        "strength": "73",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        420,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Emily Smith",
+      "position": "RB",
+      "rating": "82",
+      "skill": {
+        "passing": "66",
+        "shooting": "65",
+        "tackling": "81",
+        "saving": "10",
+        "agility": "70",
+        "strength": "90",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        600,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Gregory Smith",
+      "position": "LM",
+      "rating": "87",
+      "skill": {
+        "passing": "51",
+        "shooting": "88",
+        "tackling": "81",
+        "saving": "10",
+        "agility": "65",
+        "strength": "85",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        80,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Arthur Smith",
+      "position": "CM",
+      "rating": "41",
+      "skill": {
+        "passing": "33",
+        "shooting": "66",
+        "tackling": "55",
+        "saving": "10",
+        "agility": "70",
+        "strength": "40",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        230,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Diane Smith",
+      "position": "CM",
+      "rating": "99",
+      "skill": {
+        "passing": "88",
+        "shooting": "95",
+        "tackling": "91",
+        "saving": "10",
+        "agility": "90",
+        "strength": "75",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        420,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Colin Smith",
+      "position": "RM",
+      "rating": "79",
+      "skill": {
+        "passing": "56",
+        "shooting": "79",
+        "tackling": "74",
+        "saving": "10",
+        "agility": "40",
+        "strength": "40",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        600,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Wayne Smith",
+      "position": "ST",
+      "rating": "75",
+      "skill": {
+        "passing": "83",
+        "shooting": "88",
+        "tackling": "59",
+        "saving": "10",
+        "agility": "43",
+        "strength": "76",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        280,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Aiden Smith",
+      "position": "ST",
+      "rating": "88",
+      "skill": {
+        "passing": "73",
+        "shooting": "61",
+        "tackling": "44",
+        "saving": "10",
+        "agility": "43",
+        "strength": "88",
+        "penalty_taking": "77",
+        "jumping": "235"
+      },
+      "startPOS": [
+        440,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
+    }
+  ]
+}

@@ -17,10 +17,6 @@
                "penalty_taking": "43",
                "jumping": "300"
             },
-            "startPOS": [
-               340,
-               0
-            ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
