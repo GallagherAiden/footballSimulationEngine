@@ -29,3 +29,7 @@
 - improve run/sprint direction
 - improve passing
 - improve Error reporting
+- track shot over time
+- add saving
+- add simple player marking
+- add test simulation data
