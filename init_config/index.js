@@ -4,7 +4,6 @@ const fs = require('fs')
 
 let nextIteration
 gameOfTenIterations().then(function(finalJSON) {
-  console.log(finalJSON)
 }).catch(function(error) {
   throw new Error(error)
 })
