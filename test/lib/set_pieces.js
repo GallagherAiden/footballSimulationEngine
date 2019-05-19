@@ -49,16 +49,16 @@ async function setupBottomRightCorner(iterationFile) {
   return setPos.setBottomRightCornerPositions(matchDetails)
 }
 
-async function keepInBoundaries(ballIntended, kickersSide, iterationFile){
+async function keepInBoundaries(iterationFile, kickersSide, ballIntended) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
     })
-  setPos.keepInBoundaries(ballIntended, kickersSide, matchDetails)
+  setPos.keepInBoundaries(matchDetails, kickersSide, ballIntended)
   return matchDetails
 }
 
-async function removeBallFromAllPlayers(iterationFile){
+async function removeBallFromAllPlayers(iterationFile) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
@@ -67,7 +67,7 @@ async function removeBallFromAllPlayers(iterationFile){
   return matchDetails
 }
 
-async function setSetpieceKickOffTeam(iterationFile){
+async function setSetpieceKickOffTeam(iterationFile) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
@@ -76,7 +76,7 @@ async function setSetpieceKickOffTeam(iterationFile){
   return matchDetails
 }
 
-async function setSetpieceSecondTeam(iterationFile){
+async function setSetpieceSecondTeam(iterationFile) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
@@ -85,7 +85,7 @@ async function setSetpieceSecondTeam(iterationFile){
   return matchDetails
 }
 
-async function setTopGoalKick(iterationFile){
+async function setTopGoalKick(iterationFile) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
@@ -94,12 +94,70 @@ async function setTopGoalKick(iterationFile){
   return matchDetails
 }
 
-async function setBottomGoalKick(iterationFile){
+async function setBottomGoalKick(iterationFile) {
   let matchDetails = await common.readFile(iterationFile)
     .catch(function(err) {
       throw err.stack
     })
   setPos.setBottomGoalKick(matchDetails)
+  return matchDetails
+}
+
+async function switchSide(matchDetails, team) {
+  return setPos.switchSide(matchDetails, team)
+}
+
+async function setKickOffTeamGoalScored(iterationFile) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setKickOffTeamGoalScored(matchDetails)
+  return matchDetails
+}
+
+async function setSecondTeamGoalScored(iterationFile) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setSecondTeamGoalScored(matchDetails)
+  return matchDetails
+}
+
+async function setLeftKickOffTeamThrowIn(iterationFile, ballIntended) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setLeftKickOffTeamThrowIn(matchDetails, ballIntended)
+  return matchDetails
+}
+
+async function setLeftSecondTeamThrowIn(iterationFile, ballIntended) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setLeftSecondTeamThrowIn(matchDetails, ballIntended)
+  return matchDetails
+}
+
+async function setRightKickOffTeamThrowIn(iterationFile, ballIntended) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setRightKickOffTeamThrowIn(matchDetails, ballIntended)
+  return matchDetails
+}
+
+async function setRightSecondTeamThrowIn(iterationFile, ballIntended) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  setPos.setRightSecondTeamThrowIn(matchDetails, ballIntended)
   return matchDetails
 }
 
@@ -115,5 +173,12 @@ module.exports = {
   setSetpieceKickOffTeam,
   setSetpieceSecondTeam,
   setTopGoalKick,
-  setBottomGoalKick
+  setBottomGoalKick,
+  switchSide,
+  setKickOffTeamGoalScored,
+  setSecondTeamGoalScored,
+  setLeftKickOffTeamThrowIn,
+  setLeftSecondTeamThrowIn,
+  setRightKickOffTeamThrowIn,
+  setRightSecondTeamThrowIn
 }
