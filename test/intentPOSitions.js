@@ -31,11 +31,11 @@ function runTest() {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
-      let ballPosition = matchDetails.ball.position 
+      let ballPosition = matchDetails.ball.position
       ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.secondTeam.players) {
-        if(player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
       }
     })
@@ -61,7 +61,7 @@ function runTest() {
       ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.secondTeam.players) {
-        if(player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql(player.originPOS)
       }
     })
