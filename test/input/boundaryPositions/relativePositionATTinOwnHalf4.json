@@ -213,7 +213,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -811,12 +811,12 @@
     ],
     "ball": {
         "position": [
-            232,
-            174
+            115,
+            415
         ],
         "withPlayer": true,
-        "Player": "Peter Johnson",
-        "withTeam": "Dragons",
+        "Player": "Ham Johnson",
+        "withTeam": "Slugs",
         "direction": "southwest",
         "ballOverIterations": []
     },

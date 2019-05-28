@@ -357,7 +357,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -428,7 +428,7 @@
                 "injured": false,
                 "originPOS": [
                     340,
-                    550
+                    1050
                 ],
                 "relativePOS": [
                     340,
@@ -464,7 +464,7 @@
                 "injured": false,
                 "originPOS": [
                     80,
-                    470
+                    970
                 ],
                 "relativePOS": [
                     80,
@@ -500,7 +500,7 @@
                 "injured": false,
                 "originPOS": [
                     230,
-                    470
+                    970
                 ],
                 "relativePOS": [
                     230,
@@ -536,7 +536,7 @@
                 "injured": false,
                 "originPOS": [
                     420,
-                    470
+                    970
                 ],
                 "relativePOS": [
                     420,
@@ -572,7 +572,7 @@
                 "injured": false,
                 "originPOS": [
                     600,
-                    470
+                    970
                 ],
                 "relativePOS": [
                     600,
@@ -608,7 +608,7 @@
                 "injured": false,
                 "originPOS": [
                     80,
-                    280
+                    780
                 ],
                 "relativePOS": [
                     80,
@@ -644,7 +644,7 @@
                 "injured": false,
                 "originPOS": [
                     230,
-                    280
+                    780
                 ],
                 "relativePOS": [
                     230,
@@ -680,7 +680,7 @@
                 "injured": false,
                 "originPOS": [
                     420,
-                    280
+                    780
                 ],
                 "relativePOS": [
                     420,
@@ -716,7 +716,7 @@
                 "injured": false,
                 "originPOS": [
                     600,
-                    280
+                    780
                 ],
                 "relativePOS": [
                     600,
@@ -752,7 +752,7 @@
                 "injured": false,
                 "originPOS": [
                     280,
-                    50
+                    550
                 ],
                 "relativePOS": [
                     280,
@@ -788,7 +788,7 @@
                 "injured": false,
                 "originPOS": [
                     440,
-                    50
+                    550
                 ],
                 "relativePOS": [
                     440,
@@ -796,7 +796,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -811,12 +811,12 @@
     ],
     "ball": {
         "position": [
-            340,
-            975
+            440,
+            50
         ],
         "withPlayer": true,
-        "Player": "Peter Johnson",
-        "withTeam": "ThisTeam",
+        "Player": "Aiden Smith",
+        "withTeam": "ThatTeam",
         "direction": "south",
         "ballOverIterations": []
     },
