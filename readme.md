@@ -1,22 +1,22 @@
 # Football Simulation Engine
 ---
+##NEWSFLASH!
+A recent update to 'startPOS' and 'relativePOS' to 'currentPOS' and 'intentPOS' respectively are MAJOR changes in v3.0.0 and beyond. This change is _not yet in NPM_ but will be as of the release of v3.0.0
+
+If you wish to continue using 'startPOS' and 'relativePOS' you should use v2.2.0 https://github.com/GallagherAiden/footballSimulationEngine/archive/v2.2.0.zip 
+---
 ## Overview
 This module was designed to allow the simulation of football (soccer) matches between two teams. It consists of three functions that
  - Initiate a match
  - complete an iteration / movement
  - switch team sides / start second half
 ---
-## Latest Version (2.2.1)
-- fix closestPlayer Report
-- enhance test cases
-- keep ball with player when they run or sprint
-- improve run/sprint direction
-- improve passing
-- improve Error reporting
-- track shot over time
-- add saving
-- add simple player marking
-- add test simulation data
+## Latest Version (3.0.0)
+- altered 'startPOS' to 'currentPOS' to better reflect what the variable is used for
+- altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for
+- added 100+ test cases
+- cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
+
 ---
 ## Install
 Make sure your version of Node.js is at least 7.6.0. (The 'async/await' function is used)
@@ -80,7 +80,7 @@ Examples are baked into the file system (>v2.1.0) in the 'init_config' directory
 
 #### Example Team JSON
 Teams must have the following information and must have 11 players included in it.
-* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The startPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
+* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The currentPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
 * skills should not exceed 100
 * skill.jumping refers to height a player can jump in centimetres (so can and probably should be greater than 100).
 ```
@@ -100,7 +100,7 @@ Teams must have the following information and must have 11 players included in i
         "penalty_taking": "99",
         "jumping": "300"
       },
-      "startPOS": [60,0],
+      "currentPOS": [60,0],
       "fitness": 100,
       "injured": false
     }...],
@@ -196,11 +196,11 @@ Action should be - 'null' if the simulation is to be run normally. This can be o
        strength: '20',
        penalty_taking: '20',
        jumping: '280' },
-    startPOS: [ 60, 300 ],
+    currentPOS: [ 60, 300 ],
     fitness: 100,
     injured: false,
     originPOS: [ 70, 270 ],
-    relativePOS: [ 70, 270 ],
+    intentPOS: [ 70, 270 ],
     action: 'none',
     offside: false,
     cards: {

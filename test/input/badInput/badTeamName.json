@@ -15,7 +15,7 @@
         "penalty_taking": "43",
         "jumping": "300"
       },
-      "startPOS": [
+      "currentPOS": [
         340,
         0
       ],
@@ -36,7 +36,7 @@
         "penalty_taking": "20",
         "jumping": "235"
       },
-      "startPOS": [
+      "currentPOS": [
         80,
         80
       ],
@@ -57,7 +57,7 @@
         "penalty_taking": "20",
         "jumping": "212"
       },
-      "startPOS": [
+      "currentPOS": [
         230,
         80
       ],
@@ -78,7 +78,7 @@
         "penalty_taking": "21",
         "jumping": "280"
       },
-      "startPOS": [
+      "currentPOS": [
         420,
         80
       ],
@@ -99,7 +99,7 @@
         "penalty_taking": "20",
         "jumping": "299"
       },
-      "startPOS": [
+      "currentPOS": [
         600,
         80
       ],
@@ -120,7 +120,7 @@
         "penalty_taking": "20",
         "jumping": "250"
       },
-      "startPOS": [
+      "currentPOS": [
         80,
         270
       ],
@@ -141,7 +141,7 @@
         "penalty_taking": "1",
         "jumping": "120"
       },
-      "startPOS": [
+      "currentPOS": [
         230,
         270
       ],
@@ -162,7 +162,7 @@
         "penalty_taking": "20",
         "jumping": "175"
       },
-      "startPOS": [
+      "currentPOS": [
         420,
         270
       ],
@@ -183,7 +183,7 @@
         "penalty_taking": "20",
         "jumping": "288"
       },
-      "startPOS": [
+      "currentPOS": [
         600,
         270
       ],
@@ -204,7 +204,7 @@
         "penalty_taking": "20",
         "jumping": "291"
       },
-      "startPOS": [
+      "currentPOS": [
         280,
         500
       ],
@@ -225,7 +225,7 @@
         "penalty_taking": "20",
         "jumping": "280"
       },
-      "startPOS": [
+      "currentPOS": [
         440,
         500
       ],
