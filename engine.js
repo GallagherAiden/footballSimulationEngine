@@ -22,7 +22,7 @@ async function initiateGame(team1, team2, pitchDetails) {
   kickOffTeam = setVariables.koDecider(kickOffTeam, matchDetails)
   matchDetails.iterationLog.push(`Team to kick off - ${kickOffTeam.name}`)
   matchDetails.iterationLog.push(`Second team - ${secondTeam.name}`)
-  secondTeam = setPositions.switchSide(secondTeam, matchDetails)
+  setPositions.switchSide(matchDetails, secondTeam)
   matchDetails.kickOffTeam = kickOffTeam
   matchDetails.secondTeam = secondTeam
   return matchDetails
@@ -64,12 +64,14 @@ async function startSecondHalf(matchDetails) {
   validate.validateTeamSecondHalf(matchDetails.secondTeam)
   validate.validatePlayerPositions(matchDetails)
   let { kickOffTeam, secondTeam } = matchDetails
-  kickOffTeam = setPositions.switchSide(kickOffTeam, matchDetails)
-  secondTeam = setPositions.switchSide(secondTeam, matchDetails)
-  setPositions.setGoalScored(secondTeam, kickOffTeam, matchDetails)
+  setPositions.switchSide(matchDetails, kickOffTeam)
+  setPositions.switchSide(matchDetails, secondTeam)
+  setPositions.removeBallFromAllPlayers(matchDetails)
+  setVariables.resetPlayerPositions(matchDetails)
+  setPositions.setBallSpecificGoalScoreValue(matchDetails, matchDetails.kickOffTeam)
+  matchDetails.kickOffTeam.intent = `attack`
+  matchDetails.secondTeam.intent = `defend`
   matchDetails.half++
-  matchDetails.kickOffTeam = kickOffTeam
-  matchDetails.secondTeam = secondTeam
   return matchDetails
 }
 

@@ -3,8 +3,7 @@ const engine = require('./../engine')
 const fs = require('fs')
 
 let nextIteration
-gameOfTenIterations().then(function(finalJSON) {
-  console.log(finalJSON)
+gameOfTenIterations().then(function() {
 }).catch(function(error) {
   throw new Error(error)
 })

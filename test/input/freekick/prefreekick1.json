@@ -1,0 +1,850 @@
+{
+    "kickOffTeam": {
+        "name": "Slugs",
+        "rating": 88,
+        "players": [
+            {
+                "name": "Bill Johnson",
+                "position": "GK",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "12",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "43",
+                    "jumping": "300"
+                },
+                "startPOS": [
+                    340,
+                    -350
+                ],
+                "fitness": 80.175,
+                "injured": false,
+                "originPOS": [
+                    340,
+                    0
+                ],
+                "relativePOS": [
+                    340,
+                    0
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Fred Johnson",
+                "position": "LB",
+                "rating": "90",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "saving": "20",
+                    "tackling": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    322,
+                    94
+                ],
+                "fitness": 83.56,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    80
+                ],
+                "relativePOS": [
+                    80,
+                    95
+                ],
+                "action": "none",
+                "offside": true,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "George Johnson",
+                "position": "CB",
+                "rating": "84",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "212"
+                },
+                "startPOS": [
+                    230,
+                    -445
+                ],
+                "fitness": 83.775,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    80
+                ],
+                "relativePOS": [
+                    230,
+                    80
+                ],
+                "action": "none",
+                "offside": true,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Jim Johnson",
+                "position": "CB",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "21",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    420,
+                    -445
+                ],
+                "fitness": 83.21,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    80
+                ],
+                "relativePOS": [
+                    363,
+                    95
+                ],
+                "action": "none",
+                "offside": true,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Georgina Johnson",
+                "position": "RB",
+                "rating": "82",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "23",
+                    "penalty_taking": "20",
+                    "jumping": "299"
+                },
+                "startPOS": [
+                    264,
+                    9
+                ],
+                "fitness": 83.145,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    80
+                ],
+                "relativePOS": [
+                    568,
+                    95
+                ],
+                "action": "none",
+                "offside": true,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Lucy Johnson",
+                "position": "LM",
+                "rating": "87",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "250"
+                },
+                "startPOS": [
+                    243,
+                    137
+                ],
+                "fitness": 83.63,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    270
+                ],
+                "relativePOS": [
+                    120,
+                    285
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": true,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Arthur Johnson",
+                "position": "CM",
+                "rating": "41",
+                "skill": {
+                    "passing": "33",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "1",
+                    "jumping": "120"
+                },
+                "startPOS": [
+                    269,
+                    412
+                ],
+                "fitness": 83.275,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    270
+                ],
+                "relativePOS": [
+                    270,
+                    285
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Cameron Johnson",
+                "position": "CM",
+                "rating": "99",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "175"
+                },
+                "startPOS": [
+                    457,
+                    135
+                ],
+                "fitness": 82.995,
+                "injured": false,
+                "originPOS": [
+                    420,
+                    270
+                ],
+                "relativePOS": [
+                    566,
+                    285
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Gill Johnson",
+                "position": "RM",
+                "rating": "79",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "288"
+                },
+                "startPOS": [
+                    199,
+                    49
+                ],
+                "fitness": 82.875,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    270
+                ],
+                "relativePOS": [
+                    600,
+                    285
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Peter Johnson",
+                "position": "ST",
+                "rating": "75",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "291"
+                },
+                "startPOS": [
+                    328,
+                    43
+                ],
+                "fitness": 81.51,
+                "injured": false,
+                "originPOS": [
+                    280,
+                    500
+                ],
+                "relativePOS": [
+                    402,
+                    515
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Louise Johnson",
+                "position": "ST",
+                "rating": "88",
+                "skill": {
+                    "passing": "20",
+                    "shooting": "20",
+                    "tackling": "20",
+                    "saving": "20",
+                    "agility": "20",
+                    "strength": "20",
+                    "penalty_taking": "20",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    398,
+                    134
+                ],
+                "fitness": 81.92,
+                "injured": false,
+                "originPOS": [
+                    440,
+                    500
+                ],
+                "relativePOS": [
+                    440,
+                    515
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            }
+        ],
+        "intent": "attack"
+    },
+    "secondTeam": {
+        "name": "Dragons",
+        "rating": 88,
+        "players": [
+            {
+                "name": "Bill Johnson",
+                "position": [
+                    323,
+                    1026,
+                    0
+                ],
+                "rating": "75",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "12",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "43",
+                    "jumping": "300"
+                },
+                "startPOS": [
+                    385,
+                    795
+                ],
+                "fitness": 82.44,
+                "injured": false,
+                "originPOS": [
+                    340,
+                    1050
+                ],
+                "relativePOS": [
+                    386,
+                    781
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Fred Johnson",
+                "position": "LB",
+                "rating": "90",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "saving": "100",
+                    "tackling": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "235"
+                },
+                "startPOS": [
+                    325,
+                    10
+                ],
+                "fitness": 83.545,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    970
+                ],
+                "relativePOS": [
+                    82,
+                    701
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "George Johnson",
+                "position": "CB",
+                "rating": "84",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "212"
+                },
+                "startPOS": [
+                    334,
+                    11
+                ],
+                "fitness": 82.215,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    970
+                ],
+                "relativePOS": [
+                    230,
+                    970
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Jim Johnson",
+                "position": "CB",
+                "rating": "75",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "21",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    346,
+                    10
+                ],
+                "fitness": 83.16,
+                "injured": false,
+                "originPOS": [
+                    475,
+                    970
+                ],
+                "relativePOS": [
+                    475,
+                    970
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Georgina Johnson",
+                "position": "RB",
+                "rating": "82",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "23",
+                    "penalty_taking": "100",
+                    "jumping": "299"
+                },
+                "startPOS": [
+                    355,
+                    11
+                ],
+                "fitness": 83.21,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    970
+                ],
+                "relativePOS": [
+                    600,
+                    701
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Lucy Johnson",
+                "position": "LM",
+                "rating": "87",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "250"
+                },
+                "startPOS": [
+                    349.5,
+                    87
+                ],
+                "fitness": 83.18,
+                "injured": false,
+                "originPOS": [
+                    80,
+                    780
+                ],
+                "relativePOS": [
+                    108,
+                    511
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Arthur Johnson",
+                "position": "CM",
+                "rating": "41",
+                "skill": {
+                    "passing": "33",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "1",
+                    "jumping": "1100"
+                },
+                "startPOS": [
+                    350.5,
+                    85
+                ],
+                "fitness": 83.39,
+                "injured": false,
+                "originPOS": [
+                    230,
+                    780
+                ],
+                "relativePOS": [
+                    242,
+                    511
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Cameron Johnson",
+                "position": "CM",
+                "rating": "99",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "175"
+                },
+                "startPOS": [
+                    352.5,
+                    84
+                ],
+                "fitness": 82.53,
+                "injured": false,
+                "originPOS": [
+                    475,
+                    780
+                ],
+                "relativePOS": [
+                    572,
+                    511
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Gill Johnson",
+                "position": "RM",
+                "rating": "79",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "288"
+                },
+                "startPOS": [
+                    456,
+                    116
+                ],
+                "fitness": 83.265,
+                "injured": false,
+                "originPOS": [
+                    600,
+                    780
+                ],
+                "relativePOS": [
+                    540,
+                    511
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Peter Johnson",
+                "position": "ST",
+                "rating": "75",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "291"
+                },
+                "startPOS": [
+                    206,
+                    79
+                ],
+                "fitness": 82.91,
+                "injured": false,
+                "originPOS": [
+                    280,
+                    550
+                ],
+                "relativePOS": [
+                    333,
+                    281
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            },
+            {
+                "name": "Louise Johnson",
+                "position": "ST",
+                "rating": "88",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "280"
+                },
+                "startPOS": [
+                    341,
+                    20
+                ],
+                "fitness": 82,
+                "injured": false,
+                "originPOS": [
+                    440,
+                    550
+                ],
+                "relativePOS": [
+                    457,
+                    281
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": false,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                }
+            }
+        ],
+        "intent": "defend"
+    },
+    "pitchSize": [
+        680,
+        1050
+    ],
+    "ball": {
+        "position": [
+            243,
+            137,
+            0
+        ],
+        "withPlayer": true,
+        "Player": "Lucy Johnson",
+        "withTeam": "Slugs",
+        "direction": "southwest",
+        "ballOverIterations": []
+    },
+    "half": 1,
+    "kickOffTeamStatistics": {
+        "goals": 0,
+        "shots": 0,
+        "corners": 0,
+        "freekicks": 1,
+        "penalties": 1,
+        "fouls": 1
+    },
+    "secondTeamStatistics": {
+        "goals": 0,
+        "shots": 9,
+        "corners": 0,
+        "freekicks": 0,
+        "penalties": 0,
+        "fouls": 0
+    },
+    "iterationLog": [
+        "ball still moving from previous kick: 360,96",
+        "Closest Player to ball: Jim Johnson",
+        "Closest Player to ball: Peter Johnson"
+    ]
+}

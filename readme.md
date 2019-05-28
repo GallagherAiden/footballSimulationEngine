@@ -6,22 +6,17 @@ This module was designed to allow the simulation of football (soccer) matches be
  - complete an iteration / movement
  - switch team sides / start second half
 ---
-## Latest Version (2.1.2)
-- Added to allow more tackles and fouls
-- Added fitness measure (currently has no affect on the game - see later versions)
-- Remove promises from the internal functions (still required for three main functions as above)
-- Includes a test suite (still in development)
-- Improvements to ball movement to give movement over time instead of a 'jump'
-- refactoring to improve source code readability
-- Removed dependency on async function
-- Resolved error where players leave pitch
-- Provided setup data - e.g. a pitch JSON and two team JSONs for easier setup
-- Allow interception of the ball whilst in transit
-- Included ability to set a players action for each iteration to enforce a specific move
-- Added Offside logic
-- security fix for https://nvd.nist.gov/vuln/detail/CVE-2018-16487
-- limit ability for players to become 'stuck'
-- checks to reduce occurances of players.hasBall = true when the ball is not with the player
+## Latest Version (2.2.1)
+- fix closestPlayer Report
+- enhance test cases
+- keep ball with player when they run or sprint
+- improve run/sprint direction
+- improve passing
+- improve Error reporting
+- track shot over time
+- add saving
+- add simple player marking
+- add test simulation data
 ---
 ## Install
 Make sure your version of Node.js is at least 7.6.0. (The 'async/await' function is used)
@@ -76,7 +71,7 @@ startSecondHalf(matchDetails).then(function (matchDetails) {
 * Raise issues in [github](https://github.com/GallagherAiden/footballSimulationEngine/issues)
 ---
 # Examples:
-Examples are baked into the file system (v2.1.0) in the 'init_config' directory:
+Examples are baked into the file system (>v2.1.0) in the 'init_config' directory:
  - index.js : example function usages
  - team1.json : example json for a primary team
  - team2.json : example json for a secondary team
