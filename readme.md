@@ -1,9 +1,7 @@
 # Football Simulation Engine
 ---
 ##NEWSFLASH!
-A recent update to 'startPOS' and 'relativePOS' to 'currentPOS' and 'intentPOS' respectively are MAJOR changes in v3.0.0 and beyond. This change is _not yet in NPM_ but will be as of the release of v3.0.0
-
-If you wish to continue using 'startPOS' and 'relativePOS' you should use v2.2.0 https://github.com/GallagherAiden/footballSimulationEngine/archive/v2.2.0.zip 
+A recent update to 'startPOS' and 'relativePOS' to 'currentPOS' and 'intentPOS' respectively are MAJOR changes in v3.0.0 and beyond. This change is _not yet in NPM_ but will be as of the release of v3.0.0. If you wish to continue using 'startPOS' and 'relativePOS' use the v2.2.0 Release https://github.com/GallagherAiden/footballSimulationEngine/releases/tag/v2.2.0
 ---
 ## Overview
 This module was designed to allow the simulation of football (soccer) matches between two teams. It consists of three functions that
