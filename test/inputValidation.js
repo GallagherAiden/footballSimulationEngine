@@ -150,14 +150,14 @@ function runTest() {
         expect(err.toString()).to.have.string(expectedOutput)
       }
     })
-    mocha.it('playIteration no start pos', async() => {
-      let providedItJson = './test/input/badInput/noStartPos.json'
+    mocha.it('playIteration no current pos', async() => {
+      let providedItJson = './test/input/badInput/nocurrentPOS.json'
       try {
         let outputIteration = await validation.playIteration(providedItJson)
         expect(outputIteration).to.be.an('Error')
       } catch (err) {
         expect(err).to.be.an('Error')
-        expect(err.toString()).to.have.string('Player must contain JSON variable: startPOS')
+        expect(err.toString()).to.have.string('Player must contain JSON variable: currentPOS')
       }
     })
     mocha.it('playIteration no iteration log', async() => {

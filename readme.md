@@ -1,22 +1,30 @@
 # Football Simulation Engine
 ---
+##NEWSFLASH!
+A recent update to 'startPOS' and 'relativePOS' to 'currentPOS' and 'intentPOS' respectively are MAJOR changes in v3.0.0 and beyond. This change is _not yet in NPM_ but will be as of the release of v3.0.0
+
+If you wish to continue using 'startPOS' and 'relativePOS' you should use v2.2.0 https://github.com/GallagherAiden/footballSimulationEngine/releases/tag/v2.2.0
+---
 ## Overview
-This module was designed to allow the simulation of football (soccer) matches between two teams. It consists of three functions that
+This module was designed to allow the simulation of football (soccer) matches between two teams. This module allows for an iterative football match to be played out given initial "state" of players. 
+
+The module consists of three functions that:
  - Initiate a match
  - complete an iteration / movement
  - switch team sides / start second half
+
+For examples of how this module can be used, see:
+* [A narrated video of a match.](https://youtu.be/yxTXFrAZCdY)
+* [An example Node implementation of a Football Simulator with a GUI](https://github.com/GallagherAiden/footballsimulationexample)
+* [An example Node implementation for the 2018 World Cup](https://github.com/GallagherAiden/worldcup2018simulator)
 ---
-## Latest Version (2.2.1)
-- fix closestPlayer Report
-- enhance test cases
-- keep ball with player when they run or sprint
-- improve run/sprint direction
-- improve passing
-- improve Error reporting
-- track shot over time
-- add saving
-- add simple player marking
-- add test simulation data
+## Latest Version (3.0.0)
+- altered 'startPOS' to 'currentPOS' to better reflect what the variable is used for
+- altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for
+- added 100+ test cases
+- cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
+- [Full and Past changelogs are available here.](history.md)
+
 ---
 ## Install
 Make sure your version of Node.js is at least 7.6.0. (The 'async/await' function is used)
@@ -25,7 +33,7 @@ Make sure your version of Node.js is at least 7.6.0. (The 'async/await' function
 
 ---
 ## Initiate Game
-This function is a promise that expects two teams and pitch information in JSON format. The function will return match details including player start positions, match statistics, ball position and an iteration log.
+This function is a promise that expects two teams and pitch information in JSON format (JSON format is described below). The function will return match details including player start positions, match statistics, ball position and an iteration log.
 
 #### Example Call
 ```
@@ -61,26 +69,26 @@ startSecondHalf(matchDetails).then(function (matchDetails) {
 ---
 ## Recommendations
 * Users can determine how many iterations make a half
-* Test data found in 'init_config' is the data used for testing
-* Iteration Logs give an overview of what has happened in the iteration
+* Test data found in `init_config` is the data used for testing
+* Iteration logs give an overview of what has happened in the iteration
 * Uncomment console.log(output) to receive iteration by iteration information of each players iteration action, movement, original position and final position (start POS).
 
 ## Additional Information
 * Get in touch with any questions [email](mailto:aiden.g@live.co.uk)
 * See a match example [here](https://youtu.be/yxTXFrAZCdY)
-* Raise issues in [github](https://github.com/GallagherAiden/footballSimulationEngine/issues)
+* Raise issues in [GitHub](https://github.com/GallagherAiden/footballSimulationEngine/issues)
 ---
 # Examples:
-Examples are baked into the file system (>v2.1.0) in the 'init_config' directory:
- - index.js : example function usages
- - team1.json : example json for a primary team
- - team2.json : example json for a secondary team
- - pitch.json : example json for pitch details
- - iteration.json : shows what the overall output given for each iteration
+Examples are baked into the file system (>v2.1.0) in the `init_config` directory:
+ - `index.js` : example function usages
+ - `team1.json` : example json for a primary team
+ - `team2.json` : example json for a secondary team
+ - `pitch.json` : example json for pitch details
+ - `iteration.json` : shows what the overall output given for each iteration
 
 #### Example Team JSON
-Teams must have the following information and must have 11 players included in it.
-* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The startPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
+Each team must have the following information and contain 11 players.
+* A start position for each player, with both teams given start positions as if they were the team at the top of a vertical pitch (shooting to the bottom of the screen). The currentPOS object should be [widthPosition, heightPosition] where the height placement should not be a greater number than half the pitch height.
 * skills should not exceed 100
 * skill.jumping refers to height a player can jump in centimetres (so can and probably should be greater than 100).
 ```
@@ -100,7 +108,7 @@ Teams must have the following information and must have 11 players included in i
         "penalty_taking": "99",
         "jumping": "300"
       },
-      "startPOS": [60,0],
+      "currentPOS": [60,0],
       "fitness": 100,
       "injured": false
     }...],
@@ -179,7 +187,7 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
    [ 'Closest Player to ball: Aiden Gallagher',
      'Closest Player to ball: Joe Bloggs' ] }
 ```
-Example Player JSON (after game initiated):
+#### Example Player JSON (after game initiated):
 Any and all player objects may be altered between iterations. Including the relative position, origin position and action.
 Action should be - 'null' if the simulation is to be run normally. This can be overriden with any of the following actions:
 'shoot', 'throughBall', 'pass', 'cross', 'tackle', 'intercept', 'slide', 'run', 'sprint', 'cleared', 'boot'. The player must have the ball in order to complete ball specific actions like 'shoot'. Any invalid actions will result in the simulation running as normal.
@@ -196,11 +204,11 @@ Action should be - 'null' if the simulation is to be run normally. This can be o
        strength: '20',
        penalty_taking: '20',
        jumping: '280' },
-    startPOS: [ 60, 300 ],
+    currentPOS: [ 60, 300 ],
     fitness: 100,
     injured: false,
     originPOS: [ 70, 270 ],
-    relativePOS: [ 70, 270 ],
+    intentPOS: [ 70, 270 ],
     action: 'none',
     offside: false,
     cards: {
