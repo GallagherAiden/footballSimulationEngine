@@ -420,11 +420,7 @@
       "players": [
          {
             "name": "Bill Johnson",
-            "position": [
-               334,
-               978,
-               0
-            ],
+            "position": "GK",
             "rating": "75",
             "skill": {
                "passing": "100",

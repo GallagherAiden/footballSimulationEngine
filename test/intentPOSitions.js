@@ -25,7 +25,12 @@ function runTest() {
       if (ballPosition[2] >= 0) ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
+        let diffXPOSplayerandball = ballPosition[0] - player.currentPOS[0]
+        let diffYPOSplayerandball = ballPosition[1] - player.currentPOS[1]
+        let xPosProx = common.isBetween(diffXPOSplayerandball, -40, 40)
+        let yPosProx = common.isBetween(diffYPOSplayerandball, -40, 40)
         if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        else if (xPosProx && yPosProx) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
       }
     })
