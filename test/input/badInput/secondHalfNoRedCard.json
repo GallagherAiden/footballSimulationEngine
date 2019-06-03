@@ -353,13 +353,8 @@
                "penalty_taking": "20",
                "jumping": "291"
             },
-<<<<<<< HEAD
-            "startPOS": [
-               360,
-=======
             "currentPOS": [
                340,
->>>>>>> origin/v3.0.0
                525
             ],
             "fitness": 100,
@@ -395,13 +390,8 @@
                "penalty_taking": "20",
                "jumping": "280"
             },
-<<<<<<< HEAD
-            "startPOS": [
-               340,
-=======
             "currentPOS": [
                360,
->>>>>>> origin/v3.0.0
                525
             ],
             "fitness": 100,
