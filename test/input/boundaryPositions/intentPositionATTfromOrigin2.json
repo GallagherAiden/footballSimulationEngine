@@ -17,7 +17,7 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     0
                 ],
@@ -27,7 +27,7 @@
                     340,
                     0
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
                     0
                 ],
@@ -54,9 +54,9 @@
                     "penalty_taking": "20",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
-                    123
+                    80
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -64,7 +64,7 @@
                     80,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     80
                 ],
@@ -91,9 +91,9 @@
                     "penalty_taking": "20",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
-                    123
+                    80
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -101,7 +101,7 @@
                     230,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     80
                 ],
@@ -128,9 +128,9 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
-                    123
+                    80
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -138,7 +138,7 @@
                     420,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     80
                 ],
@@ -165,9 +165,9 @@
                     "penalty_taking": "20",
                     "jumping": "299"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
-                    123
+                    80
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -175,7 +175,7 @@
                     600,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
                     80
                 ],
@@ -202,9 +202,9 @@
                     "penalty_taking": "20",
                     "jumping": "250"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
-                    313
+                    270
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -212,7 +212,7 @@
                     80,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     270
                 ],
@@ -239,9 +239,9 @@
                     "penalty_taking": "1",
                     "jumping": "120"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
-                    313
+                    270
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -249,7 +249,7 @@
                     230,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     270
                 ],
@@ -276,9 +276,9 @@
                     "penalty_taking": "20",
                     "jumping": "175"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
-                    313
+                    270
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -286,7 +286,7 @@
                     420,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     270
                 ],
@@ -313,9 +313,9 @@
                     "penalty_taking": "20",
                     "jumping": "288"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
-                    313
+                    270
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -323,7 +323,7 @@
                     600,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
                     270
                 ],
@@ -350,9 +350,9 @@
                     "penalty_taking": "20",
                     "jumping": "291"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
-                    543
+                    525
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -360,13 +360,13 @@
                     280,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
                     500
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -387,9 +387,9 @@
                     "penalty_taking": "20",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     360,
-                    543
+                    525
                 ],
                 "fitness": 100,
                 "injured": false,
@@ -397,7 +397,7 @@
                     440,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     440,
                     500
                 ],
@@ -432,7 +432,7 @@
                     "penalty_taking": "45",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     1050
                 ],
@@ -442,7 +442,7 @@
                     340,
                     1050
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
                     1050
                 ],
@@ -469,7 +469,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
                     970
                 ],
@@ -479,7 +479,7 @@
                     80,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     970
                 ],
@@ -506,7 +506,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     970
                 ],
@@ -516,7 +516,7 @@
                     230,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     970
                 ],
@@ -543,7 +543,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
                     970
                 ],
@@ -553,7 +553,7 @@
                     420,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     970
                 ],
@@ -580,7 +580,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
                     970
                 ],
@@ -590,7 +590,7 @@
                     600,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
                     970
                 ],
@@ -617,7 +617,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
                     780
                 ],
@@ -627,7 +627,7 @@
                     80,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     780
                 ],
@@ -654,7 +654,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     780
                 ],
@@ -664,7 +664,7 @@
                     230,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     780
                 ],
@@ -691,7 +691,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
                     780
                 ],
@@ -701,7 +701,7 @@
                     420,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     780
                 ],
@@ -728,7 +728,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
                     780
                 ],
@@ -738,7 +738,7 @@
                     600,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
                     780
                 ],
@@ -765,7 +765,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     280,
                     550
                 ],
@@ -775,13 +775,13 @@
                     280,
                     550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
                     550
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -802,7 +802,7 @@
                     "penalty_taking": "77",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     440,
                     550
                 ],
@@ -812,7 +812,7 @@
                     440,
                     550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     440,
                     550
                 ],
@@ -835,14 +835,13 @@
     ],
     "ball": {
         "position": [
-            340,
-            543,
-            0
+            280,
+            550
         ],
         "withPlayer": true,
-        "Player": "78883930303030109",
-        "withTeam": "78883930303030002",
-        "direction": "south",
+        "Player": "78883930303030209",
+        "withTeam": "78883930303030003",
+        "direction": "north",
         "ballOverIterations": []
     },
     "half": 1,

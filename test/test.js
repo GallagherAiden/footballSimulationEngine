@@ -4,7 +4,7 @@ const testC = require('./closestPlayerChecks')
 const testD = require('./keepInBoundaries')
 const testE = require('./miscPositionChecks')
 const testF = require('./setPositionTests')
-const testG = require('./relativePositions')
+const testG = require('./intentPOSitions')
 const testH = require('./setTopFreekicksTests')
 const testI = require('./setBottomFreekicksTests')
 

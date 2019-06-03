@@ -4,7 +4,7 @@
         "rating": 88,
         "players": [
             {
-                "name": "Jed Johnson",
+                "name": "Bob Johnson",
                 "position": "GK",
                 "rating": "75",
                 "skill": {
@@ -17,17 +17,17 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     1050
                 ],
-                "fitness": 81.13,
+                "fitness": 91.015,
                 "injured": false,
                 "originPOS": [
                     340,
                     1050
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
                     1050
                 ],
@@ -41,7 +41,7 @@
                 "playerID": "78883930303030100"
             },
             {
-                "name": "Luke Johnson",
+                "name": "Bobbie Johnson",
                 "position": "LB",
                 "rating": "90",
                 "skill": {
@@ -54,19 +54,19 @@
                     "penalty_taking": "20",
                     "jumping": "235"
                 },
-                "startPOS": [
-                    99,
-                    970
+                "currentPOS": [
+                    82,
+                    510
                 ],
-                "fitness": 83.035,
+                "fitness": 92.085,
                 "injured": false,
                 "originPOS": [
                     80,
                     970
                 ],
-                "relativePOS": [
-                    99,
-                    483
+                "intentPOS": [
+                    81,
+                    510
                 ],
                 "action": "none",
                 "offside": false,
@@ -78,7 +78,7 @@
                 "playerID": "78883930303030101"
             },
             {
-                "name": "Rob Johnson",
+                "name": "Bobby Johnson",
                 "position": "CB",
                 "rating": "84",
                 "skill": {
@@ -91,17 +91,17 @@
                     "penalty_taking": "20",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     231,
-                    970
+                    969
                 ],
-                "fitness": 82.78,
+                "fitness": 92.15,
                 "injured": false,
                 "originPOS": [
                     230,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     970
                 ],
@@ -115,7 +115,7 @@
                 "playerID": "78883930303030102"
             },
             {
-                "name": "Foe Johnson",
+                "name": "Binder Johnson",
                 "position": "CB",
                 "rating": "75",
                 "skill": {
@@ -128,17 +128,17 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
                     970
                 ],
-                "fitness": 83.46,
+                "fitness": 91.975,
                 "injured": false,
                 "originPOS": [
                     420,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     970
                 ],
@@ -152,7 +152,7 @@
                 "playerID": "78883930303030103"
             },
             {
-                "name": "Red Johnson",
+                "name": "Raphael Johnson",
                 "position": "RB",
                 "rating": "82",
                 "skill": {
@@ -165,19 +165,19 @@
                     "penalty_taking": "20",
                     "jumping": "299"
                 },
-                "startPOS": [
-                    447,
-                    970
+                "currentPOS": [
+                    600,
+                    511
                 ],
-                "fitness": 82.83,
+                "fitness": 92.31,
                 "injured": false,
                 "originPOS": [
                     600,
                     970
                 ],
-                "relativePOS": [
-                    447,
-                    483
+                "intentPOS": [
+                    600,
+                    510
                 ],
                 "action": "none",
                 "offside": false,
@@ -189,7 +189,7 @@
                 "playerID": "78883930303030104"
             },
             {
-                "name": "Paul Johnson",
+                "name": "Ellie Johnson",
                 "position": "LM",
                 "rating": "87",
                 "skill": {
@@ -202,19 +202,19 @@
                     "penalty_taking": "20",
                     "jumping": "250"
                 },
-                "startPOS": [
-                    273,
-                    300
+                "currentPOS": [
+                    256,
+                    267
                 ],
-                "fitness": 81.77,
+                "fitness": 91.535,
                 "injured": false,
                 "originPOS": [
                     80,
                     780
                 ],
-                "relativePOS": [
-                    273,
-                    293
+                "intentPOS": [
+                    255,
+                    320
                 ],
                 "action": "none",
                 "offside": false,
@@ -226,7 +226,7 @@
                 "playerID": "78883930303030105"
             },
             {
-                "name": "Artur Johnson",
+                "name": "Dean Johnson",
                 "position": "CM",
                 "rating": "41",
                 "skill": {
@@ -239,19 +239,19 @@
                     "penalty_taking": "1",
                     "jumping": "120"
                 },
-                "startPOS": [
+                "currentPOS": [
                     236,
-                    323
+                    331
                 ],
-                "fitness": 82.725,
+                "fitness": 92.07,
                 "injured": false,
                 "originPOS": [
                     230,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     236,
-                    293
+                    320
                 ],
                 "action": "none",
                 "offside": false,
@@ -263,7 +263,7 @@
                 "playerID": "78883930303030106"
             },
             {
-                "name": "Corey Johnson",
+                "name": "Mike Johnson",
                 "position": "CM",
                 "rating": "99",
                 "skill": {
@@ -276,19 +276,19 @@
                     "penalty_taking": "20",
                     "jumping": "175"
                 },
-                "startPOS": [
-                    439,
-                    308
+                "currentPOS": [
+                    420,
+                    329
                 ],
-                "fitness": 83.185,
+                "fitness": 92.21,
                 "injured": false,
                 "originPOS": [
                     420,
                     780
                 ],
-                "relativePOS": [
-                    439,
-                    293
+                "intentPOS": [
+                    420,
+                    320
                 ],
                 "action": "none",
                 "offside": false,
@@ -300,7 +300,7 @@
                 "playerID": "78883930303030107"
             },
             {
-                "name": "Shan Johnson",
+                "name": "Michael Johnson",
                 "position": "RM",
                 "rating": "79",
                 "skill": {
@@ -313,19 +313,19 @@
                     "penalty_taking": "20",
                     "jumping": "288"
                 },
-                "startPOS": [
-                    543,
-                    313
+                "currentPOS": [
+                    599,
+                    332
                 ],
-                "fitness": 82.14,
+                "fitness": 92.335,
                 "injured": false,
                 "originPOS": [
                     600,
                     780
                 ],
-                "relativePOS": [
-                    543,
-                    293
+                "intentPOS": [
+                    600,
+                    320
                 ],
                 "action": "none",
                 "offside": false,
@@ -337,7 +337,7 @@
                 "playerID": "78883930303030108"
             },
             {
-                "name": "Robert Johnson",
+                "name": "Mitch Johnson",
                 "position": "ST",
                 "rating": "75",
                 "skill": {
@@ -350,19 +350,19 @@
                     "penalty_taking": "20",
                     "jumping": "291"
                 },
-                "startPOS": [
-                    307,
-                    63
+                "currentPOS": [
+                    600,
+                    219
                 ],
-                "fitness": 82.795,
+                "fitness": 89.73,
                 "injured": false,
                 "originPOS": [
                     280,
                     550
                 ],
-                "relativePOS": [
-                    306,
-                    63
+                "intentPOS": [
+                    280,
+                    90
                 ],
                 "action": "none",
                 "offside": false,
@@ -374,7 +374,7 @@
                 "playerID": "78883930303030109"
             },
             {
-                "name": "Chris Johnson",
+                "name": "Mitchell Johnson",
                 "position": "ST",
                 "rating": "88",
                 "skill": {
@@ -387,19 +387,19 @@
                     "penalty_taking": "20",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    328,
-                    83
+                "currentPOS": [
+                    450,
+                    133
                 ],
-                "fitness": 82.77,
+                "fitness": 91.985,
                 "injured": false,
                 "originPOS": [
                     440,
                     550
                 ],
-                "relativePOS": [
-                    333,
-                    63
+                "intentPOS": [
+                    446,
+                    90
                 ],
                 "action": "none",
                 "offside": false,
@@ -432,19 +432,19 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
-                    308,
-                    65
+                "currentPOS": [
+                    340,
+                    0
                 ],
-                "fitness": 80.72,
+                "fitness": 90.745,
                 "injured": false,
                 "originPOS": [
                     340,
                     0
                 ],
-                "relativePOS": [
-                    306,
-                    63
+                "intentPOS": [
+                    340,
+                    0
                 ],
                 "action": "none",
                 "offside": false,
@@ -469,19 +469,19 @@
                     "penalty_taking": "100",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
-                    121
+                    31
                 ],
-                "fitness": 83.21,
+                "fitness": 92.26,
                 "injured": false,
                 "originPOS": [
                     80,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
-                    143
+                    105
                 ],
                 "action": "none",
                 "offside": false,
@@ -506,17 +506,17 @@
                     "penalty_taking": "100",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     80
                 ],
-                "fitness": 83.175,
+                "fitness": 91.77,
                 "injured": false,
                 "originPOS": [
                     230,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     80
                 ],
@@ -543,19 +543,19 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    475,
-                    80
+                "currentPOS": [
+                    468,
+                    107
                 ],
-                "fitness": 82.76,
+                "fitness": 91.235,
                 "injured": false,
                 "originPOS": [
                     475,
                     80
                 ],
-                "relativePOS": [
-                    475,
-                    80
+                "intentPOS": [
+                    467,
+                    105
                 ],
                 "action": "none",
                 "offside": false,
@@ -580,19 +580,19 @@
                     "penalty_taking": "100",
                     "jumping": "299"
                 },
-                "startPOS": [
+                "currentPOS": [
                     599,
-                    100
+                    97
                 ],
-                "fitness": 82.81,
+                "fitness": 91.815,
                 "injured": false,
                 "originPOS": [
                     600,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
-                    143
+                    105
                 ],
                 "action": "none",
                 "offside": false,
@@ -617,19 +617,19 @@
                     "penalty_taking": "100",
                     "jumping": "250"
                 },
-                "startPOS": [
-                    308,
-                    263
+                "currentPOS": [
+                    181,
+                    206
                 ],
-                "fitness": 81.975,
+                "fitness": 91.86,
                 "injured": false,
                 "originPOS": [
                     80,
                     270
                 ],
-                "relativePOS": [
-                    80,
-                    333
+                "intentPOS": [
+                    181,
+                    295
                 ],
                 "action": "none",
                 "offside": false,
@@ -654,19 +654,19 @@
                     "penalty_taking": "1",
                     "jumping": "1100"
                 },
-                "startPOS": [
-                    290,
-                    252
+                "currentPOS": [
+                    345,
+                    162
                 ],
-                "fitness": 81.735,
+                "fitness": 90.805,
                 "injured": false,
                 "originPOS": [
                     230,
                     270
                 ],
-                "relativePOS": [
-                    230,
-                    333
+                "intentPOS": [
+                    345,
+                    295
                 ],
                 "action": "none",
                 "offside": false,
@@ -691,19 +691,19 @@
                     "penalty_taking": "100",
                     "jumping": "175"
                 },
-                "startPOS": [
-                    474,
-                    266
+                "currentPOS": [
+                    473,
+                    202
                 ],
-                "fitness": 82.97,
+                "fitness": 91.985,
                 "injured": false,
                 "originPOS": [
                     475,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     475,
-                    333
+                    295
                 ],
                 "action": "none",
                 "offside": false,
@@ -728,23 +728,23 @@
                     "penalty_taking": "100",
                     "jumping": "288"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
-                    263
+                    221
                 ],
-                "fitness": 82.64,
+                "fitness": 91.98,
                 "injured": false,
                 "originPOS": [
                     600,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
-                    333
+                    295
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -765,19 +765,19 @@
                     "penalty_taking": "100",
                     "jumping": "291"
                 },
-                "startPOS": [
+                "currentPOS": [
                     281,
-                    496
+                    400
                 ],
-                "fitness": 82.735,
+                "fitness": 92.09,
                 "injured": false,
                 "originPOS": [
                     280,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
-                    563
+                    525
                 ],
                 "action": "none",
                 "offside": false,
@@ -802,23 +802,23 @@
                     "penalty_taking": "100",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    308,
-                    800
+                "currentPOS": [
+                    441,
+                    409
                 ],
-                "fitness": 81.61,
+                "fitness": 92.05,
                 "injured": false,
                 "originPOS": [
                     440,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     440,
-                    563
+                    525
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "cards": {
                     "yellow": 0,
                     "red": 0
@@ -835,20 +835,315 @@
     ],
     "ball": {
         "position": [
-            308,
-            800,
-            0
+            600,
+            221
         ],
         "withPlayer": true,
-        "Player": "78883930303030210",
+        "Player": "78883930303030208",
         "withTeam": "78883930303030003",
         "direction": "wait",
-        "ballOverIterations": []
+        "ballOverIterations": [
+            [
+                481,
+                114,
+                8
+            ],
+            [
+                485,
+                113,
+                8
+            ],
+            [
+                489,
+                112,
+                8
+            ],
+            [
+                493,
+                111,
+                7
+            ],
+            [
+                497,
+                110,
+                7
+            ],
+            [
+                501,
+                109,
+                7
+            ],
+            [
+                505,
+                108,
+                7
+            ],
+            [
+                509,
+                107,
+                7
+            ],
+            [
+                513,
+                106,
+                7
+            ],
+            [
+                516,
+                105,
+                7
+            ],
+            [
+                519,
+                104,
+                7
+            ],
+            [
+                522,
+                103,
+                6
+            ],
+            [
+                525,
+                102,
+                6
+            ],
+            [
+                528,
+                101,
+                6
+            ],
+            [
+                531,
+                100,
+                6
+            ],
+            [
+                534,
+                99,
+                6
+            ],
+            [
+                537,
+                98,
+                6
+            ],
+            [
+                540,
+                97,
+                6
+            ],
+            [
+                543,
+                96,
+                5
+            ],
+            [
+                546,
+                95,
+                5
+            ],
+            [
+                549,
+                94,
+                5
+            ],
+            [
+                552,
+                93,
+                5
+            ],
+            [
+                555,
+                92,
+                5
+            ],
+            [
+                557,
+                91,
+                5
+            ],
+            [
+                559,
+                90,
+                5
+            ],
+            [
+                561,
+                89,
+                5
+            ],
+            [
+                563,
+                88,
+                4
+            ],
+            [
+                565,
+                87,
+                4
+            ],
+            [
+                567,
+                86,
+                4
+            ],
+            [
+                569,
+                85,
+                4
+            ],
+            [
+                571,
+                84,
+                4
+            ],
+            [
+                573,
+                83,
+                4
+            ],
+            [
+                575,
+                82,
+                4
+            ],
+            [
+                577,
+                81,
+                3
+            ],
+            [
+                579,
+                80,
+                3
+            ],
+            [
+                581,
+                80,
+                3
+            ],
+            [
+                583,
+                80,
+                3
+            ],
+            [
+                585,
+                80,
+                3
+            ],
+            [
+                586,
+                80,
+                3
+            ],
+            [
+                587,
+                80,
+                3
+            ],
+            [
+                588,
+                80,
+                3
+            ],
+            [
+                589,
+                80,
+                2
+            ],
+            [
+                590,
+                80,
+                2
+            ],
+            [
+                591,
+                80,
+                2
+            ],
+            [
+                592,
+                80,
+                2
+            ],
+            [
+                593,
+                80,
+                2
+            ],
+            [
+                594,
+                80,
+                2
+            ],
+            [
+                595,
+                80,
+                2
+            ],
+            [
+                596,
+                80,
+                1
+            ],
+            [
+                597,
+                80,
+                1
+            ],
+            [
+                598,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                1
+            ],
+            [
+                599,
+                80,
+                0
+            ],
+            [
+                599,
+                80,
+                0
+            ],
+            [
+                599,
+                79,
+                0
+            ]
+        ]
     },
     "half": 2,
     "kickOffTeamStatistics": {
         "goals": 0,
-        "shots": 8,
+        "shots": 3,
         "corners": 0,
         "freekicks": 0,
         "penalties": 0,
@@ -863,8 +1158,9 @@
         "fouls": 0
     },
     "iterationLog": [
-        "Closest Player to ball: Peter Johnson",
-        "Closest Player to ball: Louise Johnson"
+        "ball still moving from previous kick: 477,115",
+        "Closest Player to ball: Fred Johnson",
+        "Closest Player to ball: Jim Johnson"
     ],
     "matchID": "78883930303030001"
 }

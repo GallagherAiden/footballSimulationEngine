@@ -12,13 +12,13 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([340, 1])
-      expect(kickOffTeam.players[0].startPOS).to.eql([340, 1])
+      expect(kickOffTeam.players[0].currentPOS).to.eql([340, 1])
       for (let player of kickOffTeam.players) {
-        if (player.position != 'GK') expect(player.startPOS).to.eql(player.originPOS)
+        if (player.position != 'GK') expect(player.currentPOS).to.eql(player.originPOS)
       }
       for (let player of secondTeam.players) {
-        if (player.position == 'GK') expect(player.startPOS).to.eql(player.originPOS)
-        if (player.position != 'GK') expect(player.startPOS).to.eql([player.originPOS[0], player.originPOS[1] - 100])
+        if (player.position == 'GK') expect(player.currentPOS).to.eql(player.originPOS)
+        if (player.position != 'GK') expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] - 100])
       }
     })
     mocha.it('freekick in own half - top origin positions', async() => {
@@ -28,17 +28,17 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([340, 101])
-      expect(kickOffTeam.players[0].startPOS).to.eql([340, 101])
+      expect(kickOffTeam.players[0].currentPOS).to.eql([340, 101])
       for (let player of kickOffTeam.players) {
         if (player.position != 'GK') {
-          expect(player.startPOS).to.eql([player.originPOS[0], player.originPOS[1] + 300])
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] + 300])
         }
       }
       for (let player of secondTeam.players) {
         if (player.position == 'GK') {
-          expect(player.startPOS).to.eql(player.originPOS)
+          expect(player.currentPOS).to.eql(player.originPOS)
         } else {
-          expect(player.startPOS).to.eql([player.originPOS[0], player.originPOS[1] - 100])
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] - 100])
         }
       }
     })
@@ -52,26 +52,26 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([340, 524])
-      expect(kickOffTeam.players[3].startPOS).to.eql([340, 524])
-      expect(secondTeam.players[3].startPOS).to.eql(secondTeam.players[3].originPOS)
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(kickOffTeam.players[3].currentPOS).to.eql([340, 524])
+      expect(secondTeam.players[3].currentPOS).to.eql(secondTeam.players[3].originPOS)
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
       for (let num of [1, 2, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
-        expect(thatPlayer.startPOS).to.eql(thatPlayer.originPOS)
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+        expect(thatPlayer.currentPOS).to.eql(thatPlayer.originPOS)
       }
       for (let num of [5, 6, 7, 8]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10) + 5])
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10) + 5])
       }
       for (let num of [9, 10]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], 824])
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], 824])
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
       }
     })
   })
@@ -87,30 +87,30 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([400, 550])
-      expect(kickOffTeam.players[5].startPOS).to.eql([400, 550])
-      expect(secondTeam.players[5].startPOS).to.eql([80, parseInt(pitchHeight * 0.75, 10)])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([400, 550])
+      expect(secondTeam.players[5].currentPOS).to.eql([80, parseInt(pitchHeight * 0.75, 10)])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], 450])
-        expect(thatPlayer.startPOS).to.eql(thatPlayer.originPOS)
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], 450])
+        expect(thatPlayer.currentPOS).to.eql(thatPlayer.originPOS)
       }
       for (let num of [6, 7, 8]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(699)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(699)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
       }
       for (let num of [9, 10]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(849)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(849)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
       }
     })
     mocha.it('freekick between halfway and last quarter - top left', async() => {
@@ -124,30 +124,30 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('southeast')
       expect(nextJSON.ball.position).to.eql([29, 550])
-      expect(kickOffTeam.players[5].startPOS).to.eql([29, 550])
-      expect(secondTeam.players[5].startPOS).to.eql([80, parseInt((pitchHeight * 0.75), 10)])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([29, 550])
+      expect(secondTeam.players[5].currentPOS).to.eql([80, parseInt((pitchHeight * 0.75), 10)])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], 450])
-        expect(thatPlayer.startPOS).to.eql(thatPlayer.originPOS)
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], 450])
+        expect(thatPlayer.currentPOS).to.eql(thatPlayer.originPOS)
       }
       for (let num of [6, 7, 8]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(699)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(699)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
       }
       for (let num of [9, 10]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(849)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(849)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
       }
     })
     mocha.it('freekick between halfway and last quarter - top right', async() => {
@@ -161,30 +161,30 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('southwest')
       expect(nextJSON.ball.position).to.eql([655, 550])
-      expect(kickOffTeam.players[5].startPOS).to.eql([655, 550])
-      expect(secondTeam.players[5].startPOS).to.eql([80, parseInt((pitchHeight * 0.75), 10)])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([655, 550])
+      expect(secondTeam.players[5].currentPOS).to.eql([80, parseInt((pitchHeight * 0.75), 10)])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], 450])
-        expect(thatPlayer.startPOS).to.eql(thatPlayer.originPOS)
+        expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], 450])
+        expect(thatPlayer.currentPOS).to.eql(thatPlayer.originPOS)
       }
       for (let num of [6, 7, 8]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(699)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(699)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.75, 10)])
       }
       for (let num of [9, 10]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
 
-        expect(thisPlayer.startPOS[1]).to.gt(849)
-        expect(thatPlayer.startPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+        expect(thisPlayer.currentPOS[1]).to.gt(849)
+        expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
       }
     })
   })
@@ -201,9 +201,9 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([340, parseInt(pitchHeight - (pitchHeight / 6) - 35, 10)])
-      expect(kickOffTeam.players[5].startPOS).to.eql([340, parseInt(pitchHeight - (pitchHeight / 6) - 35, 10)])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([340, parseInt(pitchHeight - (pitchHeight / 6) - 35, 10)])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
@@ -212,20 +212,20 @@ function runTest() {
         let ballDistanceFromGoalY = (pitchHeight - nextJSON.ball.position[1])
         let midWayFromBalltoGoalY = parseInt((nextJSON.ball.position[1] - ballDistanceFromGoalY) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
       let boundaryY = [pitchHeight - (pitchHeight / 6) - 5, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
@@ -248,9 +248,9 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.ball.position).to.eql([340, 869])
-      expect(kickOffTeam.players[5].startPOS).to.eql([340, 869])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([340, 869])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
@@ -259,20 +259,20 @@ function runTest() {
         let ballDistanceFromGoalY = (pitchHeight - nextJSON.ball.position[1])
         let midWayFromBalltoGoalY = parseInt((nextJSON.ball.position[1] - ballDistanceFromGoalY) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
       let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
@@ -295,9 +295,9 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('southeast')
       expect(nextJSON.ball.position).to.eql([10, 850])
-      expect(kickOffTeam.players[5].startPOS).to.eql([10, 850])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([10, 850])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
@@ -306,20 +306,20 @@ function runTest() {
         let ballDistanceFromGoalY = (pitchHeight - nextJSON.ball.position[1])
         let midWayFromBalltoGoalY = parseInt((nextJSON.ball.position[1] - ballDistanceFromGoalY) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
       let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
@@ -342,9 +342,9 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('southwest')
       expect(nextJSON.ball.position).to.eql([600, 826])
-      expect(kickOffTeam.players[5].startPOS).to.eql([600, 826])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([600, 826])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
@@ -353,20 +353,20 @@ function runTest() {
         let ballDistanceFromGoalY = (pitchHeight - nextJSON.ball.position[1])
         let midWayFromBalltoGoalY = parseInt((nextJSON.ball.position[1] - ballDistanceFromGoalY) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX + playerSpace, midWayFromBalltoGoalY])
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
       let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
@@ -389,29 +389,29 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('east')
       expect(nextJSON.ball.position).to.eql([10, pitchHeight - 1])
-      expect(kickOffTeam.players[5].startPOS).to.eql([10, pitchHeight - 1])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([10, pitchHeight - 1])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
         let ballDistanceFromGoalX = nextJSON.ball.position[0] - (pitchWidth / 2)
         let midWayFromBalltoGoalX = parseInt((nextJSON.ball.position[0] - ballDistanceFromGoalX) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX, firstWallPosition])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX, firstWallPosition])
         firstWallPosition -= 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
       let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
@@ -434,27 +434,27 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ball.direction).to.eql('west')
       expect(nextJSON.ball.position).to.eql([600, 1049])
-      expect(kickOffTeam.players[5].startPOS).to.eql([600, 1049])
-      expect(KOTgoalie.startPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
-      expect(STgoalie.startPOS).to.eql(STgoalie.originPOS)
+      expect(kickOffTeam.players[5].currentPOS).to.eql([600, 1049])
+      expect(KOTgoalie.currentPOS).to.eql([KOTgoalie.originPOS[0], parseInt(pitchHeight * 0.25, 10)])
+      expect(STgoalie.currentPOS).to.eql(STgoalie.originPOS)
       for (let num of [1, 2, 3, 4]) {
         let thisPlayer = kickOffTeam.players[num]
         let thatPlayer = secondTeam.players[num]
         let ballDistanceFromGoalX = nextJSON.ball.position[0] - (pitchWidth / 2)
         let midWayFromBalltoGoalX = parseInt((nextJSON.ball.position[0] - ballDistanceFromGoalX) / 2, 10)
         if (thisPlayer.position == 'CB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
         } else if (thisPlayer.position == 'LB' || thisPlayer.position == 'RB') {
-          expect(thisPlayer.startPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
+          expect(thisPlayer.currentPOS).to.eql([thisPlayer.originPOS[0], parseInt(pitchHeight * 0.66, 10)])
         }
-        expect(thatPlayer.startPOS).to.eql([midWayFromBalltoGoalX, firstWallPosition])
+        expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX, firstWallPosition])
         firstWallPosition -= 2
       }
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].startPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].startPOS[1]
-        let thisXPOSST = secondTeam.players[num].startPOS[0]
-        let thisYPOSST = secondTeam.players[num].startPOS[1]
+        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
+        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
+        let thisXPOSST = secondTeam.players[num].currentPOS[0]
+        let thisYPOSST = secondTeam.players[num].currentPOS[1]
         let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
         let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
 

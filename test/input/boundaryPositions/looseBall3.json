@@ -17,7 +17,7 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     0
                 ],
@@ -27,7 +27,7 @@
                     340,
                     0
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
                     0
                 ],
@@ -54,7 +54,7 @@
                     "penalty_taking": "20",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     122,
                     274
                 ],
@@ -64,7 +64,7 @@
                     80,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     122,
                     286
                 ],
@@ -91,7 +91,7 @@
                     "penalty_taking": "20",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     80
                 ],
@@ -101,7 +101,7 @@
                     230,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     80
                 ],
@@ -128,7 +128,7 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     421,
                     80
                 ],
@@ -138,7 +138,7 @@
                     420,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
                     80
                 ],
@@ -165,7 +165,7 @@
                     "penalty_taking": "20",
                     "jumping": "299"
                 },
-                "startPOS": [
+                "currentPOS": [
                     465,
                     247
                 ],
@@ -175,7 +175,7 @@
                     600,
                     80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     464,
                     286
                 ],
@@ -202,7 +202,7 @@
                     "penalty_taking": "20",
                     "jumping": "250"
                 },
-                "startPOS": [
+                "currentPOS": [
                     410,
                     447
                 ],
@@ -212,7 +212,7 @@
                     80,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     409,
                     476
                 ],
@@ -239,7 +239,7 @@
                     "penalty_taking": "1",
                     "jumping": "120"
                 },
-                "startPOS": [
+                "currentPOS": [
                     589,
                     477
                 ],
@@ -249,7 +249,7 @@
                     230,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     590,
                     476
                 ],
@@ -276,7 +276,7 @@
                     "penalty_taking": "20",
                     "jumping": "175"
                 },
-                "startPOS": [
+                "currentPOS": [
                     595,
                     461
                 ],
@@ -286,7 +286,7 @@
                     420,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     595,
                     476
                 ],
@@ -313,7 +313,7 @@
                     "penalty_taking": "20",
                     "jumping": "288"
                 },
-                "startPOS": [
+                "currentPOS": [
                     575,
                     456
                 ],
@@ -323,7 +323,7 @@
                     600,
                     270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     575,
                     476
                 ],
@@ -350,7 +350,7 @@
                     "penalty_taking": "20",
                     "jumping": "291"
                 },
-                "startPOS": [
+                "currentPOS": [
                     301,
                     638
                 ],
@@ -360,7 +360,7 @@
                     280,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     301,
                     706
                 ],
@@ -387,7 +387,7 @@
                     "penalty_taking": "20",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     328,
                     693
                 ],
@@ -397,7 +397,7 @@
                     440,
                     500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     328,
                     706
                 ],
@@ -432,7 +432,7 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     1050
                 ],
@@ -442,7 +442,7 @@
                     340,
                     1050
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
                     1050
                 ],
@@ -469,7 +469,7 @@
                     "penalty_taking": "100",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     254,
                     505
                 ],
@@ -479,7 +479,7 @@
                     80,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     558
                 ],
@@ -506,7 +506,7 @@
                     "penalty_taking": "100",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     970
                 ],
@@ -516,7 +516,7 @@
                     230,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     970
                 ],
@@ -543,7 +543,7 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     475,
                     970
                 ],
@@ -553,7 +553,7 @@
                     475,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     475,
                     970
                 ],
@@ -580,7 +580,7 @@
                     "penalty_taking": "100",
                     "jumping": "299"
                 },
-                "startPOS": [
+                "currentPOS": [
                     498,
                     557
                 ],
@@ -590,7 +590,7 @@
                     600,
                     970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     497,
                     558
                 ],
@@ -617,7 +617,7 @@
                     "penalty_taking": "100",
                     "jumping": "250"
                 },
-                "startPOS": [
+                "currentPOS": [
                     254,
                     435
                 ],
@@ -627,7 +627,7 @@
                     80,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
                     368
                 ],
@@ -654,7 +654,7 @@
                     "penalty_taking": "1",
                     "jumping": "1100"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
                     434
                 ],
@@ -664,7 +664,7 @@
                     230,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
                     368
                 ],
@@ -691,7 +691,7 @@
                     "penalty_taking": "100",
                     "jumping": "175"
                 },
-                "startPOS": [
+                "currentPOS": [
                     475,
                     432
                 ],
@@ -701,7 +701,7 @@
                     475,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     475,
                     368
                 ],
@@ -728,7 +728,7 @@
                     "penalty_taking": "100",
                     "jumping": "288"
                 },
-                "startPOS": [
+                "currentPOS": [
                     554,
                     475
                 ],
@@ -738,7 +738,7 @@
                     600,
                     780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     554,
                     368
                 ],
@@ -765,7 +765,7 @@
                     "penalty_taking": "100",
                     "jumping": "291"
                 },
-                "startPOS": [
+                "currentPOS": [
                     280,
                     225
                 ],
@@ -775,7 +775,7 @@
                     280,
                     550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
                     138
                 ],
@@ -802,7 +802,7 @@
                     "penalty_taking": "100",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
                     8
                 ],
@@ -812,7 +812,7 @@
                     440,
                     550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     440,
                     138
                 ],

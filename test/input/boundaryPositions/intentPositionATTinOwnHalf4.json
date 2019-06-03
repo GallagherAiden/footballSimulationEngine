@@ -4,7 +4,7 @@
         "rating": 88,
         "players": [
             {
-                "name": "Bob Johnson",
+                "name": "Ben Johnson",
                 "position": "GK",
                 "rating": "75",
                 "skill": {
@@ -17,19 +17,19 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
-                    1050
+                    0
                 ],
-                "fitness": 91.015,
+                "fitness": 80.89,
                 "injured": false,
                 "originPOS": [
                     340,
-                    1050
+                    0
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
-                    1050
+                    0
                 ],
                 "action": "none",
                 "offside": false,
@@ -37,11 +37,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030100"
+                }
             },
             {
-                "name": "Bobbie Johnson",
+                "name": "Bed Johnson",
                 "position": "LB",
                 "rating": "90",
                 "skill": {
@@ -54,19 +53,19 @@
                     "penalty_taking": "20",
                     "jumping": "235"
                 },
-                "startPOS": [
-                    82,
-                    510
+                "currentPOS": [
+                    93,
+                    95
                 ],
-                "fitness": 92.085,
+                "fitness": 83.305,
                 "injured": false,
                 "originPOS": [
                     80,
-                    970
+                    80
                 ],
-                "relativePOS": [
-                    81,
-                    510
+                "intentPOS": [
+                    93,
+                    93
                 ],
                 "action": "none",
                 "offside": false,
@@ -74,11 +73,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030101"
+                }
             },
             {
-                "name": "Bobby Johnson",
+                "name": "Borge Johnson",
                 "position": "CB",
                 "rating": "84",
                 "skill": {
@@ -91,19 +89,19 @@
                     "penalty_taking": "20",
                     "jumping": "212"
                 },
-                "startPOS": [
-                    231,
-                    969
+                "currentPOS": [
+                    230,
+                    80
                 ],
-                "fitness": 92.15,
+                "fitness": 83.125,
                 "injured": false,
                 "originPOS": [
                     230,
-                    970
+                    80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
-                    970
+                    80
                 ],
                 "action": "none",
                 "offside": false,
@@ -111,11 +109,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030102"
+                }
             },
             {
-                "name": "Binder Johnson",
+                "name": "Reek Johnson",
                 "position": "CB",
                 "rating": "75",
                 "skill": {
@@ -128,19 +125,19 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
-                    970
+                    80
                 ],
-                "fitness": 91.975,
+                "fitness": 82.845,
                 "injured": false,
                 "originPOS": [
                     420,
-                    970
+                    80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
-                    970
+                    80
                 ],
                 "action": "none",
                 "offside": false,
@@ -148,11 +145,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030103"
+                }
             },
             {
-                "name": "Raphael Johnson",
+                "name": "Hodor Johnson",
                 "position": "RB",
                 "rating": "82",
                 "skill": {
@@ -165,19 +161,19 @@
                     "penalty_taking": "20",
                     "jumping": "299"
                 },
-                "startPOS": [
-                    600,
-                    511
+                "currentPOS": [
+                    502,
+                    93
                 ],
-                "fitness": 92.31,
+                "fitness": 83.29,
                 "injured": false,
                 "originPOS": [
                     600,
-                    970
+                    80
                 ],
-                "relativePOS": [
-                    600,
-                    510
+                "intentPOS": [
+                    503,
+                    93
                 ],
                 "action": "none",
                 "offside": false,
@@ -185,11 +181,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030104"
+                }
             },
             {
-                "name": "Ellie Johnson",
+                "name": "Ham Johnson",
                 "position": "LM",
                 "rating": "87",
                 "skill": {
@@ -202,31 +197,30 @@
                     "penalty_taking": "20",
                     "jumping": "250"
                 },
-                "startPOS": [
-                    256,
-                    267
+                "currentPOS": [
+                    155,
+                    415
                 ],
-                "fitness": 91.535,
+                "fitness": 83.055,
                 "injured": false,
                 "originPOS": [
                     80,
-                    780
+                    270
                 ],
-                "relativePOS": [
-                    255,
-                    320
+                "intentPOS": [
+                    202,
+                    283
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030105"
+                }
             },
             {
-                "name": "Dean Johnson",
+                "name": "Meena Johnson",
                 "position": "CM",
                 "rating": "41",
                 "skill": {
@@ -239,19 +233,19 @@
                     "penalty_taking": "1",
                     "jumping": "120"
                 },
-                "startPOS": [
-                    236,
-                    331
+                "currentPOS": [
+                    230,
+                    407
                 ],
-                "fitness": 92.07,
+                "fitness": 83.33,
                 "injured": false,
                 "originPOS": [
                     230,
-                    780
+                    270
                 ],
-                "relativePOS": [
-                    236,
-                    320
+                "intentPOS": [
+                    329,
+                    283
                 ],
                 "action": "none",
                 "offside": false,
@@ -259,11 +253,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030106"
+                }
             },
             {
-                "name": "Mike Johnson",
+                "name": "Amelia Johnson",
                 "position": "CM",
                 "rating": "99",
                 "skill": {
@@ -276,19 +269,19 @@
                     "penalty_taking": "20",
                     "jumping": "175"
                 },
-                "startPOS": [
-                    420,
-                    329
+                "currentPOS": [
+                    429,
+                    402
                 ],
-                "fitness": 92.21,
+                "fitness": 83.24,
                 "injured": false,
                 "originPOS": [
                     420,
-                    780
+                    270
                 ],
-                "relativePOS": [
-                    420,
-                    320
+                "intentPOS": [
+                    392,
+                    283
                 ],
                 "action": "none",
                 "offside": false,
@@ -296,11 +289,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030107"
+                }
             },
             {
-                "name": "Michael Johnson",
+                "name": "Feemer Johnson",
                 "position": "RM",
                 "rating": "79",
                 "skill": {
@@ -313,19 +305,19 @@
                     "penalty_taking": "20",
                     "jumping": "288"
                 },
-                "startPOS": [
-                    599,
-                    332
+                "currentPOS": [
+                    483,
+                    445
                 ],
-                "fitness": 92.335,
+                "fitness": 82.86,
                 "injured": false,
                 "originPOS": [
                     600,
-                    780
+                    270
                 ],
-                "relativePOS": [
-                    600,
-                    320
+                "intentPOS": [
+                    552,
+                    283
                 ],
                 "action": "none",
                 "offside": false,
@@ -333,11 +325,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030108"
+                }
             },
             {
-                "name": "Mitch Johnson",
+                "name": "Frederico Johnson",
                 "position": "ST",
                 "rating": "75",
                 "skill": {
@@ -350,31 +341,30 @@
                     "penalty_taking": "20",
                     "jumping": "291"
                 },
-                "startPOS": [
-                    600,
-                    219
+                "currentPOS": [
+                    232,
+                    174
                 ],
-                "fitness": 89.73,
+                "fitness": 80.88,
                 "injured": false,
                 "originPOS": [
                     280,
-                    550
+                    500
                 ],
-                "relativePOS": [
-                    280,
-                    90
+                "intentPOS": [
+                    425,
+                    513
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "cards": {
-                    "yellow": 0,
+                    "yellow": 1,
                     "red": 0
-                },
-                "playerID": "78883930303030109"
+                }
             },
             {
-                "name": "Mitchell Johnson",
+                "name": "Juan Johnson",
                 "position": "ST",
                 "rating": "88",
                 "skill": {
@@ -387,19 +377,19 @@
                     "penalty_taking": "20",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    450,
-                    133
+                "currentPOS": [
+                    440,
+                    179
                 ],
-                "fitness": 91.985,
+                "fitness": 83.13,
                 "injured": false,
                 "originPOS": [
                     440,
-                    550
+                    500
                 ],
-                "relativePOS": [
-                    446,
-                    90
+                "intentPOS": [
+                    440,
+                    513
                 ],
                 "action": "none",
                 "offside": false,
@@ -407,12 +397,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030110"
+                }
             }
         ],
-        "intent": "attack",
-        "teamID": "78883930303030002"
+        "intent": "attack"
     },
     "secondTeam": {
         "name": "Dragons",
@@ -432,19 +420,19 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
-                    0
+                    1050
                 ],
-                "fitness": 90.745,
+                "fitness": 82.505,
                 "injured": false,
                 "originPOS": [
                     340,
-                    0
+                    1050
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
-                    0
+                    1050
                 ],
                 "action": "none",
                 "offside": false,
@@ -452,8 +440,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030200"
+                }
             },
             {
                 "name": "Fred Johnson",
@@ -469,19 +456,19 @@
                     "penalty_taking": "100",
                     "jumping": "235"
                 },
-                "startPOS": [
-                    80,
-                    31
+                "currentPOS": [
+                    92,
+                    577
                 ],
-                "fitness": 92.26,
+                "fitness": 82.795,
                 "injured": false,
                 "originPOS": [
                     80,
-                    80
+                    970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
-                    105
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -489,8 +476,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030201"
+                }
             },
             {
                 "name": "George Johnson",
@@ -506,19 +492,19 @@
                     "penalty_taking": "100",
                     "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
-                    80
+                    970
                 ],
-                "fitness": 91.77,
+                "fitness": 83.105,
                 "injured": false,
                 "originPOS": [
                     230,
-                    80
+                    970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
-                    80
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -526,8 +512,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030202"
+                }
             },
             {
                 "name": "Jim Johnson",
@@ -543,19 +528,19 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    468,
-                    107
+                "currentPOS": [
+                    475,
+                    970
                 ],
-                "fitness": 91.235,
+                "fitness": 83.405,
                 "injured": false,
                 "originPOS": [
                     475,
-                    80
+                    970
                 ],
-                "relativePOS": [
-                    467,
-                    105
+                "intentPOS": [
+                    475,
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -563,8 +548,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030203"
+                }
             },
             {
                 "name": "Georgina Johnson",
@@ -580,19 +564,19 @@
                     "penalty_taking": "100",
                     "jumping": "299"
                 },
-                "startPOS": [
-                    599,
-                    97
+                "currentPOS": [
+                    600,
+                    970
                 ],
-                "fitness": 91.815,
+                "fitness": 83.295,
                 "injured": false,
                 "originPOS": [
                     600,
-                    80
+                    970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
-                    105
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -600,8 +584,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030204"
+                }
             },
             {
                 "name": "Lucy Johnson",
@@ -617,19 +600,19 @@
                     "penalty_taking": "100",
                     "jumping": "250"
                 },
-                "startPOS": [
-                    181,
-                    206
+                "currentPOS": [
+                    202,
+                    292
                 ],
-                "fitness": 91.86,
+                "fitness": 82.375,
                 "injured": false,
                 "originPOS": [
                     80,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    181,
-                    295
+                "intentPOS": [
+                    80,
+                    780
                 ],
                 "action": "none",
                 "offside": false,
@@ -637,8 +620,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030205"
+                }
             },
             {
                 "name": "Arthur Johnson",
@@ -654,19 +636,19 @@
                     "penalty_taking": "1",
                     "jumping": "1100"
                 },
-                "startPOS": [
-                    345,
-                    162
+                "currentPOS": [
+                    329,
+                    296
                 ],
-                "fitness": 90.805,
+                "fitness": 83.68,
                 "injured": false,
                 "originPOS": [
                     230,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    345,
-                    295
+                "intentPOS": [
+                    230,
+                    780
                 ],
                 "action": "none",
                 "offside": false,
@@ -674,8 +656,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030206"
+                }
             },
             {
                 "name": "Cameron Johnson",
@@ -691,19 +672,19 @@
                     "penalty_taking": "100",
                     "jumping": "175"
                 },
-                "startPOS": [
-                    473,
-                    202
+                "currentPOS": [
+                    392,
+                    284
                 ],
-                "fitness": 91.985,
+                "fitness": 83.07,
                 "injured": false,
                 "originPOS": [
                     475,
-                    270
+                    780
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     475,
-                    295
+                    780
                 ],
                 "action": "none",
                 "offside": false,
@@ -711,8 +692,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030207"
+                }
             },
             {
                 "name": "Gill Johnson",
@@ -728,28 +708,27 @@
                     "penalty_taking": "100",
                     "jumping": "288"
                 },
-                "startPOS": [
-                    600,
-                    221
+                "currentPOS": [
+                    552,
+                    308
                 ],
-                "fitness": 91.98,
+                "fitness": 83.15,
                 "injured": false,
                 "originPOS": [
                     600,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    600,
-                    295
+                "intentPOS": [
+                    485,
+                    445
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030208"
+                }
             },
             {
                 "name": "Peter Johnson",
@@ -765,19 +744,19 @@
                     "penalty_taking": "100",
                     "jumping": "291"
                 },
-                "startPOS": [
-                    281,
-                    400
+                "currentPOS": [
+                    422,
+                    850
                 ],
-                "fitness": 92.09,
+                "fitness": 81.875,
                 "injured": false,
                 "originPOS": [
                     280,
-                    500
+                    550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
-                    525
+                    550
                 ],
                 "action": "none",
                 "offside": false,
@@ -785,8 +764,7 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030209"
+                }
             },
             {
                 "name": "Louise Johnson",
@@ -802,19 +780,19 @@
                     "penalty_taking": "100",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    441,
-                    409
+                "currentPOS": [
+                    428,
+                    501
                 ],
-                "fitness": 92.05,
+                "fitness": 83.185,
                 "injured": false,
                 "originPOS": [
                     440,
-                    500
+                    550
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     440,
-                    525
+                    550
                 ],
                 "action": "none",
                 "offside": false,
@@ -822,12 +800,10 @@
                 "cards": {
                     "yellow": 0,
                     "red": 0
-                },
-                "playerID": "78883930303030210"
+                }
             }
         ],
-        "intent": "attack",
-        "teamID": "78883930303030003"
+        "intent": "defend"
     },
     "pitchSize": [
         680,
@@ -835,332 +811,34 @@
     ],
     "ball": {
         "position": [
-            600,
-            221
+            115,
+            415
         ],
         "withPlayer": true,
-        "Player": "78883930303030208",
-        "withTeam": "78883930303030003",
-        "direction": "wait",
-        "ballOverIterations": [
-            [
-                481,
-                114,
-                8
-            ],
-            [
-                485,
-                113,
-                8
-            ],
-            [
-                489,
-                112,
-                8
-            ],
-            [
-                493,
-                111,
-                7
-            ],
-            [
-                497,
-                110,
-                7
-            ],
-            [
-                501,
-                109,
-                7
-            ],
-            [
-                505,
-                108,
-                7
-            ],
-            [
-                509,
-                107,
-                7
-            ],
-            [
-                513,
-                106,
-                7
-            ],
-            [
-                516,
-                105,
-                7
-            ],
-            [
-                519,
-                104,
-                7
-            ],
-            [
-                522,
-                103,
-                6
-            ],
-            [
-                525,
-                102,
-                6
-            ],
-            [
-                528,
-                101,
-                6
-            ],
-            [
-                531,
-                100,
-                6
-            ],
-            [
-                534,
-                99,
-                6
-            ],
-            [
-                537,
-                98,
-                6
-            ],
-            [
-                540,
-                97,
-                6
-            ],
-            [
-                543,
-                96,
-                5
-            ],
-            [
-                546,
-                95,
-                5
-            ],
-            [
-                549,
-                94,
-                5
-            ],
-            [
-                552,
-                93,
-                5
-            ],
-            [
-                555,
-                92,
-                5
-            ],
-            [
-                557,
-                91,
-                5
-            ],
-            [
-                559,
-                90,
-                5
-            ],
-            [
-                561,
-                89,
-                5
-            ],
-            [
-                563,
-                88,
-                4
-            ],
-            [
-                565,
-                87,
-                4
-            ],
-            [
-                567,
-                86,
-                4
-            ],
-            [
-                569,
-                85,
-                4
-            ],
-            [
-                571,
-                84,
-                4
-            ],
-            [
-                573,
-                83,
-                4
-            ],
-            [
-                575,
-                82,
-                4
-            ],
-            [
-                577,
-                81,
-                3
-            ],
-            [
-                579,
-                80,
-                3
-            ],
-            [
-                581,
-                80,
-                3
-            ],
-            [
-                583,
-                80,
-                3
-            ],
-            [
-                585,
-                80,
-                3
-            ],
-            [
-                586,
-                80,
-                3
-            ],
-            [
-                587,
-                80,
-                3
-            ],
-            [
-                588,
-                80,
-                3
-            ],
-            [
-                589,
-                80,
-                2
-            ],
-            [
-                590,
-                80,
-                2
-            ],
-            [
-                591,
-                80,
-                2
-            ],
-            [
-                592,
-                80,
-                2
-            ],
-            [
-                593,
-                80,
-                2
-            ],
-            [
-                594,
-                80,
-                2
-            ],
-            [
-                595,
-                80,
-                2
-            ],
-            [
-                596,
-                80,
-                1
-            ],
-            [
-                597,
-                80,
-                1
-            ],
-            [
-                598,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                1
-            ],
-            [
-                599,
-                80,
-                0
-            ],
-            [
-                599,
-                80,
-                0
-            ],
-            [
-                599,
-                79,
-                0
-            ]
-        ]
+        "Player": "Ham Johnson",
+        "withTeam": "Slugs",
+        "direction": "southwest",
+        "ballOverIterations": []
     },
-    "half": 2,
+    "half": 1,
     "kickOffTeamStatistics": {
-        "goals": 0,
-        "shots": 3,
-        "corners": 0,
-        "freekicks": 0,
-        "penalties": 0,
-        "fouls": 0
-    },
-    "secondTeamStatistics": {
-        "goals": 0,
+        "goals": 2,
         "shots": 0,
         "corners": 0,
         "freekicks": 0,
+        "penalties": 2,
+        "fouls": 1
+    },
+    "secondTeamStatistics": {
+        "goals": 0,
+        "shots": 12,
+        "corners": 0,
+        "freekicks": 0,
         "penalties": 0,
-        "fouls": 0
+        "fouls": 1
     },
     "iterationLog": [
-        "ball still moving from previous kick: 477,115",
-        "Closest Player to ball: Fred Johnson",
-        "Closest Player to ball: Jim Johnson"
-    ],
-    "matchID": "78883930303030001"
+        "Closest Player to ball: Peter Johnson",
+        "Closest Player to ball: Gill Johnson"
+    ]
 }

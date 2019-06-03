@@ -12,7 +12,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.players[0].startPOS[1]).to.be.lessThan(insideHalf)
+      expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Top Right Corner', async() => {
@@ -22,7 +22,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.players[0].startPOS[1]).to.be.lessThan(insideHalf)
+      expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Bottom Left Corner', async() => {
@@ -32,7 +32,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.players[0].startPOS[1]).to.be.greaterThan(insideHalf)
+      expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.greaterThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Bottom Right Corner', async() => {
@@ -42,7 +42,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.players[0].startPOS[1]).to.be.greaterThan(insideHalf)
+      expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.greaterThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
   })
@@ -54,7 +54,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.players[0].startPOS[1]).to.be.lessThan(insideHalf)
+      expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Top Right Corner', async() => {
@@ -64,7 +64,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.players[0].startPOS[1]).to.be.lessThan(insideHalf)
+      expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Bottom Left Corner', async() => {
@@ -74,7 +74,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.players[0].startPOS[1]).to.be.greaterThan(insideHalf)
+      expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.greaterThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Bottom Right Corner', async() => {
@@ -84,7 +84,7 @@ function runTest() {
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.players[0].startPOS[1]).to.be.greaterThan(insideHalf)
+      expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.greaterThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
   })

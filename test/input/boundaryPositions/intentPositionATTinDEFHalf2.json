@@ -1,10 +1,10 @@
 {
     "kickOffTeam": {
-        "name": "ThisTeam",
+        "name": "Slugs",
         "rating": 88,
         "players": [
             {
-                "name": "Bill Johnson",
+                "name": "Jed Johnson",
                 "position": "GK",
                 "rating": "75",
                 "skill": {
@@ -17,19 +17,19 @@
                     "penalty_taking": "43",
                     "jumping": "300"
                 },
-                "startPOS": [
+                "currentPOS": [
                     340,
-                    0
+                    1050
                 ],
-                "fitness": 100,
+                "fitness": 81.13,
                 "injured": false,
                 "originPOS": [
                     340,
-                    0
+                    1050
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     340,
-                    0
+                    1050
                 ],
                 "action": "none",
                 "offside": false,
@@ -41,7 +41,7 @@
                 "playerID": "78883930303030100"
             },
             {
-                "name": "Fred Johnson",
+                "name": "Luke Johnson",
                 "position": "LB",
                 "rating": "90",
                 "skill": {
@@ -54,19 +54,19 @@
                     "penalty_taking": "20",
                     "jumping": "235"
                 },
-                "startPOS": [
-                    80,
-                    80
+                "currentPOS": [
+                    99,
+                    970
                 ],
-                "fitness": 100,
+                "fitness": 83.035,
                 "injured": false,
                 "originPOS": [
                     80,
-                    80
+                    970
                 ],
-                "relativePOS": [
-                    80,
-                    80
+                "intentPOS": [
+                    99,
+                    483
                 ],
                 "action": "none",
                 "offside": false,
@@ -78,7 +78,7 @@
                 "playerID": "78883930303030101"
             },
             {
-                "name": "George Johnson",
+                "name": "Rob Johnson",
                 "position": "CB",
                 "rating": "84",
                 "skill": {
@@ -91,19 +91,19 @@
                     "penalty_taking": "20",
                     "jumping": "212"
                 },
-                "startPOS": [
-                    230,
-                    80
+                "currentPOS": [
+                    231,
+                    970
                 ],
-                "fitness": 100,
+                "fitness": 82.78,
                 "injured": false,
                 "originPOS": [
                     230,
-                    80
+                    970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
-                    80
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -115,7 +115,7 @@
                 "playerID": "78883930303030102"
             },
             {
-                "name": "Jim Johnson",
+                "name": "Foe Johnson",
                 "position": "CB",
                 "rating": "75",
                 "skill": {
@@ -128,19 +128,19 @@
                     "penalty_taking": "21",
                     "jumping": "280"
                 },
-                "startPOS": [
+                "currentPOS": [
                     420,
-                    80
+                    970
                 ],
-                "fitness": 100,
+                "fitness": 83.46,
                 "injured": false,
                 "originPOS": [
                     420,
-                    80
+                    970
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     420,
-                    80
+                    970
                 ],
                 "action": "none",
                 "offside": false,
@@ -152,7 +152,7 @@
                 "playerID": "78883930303030103"
             },
             {
-                "name": "Georgina Johnson",
+                "name": "Red Johnson",
                 "position": "RB",
                 "rating": "82",
                 "skill": {
@@ -165,19 +165,19 @@
                     "penalty_taking": "20",
                     "jumping": "299"
                 },
-                "startPOS": [
-                    600,
-                    80
+                "currentPOS": [
+                    447,
+                    970
                 ],
-                "fitness": 100,
+                "fitness": 82.83,
                 "injured": false,
                 "originPOS": [
                     600,
-                    80
+                    970
                 ],
-                "relativePOS": [
-                    600,
-                    80
+                "intentPOS": [
+                    447,
+                    483
                 ],
                 "action": "none",
                 "offside": false,
@@ -189,7 +189,7 @@
                 "playerID": "78883930303030104"
             },
             {
-                "name": "Lucy Johnson",
+                "name": "Paul Johnson",
                 "position": "LM",
                 "rating": "87",
                 "skill": {
@@ -202,19 +202,19 @@
                     "penalty_taking": "20",
                     "jumping": "250"
                 },
-                "startPOS": [
-                    80,
-                    270
+                "currentPOS": [
+                    273,
+                    300
                 ],
-                "fitness": 100,
+                "fitness": 81.77,
                 "injured": false,
                 "originPOS": [
                     80,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    80,
-                    270
+                "intentPOS": [
+                    273,
+                    293
                 ],
                 "action": "none",
                 "offside": false,
@@ -226,7 +226,7 @@
                 "playerID": "78883930303030105"
             },
             {
-                "name": "Arthur Johnson",
+                "name": "Artur Johnson",
                 "position": "CM",
                 "rating": "41",
                 "skill": {
@@ -239,19 +239,19 @@
                     "penalty_taking": "1",
                     "jumping": "120"
                 },
-                "startPOS": [
-                    230,
-                    270
+                "currentPOS": [
+                    236,
+                    323
                 ],
-                "fitness": 100,
+                "fitness": 82.725,
                 "injured": false,
                 "originPOS": [
                     230,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    230,
-                    270
+                "intentPOS": [
+                    236,
+                    293
                 ],
                 "action": "none",
                 "offside": false,
@@ -263,7 +263,7 @@
                 "playerID": "78883930303030106"
             },
             {
-                "name": "Cameron Johnson",
+                "name": "Corey Johnson",
                 "position": "CM",
                 "rating": "99",
                 "skill": {
@@ -276,19 +276,19 @@
                     "penalty_taking": "20",
                     "jumping": "175"
                 },
-                "startPOS": [
-                    420,
-                    270
+                "currentPOS": [
+                    439,
+                    308
                 ],
-                "fitness": 100,
+                "fitness": 83.185,
                 "injured": false,
                 "originPOS": [
                     420,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    420,
-                    270
+                "intentPOS": [
+                    439,
+                    293
                 ],
                 "action": "none",
                 "offside": false,
@@ -300,7 +300,7 @@
                 "playerID": "78883930303030107"
             },
             {
-                "name": "Gill Johnson",
+                "name": "Shan Johnson",
                 "position": "RM",
                 "rating": "79",
                 "skill": {
@@ -313,19 +313,19 @@
                     "penalty_taking": "20",
                     "jumping": "288"
                 },
-                "startPOS": [
-                    600,
-                    270
+                "currentPOS": [
+                    543,
+                    313
                 ],
-                "fitness": 100,
+                "fitness": 82.14,
                 "injured": false,
                 "originPOS": [
                     600,
-                    270
+                    780
                 ],
-                "relativePOS": [
-                    600,
-                    270
+                "intentPOS": [
+                    543,
+                    293
                 ],
                 "action": "none",
                 "offside": false,
@@ -337,7 +337,7 @@
                 "playerID": "78883930303030108"
             },
             {
-                "name": "Peter Johnson",
+                "name": "Robert Johnson",
                 "position": "ST",
                 "rating": "75",
                 "skill": {
@@ -350,19 +350,19 @@
                     "penalty_taking": "20",
                     "jumping": "291"
                 },
-                "startPOS": [
-                    340,
-                    525
+                "currentPOS": [
+                    307,
+                    63
                 ],
-                "fitness": 100,
+                "fitness": 82.795,
                 "injured": false,
                 "originPOS": [
                     280,
-                    500
+                    550
                 ],
-                "relativePOS": [
-                    280,
-                    500
+                "intentPOS": [
+                    306,
+                    63
                 ],
                 "action": "none",
                 "offside": false,
@@ -374,7 +374,7 @@
                 "playerID": "78883930303030109"
             },
             {
-                "name": "Louise Johnson",
+                "name": "Chris Johnson",
                 "position": "ST",
                 "rating": "88",
                 "skill": {
@@ -387,19 +387,19 @@
                     "penalty_taking": "20",
                     "jumping": "280"
                 },
-                "startPOS": [
-                    360,
-                    525
+                "currentPOS": [
+                    328,
+                    83
                 ],
-                "fitness": 100,
+                "fitness": 82.77,
                 "injured": false,
                 "originPOS": [
                     440,
-                    500
+                    550
                 ],
-                "relativePOS": [
-                    440,
-                    500
+                "intentPOS": [
+                    333,
+                    63
                 ],
                 "action": "none",
                 "offside": false,
@@ -415,36 +415,36 @@
         "teamID": "78883930303030002"
     },
     "secondTeam": {
-        "name": "ThatTeam",
+        "name": "Dragons",
         "rating": 88,
         "players": [
             {
-                "name": "Ian Smith",
+                "name": "Bill Johnson",
                 "position": "GK",
                 "rating": "75",
                 "skill": {
-                    "passing": "78",
+                    "passing": "100",
                     "shooting": "12",
-                    "tackling": "75",
-                    "saving": "75",
-                    "agility": "70",
-                    "strength": "60",
-                    "penalty_taking": "45",
-                    "jumping": "235"
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "43",
+                    "jumping": "300"
                 },
-                "startPOS": [
-                    340,
-                    1050
+                "currentPOS": [
+                    308,
+                    65
                 ],
-                "fitness": 100,
+                "fitness": 80.72,
                 "injured": false,
                 "originPOS": [
                     340,
-                    1050
+                    0
                 ],
-                "relativePOS": [
-                    340,
-                    1050
+                "intentPOS": [
+                    306,
+                    63
                 ],
                 "action": "none",
                 "offside": false,
@@ -456,32 +456,32 @@
                 "playerID": "78883930303030200"
             },
             {
-                "name": "Fred Smith",
+                "name": "Fred Johnson",
                 "position": "LB",
                 "rating": "90",
                 "skill": {
-                    "passing": "83",
-                    "shooting": "40",
-                    "tackling": "32",
-                    "saving": "10",
-                    "agility": "30",
-                    "strength": "30",
-                    "penalty_taking": "77",
+                    "passing": "100",
+                    "shooting": "100",
+                    "saving": "100",
+                    "tackling": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
                     "jumping": "235"
                 },
-                "startPOS": [
+                "currentPOS": [
                     80,
-                    1005
+                    121
                 ],
-                "fitness": 100,
+                "fitness": 83.21,
                 "injured": false,
                 "originPOS": [
                     80,
-                    970
+                    80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
-                    970
+                    143
                 ],
                 "action": "none",
                 "offside": false,
@@ -493,32 +493,32 @@
                 "playerID": "78883930303030201"
             },
             {
-                "name": "Emma Smith",
+                "name": "George Johnson",
                 "position": "CB",
                 "rating": "84",
                 "skill": {
-                    "passing": "78",
-                    "shooting": "37",
-                    "tackling": "21",
-                    "saving": "10",
-                    "agility": "76",
-                    "strength": "59",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "212"
                 },
-                "startPOS": [
+                "currentPOS": [
                     230,
-                    1005
+                    80
                 ],
-                "fitness": 100,
+                "fitness": 83.175,
                 "injured": false,
                 "originPOS": [
                     230,
-                    970
+                    80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
-                    970
+                    80
                 ],
                 "action": "none",
                 "offside": false,
@@ -530,32 +530,32 @@
                 "playerID": "78883930303030202"
             },
             {
-                "name": "Jim Smith",
+                "name": "Jim Johnson",
                 "position": "CB",
                 "rating": "75",
                 "skill": {
-                    "passing": "33",
-                    "shooting": "76",
-                    "tackling": "76",
-                    "saving": "10",
-                    "agility": "83",
-                    "strength": "73",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "21",
+                    "jumping": "280"
                 },
-                "startPOS": [
-                    420,
-                    1005
+                "currentPOS": [
+                    475,
+                    80
                 ],
-                "fitness": 100,
+                "fitness": 82.76,
                 "injured": false,
                 "originPOS": [
-                    420,
-                    970
+                    475,
+                    80
                 ],
-                "relativePOS": [
-                    420,
-                    970
+                "intentPOS": [
+                    475,
+                    80
                 ],
                 "action": "none",
                 "offside": false,
@@ -567,32 +567,32 @@
                 "playerID": "78883930303030203"
             },
             {
-                "name": "Emily Smith",
+                "name": "Georgina Johnson",
                 "position": "RB",
                 "rating": "82",
                 "skill": {
-                    "passing": "66",
-                    "shooting": "65",
-                    "tackling": "81",
-                    "saving": "10",
-                    "agility": "70",
-                    "strength": "90",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "23",
+                    "penalty_taking": "100",
+                    "jumping": "299"
                 },
-                "startPOS": [
-                    600,
-                    1005
+                "currentPOS": [
+                    599,
+                    100
                 ],
-                "fitness": 100,
+                "fitness": 82.81,
                 "injured": false,
                 "originPOS": [
                     600,
-                    970
+                    80
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
-                    970
+                    143
                 ],
                 "action": "none",
                 "offside": false,
@@ -604,32 +604,32 @@
                 "playerID": "78883930303030204"
             },
             {
-                "name": "Gregory Smith",
+                "name": "Lucy Johnson",
                 "position": "LM",
                 "rating": "87",
                 "skill": {
-                    "passing": "51",
-                    "shooting": "88",
-                    "tackling": "81",
-                    "saving": "10",
-                    "agility": "65",
-                    "strength": "85",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "250"
                 },
-                "startPOS": [
-                    80,
-                    815
+                "currentPOS": [
+                    308,
+                    263
                 ],
-                "fitness": 100,
+                "fitness": 81.975,
                 "injured": false,
                 "originPOS": [
                     80,
-                    780
+                    270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     80,
-                    780
+                    333
                 ],
                 "action": "none",
                 "offside": false,
@@ -641,32 +641,32 @@
                 "playerID": "78883930303030205"
             },
             {
-                "name": "Arthur Smith",
+                "name": "Arthur Johnson",
                 "position": "CM",
                 "rating": "41",
                 "skill": {
                     "passing": "33",
-                    "shooting": "66",
-                    "tackling": "55",
-                    "saving": "10",
-                    "agility": "70",
-                    "strength": "40",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "1",
+                    "jumping": "1100"
                 },
-                "startPOS": [
-                    230,
-                    815
+                "currentPOS": [
+                    290,
+                    252
                 ],
-                "fitness": 100,
+                "fitness": 81.735,
                 "injured": false,
                 "originPOS": [
                     230,
-                    780
+                    270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     230,
-                    780
+                    333
                 ],
                 "action": "none",
                 "offside": false,
@@ -678,32 +678,32 @@
                 "playerID": "78883930303030206"
             },
             {
-                "name": "Diane Smith",
+                "name": "Cameron Johnson",
                 "position": "CM",
                 "rating": "99",
                 "skill": {
-                    "passing": "88",
-                    "shooting": "95",
-                    "tackling": "91",
-                    "saving": "10",
-                    "agility": "90",
-                    "strength": "75",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "175"
                 },
-                "startPOS": [
-                    420,
-                    815
+                "currentPOS": [
+                    474,
+                    266
                 ],
-                "fitness": 100,
+                "fitness": 82.97,
                 "injured": false,
                 "originPOS": [
-                    420,
-                    780
+                    475,
+                    270
                 ],
-                "relativePOS": [
-                    420,
-                    780
+                "intentPOS": [
+                    475,
+                    333
                 ],
                 "action": "none",
                 "offside": false,
@@ -715,32 +715,32 @@
                 "playerID": "78883930303030207"
             },
             {
-                "name": "Colin Smith",
+                "name": "Gill Johnson",
                 "position": "RM",
                 "rating": "79",
                 "skill": {
-                    "passing": "56",
-                    "shooting": "79",
-                    "tackling": "74",
-                    "saving": "10",
-                    "agility": "40",
-                    "strength": "40",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "288"
                 },
-                "startPOS": [
+                "currentPOS": [
                     600,
-                    815
+                    263
                 ],
-                "fitness": 100,
+                "fitness": 82.64,
                 "injured": false,
                 "originPOS": [
                     600,
-                    780
+                    270
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     600,
-                    780
+                    333
                 ],
                 "action": "none",
                 "offside": false,
@@ -752,69 +752,32 @@
                 "playerID": "78883930303030208"
             },
             {
-                "name": "Wayne Smith",
+                "name": "Peter Johnson",
                 "position": "ST",
                 "rating": "75",
                 "skill": {
-                    "passing": "83",
-                    "shooting": "88",
-                    "tackling": "59",
-                    "saving": "10",
-                    "agility": "43",
-                    "strength": "76",
-                    "penalty_taking": "77",
-                    "jumping": "235"
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "291"
                 },
-                "startPOS": [
-                    280,
-                    585
+                "currentPOS": [
+                    281,
+                    496
                 ],
-                "fitness": 100,
+                "fitness": 82.735,
                 "injured": false,
                 "originPOS": [
                     280,
-                    550
+                    500
                 ],
-                "relativePOS": [
+                "intentPOS": [
                     280,
-                    550
-                ],
-                "action": "none",
-                "offside": false,
-                "hasBall": true,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030209"
-            },
-            {
-                "name": "Aiden Smith",
-                "position": "ST",
-                "rating": "88",
-                "skill": {
-                    "passing": "73",
-                    "shooting": "61",
-                    "tackling": "44",
-                    "saving": "10",
-                    "agility": "43",
-                    "strength": "88",
-                    "penalty_taking": "77",
-                    "jumping": "235"
-                },
-                "startPOS": [
-                    440,
-                    585
-                ],
-                "fitness": 100,
-                "injured": false,
-                "originPOS": [
-                    440,
-                    550
-                ],
-                "relativePOS": [
-                    440,
-                    550
+                    563
                 ],
                 "action": "none",
                 "offside": false,
@@ -823,10 +786,47 @@
                     "yellow": 0,
                     "red": 0
                 },
+                "playerID": "78883930303030209"
+            },
+            {
+                "name": "Louise Johnson",
+                "position": "ST",
+                "rating": "88",
+                "skill": {
+                    "passing": "100",
+                    "shooting": "100",
+                    "tackling": "100",
+                    "saving": "100",
+                    "agility": "100",
+                    "strength": "100",
+                    "penalty_taking": "100",
+                    "jumping": "280"
+                },
+                "currentPOS": [
+                    308,
+                    800
+                ],
+                "fitness": 81.61,
+                "injured": false,
+                "originPOS": [
+                    440,
+                    500
+                ],
+                "intentPOS": [
+                    440,
+                    563
+                ],
+                "action": "none",
+                "offside": false,
+                "hasBall": true,
+                "cards": {
+                    "yellow": 0,
+                    "red": 0
+                },
                 "playerID": "78883930303030210"
             }
         ],
-        "intent": "none",
+        "intent": "attack",
         "teamID": "78883930303030003"
     },
     "pitchSize": [
@@ -835,19 +835,20 @@
     ],
     "ball": {
         "position": [
-            280,
-            585
+            308,
+            800,
+            0
         ],
         "withPlayer": true,
-        "Player": "78883930303030209",
+        "Player": "78883930303030210",
         "withTeam": "78883930303030003",
-        "direction": "north",
+        "direction": "wait",
         "ballOverIterations": []
     },
-    "half": 1,
+    "half": 2,
     "kickOffTeamStatistics": {
         "goals": 0,
-        "shots": 0,
+        "shots": 8,
         "corners": 0,
         "freekicks": 0,
         "penalties": 0,
@@ -862,8 +863,8 @@
         "fouls": 0
     },
     "iterationLog": [
-        "Team to kick off - ThisTeam",
-        "Second team - ThatTeam"
+        "Closest Player to ball: Peter Johnson",
+        "Closest Player to ball: Louise Johnson"
     ],
     "matchID": "78883930303030001"
 }
