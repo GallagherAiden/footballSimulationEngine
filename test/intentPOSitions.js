@@ -7,7 +7,7 @@ function runTest() {
   mocha.describe('intentPOSitionsDefence()', function() {
     mocha.it('kickoff team defensive players move towards ball on opposite side', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf2.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
@@ -16,7 +16,7 @@ function runTest() {
     })
     mocha.it('kickoff team defensive players move towards ball on opposite side with player near', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf3.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
@@ -29,7 +29,7 @@ function runTest() {
     })
     mocha.it('secondteam defensive players move towards ball on opposite side', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       let ballPosition = matchDetails.ball.position
       ballPosition.pop()
@@ -41,7 +41,7 @@ function runTest() {
     })
     mocha.it('kickoff team defensive players ball in own half', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinDEFHalf2.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let playerNum of [0, 1, 2, 3, 4]) {
@@ -55,7 +55,7 @@ function runTest() {
     })
     mocha.it('second team defensive players ball in own half', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinDEFHalf.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       let ballPosition = matchDetails.ball.position
       ballPosition.pop()
@@ -69,7 +69,7 @@ function runTest() {
   mocha.describe('intentPOSitionsAttacking()', function() {
     mocha.it('kickoff team attacking from behind originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTbehindOrigin.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.kickOffTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] + 20])
@@ -77,7 +77,7 @@ function runTest() {
     })
     mocha.it('kickoff team attacking from originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTfromOrigin.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.kickOffTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] + 20])
@@ -85,7 +85,7 @@ function runTest() {
     })
     mocha.it('kickoff team attacking from ahead of originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTaheadOfOrigin.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.kickOffTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] + 20])
@@ -93,7 +93,7 @@ function runTest() {
     })
     mocha.it('second team attacking from behind originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTbehindOrigin2.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.secondTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
@@ -101,7 +101,7 @@ function runTest() {
     })
     mocha.it('second team attacking from originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTfromOrigin2.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.secondTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
@@ -109,7 +109,7 @@ function runTest() {
     })
     mocha.it('second team attacking from ahead of originPOS', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTaheadOfOrigin2.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       for (let player of matchDetails.secondTeam.players) {
         expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
@@ -117,7 +117,7 @@ function runTest() {
     })
     mocha.it('kickoff team attacking in own half from top', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf4.json')
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
@@ -129,7 +129,7 @@ function runTest() {
     mocha.it('kickoff team deep in opposition half do not exceed forward limits', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTdeep.json')
       let [, pitchHeight] = matchDetails.pitchSize
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
@@ -149,7 +149,7 @@ function runTest() {
     mocha.it('second team deep in opposition half do not exceed forward limits', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTdeep2.json')
       let [, pitchHeight] = matchDetails.pitchSize
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.secondTeam.players) {
@@ -171,7 +171,7 @@ function runTest() {
     mocha.it('kickoff team moves towards ball', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/looseBall.json')
       let { kickOffTeam } = matchDetails
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       expect(kickOffTeam.players[0].intentPOS).to.eql([kickOffTeam.players[0].originPOS[0], 20])
@@ -189,7 +189,7 @@ function runTest() {
     mocha.it('second team moves towards ball', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/looseBall2.json')
       let { secondTeam } = matchDetails
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       expect(secondTeam.players[0].intentPOS).to.eql([secondTeam.players[0].originPOS[0], 1030])
@@ -207,7 +207,7 @@ function runTest() {
     mocha.it('second team moves towards ball player near ball', async() => {
       let matchDetails = await common.readFile('./test/input/boundaryPositions/looseBall3.json')
       let { secondTeam } = matchDetails
-      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerInput.json')
+      let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setintentPOSition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       expect(secondTeam.players[0].intentPOS).to.eql([secondTeam.players[0].originPOS[0], 1030])
