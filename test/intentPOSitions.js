@@ -13,7 +13,7 @@ function runTest() {
       if (ballPosition[2] >= 0) ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.kickOffTeam.players) {
-        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.playerID == closestPlayer.playerID) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
       }
     })
@@ -29,7 +29,7 @@ function runTest() {
         let diffYPOSplayerandball = ballPosition[1] - player.currentPOS[1]
         let xPosProx = common.isBetween(diffXPOSplayerandball, -40, 40)
         let yPosProx = common.isBetween(diffYPOSplayerandball, -40, 40)
-        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.playerID == closestPlayer.playerID) expect(player.intentPOS).to.eql(ballPosition)
         else if (xPosProx && yPosProx) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
       }
@@ -42,7 +42,7 @@ function runTest() {
       if (ballPosition[2] >= 0) ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.secondTeam.players) {
-        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.playerID == closestPlayer.playerID) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql([player.originPOS[0], player.currentPOS[1] - 20])
       }
     })
@@ -51,9 +51,12 @@ function runTest() {
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
+      let ballPosition = matchDetails.ball.position
+      if (ballPosition[2] >= 0) ballPosition.pop()
       for (let playerNum of [0, 1, 2, 3, 4]) {
         let thisPlayer = matchDetails.kickOffTeam.players[playerNum]
-        expect(thisPlayer.intentPOS).to.eql(thisPlayer.originPOS)
+        if (thisPlayer.playerID == closestPlayer.playerID) expect(thisPlayer.intentPOS).to.eql(ballPosition)
+        else expect(thisPlayer.intentPOS).to.eql(thisPlayer.originPOS)
       }
       for (let playerNum of [5, 6, 7, 8, 9, 10]) {
         let thisPlayer = matchDetails.kickOffTeam.players[playerNum]
@@ -68,7 +71,7 @@ function runTest() {
       ballPosition.pop()
       expect(matchDetails).to.be.an('object')
       for (let player of matchDetails.secondTeam.players) {
-        if (player.name == closestPlayer.name) expect(player.intentPOS).to.eql(ballPosition)
+        if (player.playerID == closestPlayer.playerID) expect(player.intentPOS).to.eql(ballPosition)
         else expect(player.intentPOS).to.eql(player.originPOS)
       }
     })
@@ -182,8 +185,8 @@ function runTest() {
       setPos.setIntentPosition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       expect(kickOffTeam.players[0].intentPOS).to.eql([kickOffTeam.players[0].originPOS[0], 20])
-      expect(kickOffTeam.players[1].intentPOS).to.eql([kickOffTeam.players[1].originPOS[0], 290])
-      expect(kickOffTeam.players[2].intentPOS).to.eql([380, 1000])
+      expect(kickOffTeam.players[1].intentPOS).to.eql([380, 1000])
+      expect(kickOffTeam.players[2].intentPOS).to.eql([kickOffTeam.players[2].originPOS[0], 101])
       expect(kickOffTeam.players[3].intentPOS).to.eql([kickOffTeam.players[3].originPOS[0], 101])
       expect(kickOffTeam.players[4].intentPOS).to.eql([kickOffTeam.players[4].originPOS[0], 287])
       expect(kickOffTeam.players[5].intentPOS).to.eql([kickOffTeam.players[5].originPOS[0], 465])
@@ -200,8 +203,8 @@ function runTest() {
       setPos.setIntentPosition(matchDetails, closestPlayer)
       expect(matchDetails).to.be.an('object')
       expect(secondTeam.players[0].intentPOS).to.eql([secondTeam.players[0].originPOS[0], 1030])
-      expect(secondTeam.players[1].intentPOS).to.eql([secondTeam.players[1].originPOS[0], 485])
-      expect(secondTeam.players[2].intentPOS).to.eql([341, 10])
+      expect(secondTeam.players[1].intentPOS).to.eql([80, 485])
+      expect(secondTeam.players[2].intentPOS).to.eql([secondTeam.players[2].originPOS[0], 950])
       expect(secondTeam.players[3].intentPOS).to.eql([secondTeam.players[3].originPOS[0], 950])
       expect(secondTeam.players[4].intentPOS).to.eql([secondTeam.players[4].originPOS[0], 537])
       expect(secondTeam.players[5].intentPOS).to.eql([secondTeam.players[5].originPOS[0], 415])
@@ -219,7 +222,7 @@ function runTest() {
       expect(matchDetails).to.be.an('object')
       expect(secondTeam.players[0].intentPOS).to.eql([secondTeam.players[0].originPOS[0], 1030])
       expect(secondTeam.players[1].intentPOS).to.eql([secondTeam.players[1].originPOS[0], 485])
-      expect(secondTeam.players[2].intentPOS).to.eql([341, 10])
+      expect(secondTeam.players[2].intentPOS).to.eql([secondTeam.players[2].originPOS[0], 950])
       expect(secondTeam.players[3].intentPOS).to.eql([secondTeam.players[3].originPOS[0], 950])
       expect(secondTeam.players[4].intentPOS).to.eql([secondTeam.players[4].originPOS[0], 537])
       expect(secondTeam.players[5].intentPOS).to.eql([secondTeam.players[5].originPOS[0], 415])
