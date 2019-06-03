@@ -13,7 +13,7 @@
     "penalty_taking": "100",
     "jumping": "212"
   },
-  "startPOS": [
+  "currentPOS": [
     274,
     740
   ],
@@ -23,7 +23,7 @@
     230,
     970
   ],
-  "relativePOS": [
+  "intentPOS": [
     230,
     787.5
   ],
