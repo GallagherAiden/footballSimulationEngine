@@ -1,9 +1,12 @@
 {
+   "matchID": 78883930303030000,
    "secondTeam": {
+      "teamID": 78883930303030000,
       "name": "ThatTeam",
       "rating": 88,
       "players": [
          {
+            "playerID": 78883930303030020,
             "name": "Ian Smith",
             "position": "GK",
             "rating": "75",
@@ -19,17 +22,17 @@
             },
             "startPOS": [
                340,
-               1050
+               0
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                340,
-               1050
+               0
             ],
             "relativePOS": [
                340,
-               1050
+               0
             ],
             "action": "none",
             "offside": false,
@@ -40,6 +43,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Fred Smith",
             "position": "LB",
             "rating": "90",
@@ -55,17 +59,17 @@
             },
             "startPOS": [
                80,
-               970
+               80
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                80,
-               970
+               80
             ],
             "relativePOS": [
                80,
-               970
+               80
             ],
             "action": "none",
             "offside": false,
@@ -76,6 +80,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Emma Smith",
             "position": "CB",
             "rating": "84",
@@ -91,17 +96,17 @@
             },
             "startPOS": [
                230,
-               970
+               80
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                230,
-               970
+               80
             ],
             "relativePOS": [
                230,
-               970
+               80
             ],
             "action": "none",
             "offside": false,
@@ -112,6 +117,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Jim Smith",
             "position": "CB",
             "rating": "75",
@@ -127,17 +133,17 @@
             },
             "startPOS": [
                420,
-               970
+               80
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                420,
-               970
+               80
             ],
             "relativePOS": [
                420,
-               970
+               80
             ],
             "action": "none",
             "offside": false,
@@ -148,6 +154,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Emily Smith",
             "position": "RB",
             "rating": "82",
@@ -163,17 +170,17 @@
             },
             "startPOS": [
                600,
-               970
+               80
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                600,
-               970
+               80
             ],
             "relativePOS": [
                600,
-               970
+               80
             ],
             "action": "none",
             "offside": false,
@@ -184,6 +191,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Gregory Smith",
             "position": "LM",
             "rating": "87",
@@ -199,17 +207,17 @@
             },
             "startPOS": [
                80,
-               780
+               270
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                80,
-               780
+               270
             ],
             "relativePOS": [
                80,
-               780
+               270
             ],
             "action": "none",
             "offside": false,
@@ -220,6 +228,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Arthur Smith",
             "position": "CM",
             "rating": "41",
@@ -235,17 +244,17 @@
             },
             "startPOS": [
                230,
-               780
+               270
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                230,
-               780
+               270
             ],
             "relativePOS": [
                230,
-               780
+               270
             ],
             "action": "none",
             "offside": false,
@@ -256,6 +265,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Diane Smith",
             "position": "CM",
             "rating": "99",
@@ -271,17 +281,17 @@
             },
             "startPOS": [
                420,
-               780
+               270
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                420,
-               780
+               270
             ],
             "relativePOS": [
                420,
-               780
+               270
             ],
             "action": "none",
             "offside": false,
@@ -292,6 +302,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Colin Smith",
             "position": "RM",
             "rating": "79",
@@ -307,17 +318,17 @@
             },
             "startPOS": [
                600,
-               780
+               270
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                600,
-               780
+               270
             ],
             "relativePOS": [
                600,
-               780
+               270
             ],
             "action": "none",
             "offside": false,
@@ -328,6 +339,7 @@
             }
          },
          {
+            "playerID": 78883930303030020,
             "name": "Wayne Smith",
             "position": "ST",
             "rating": "75",
@@ -343,17 +355,17 @@
             },
             "startPOS": [
                280,
-               550
+               500
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                280,
-               550
+               500
             ],
             "relativePOS": [
                280,
-               550
+               500
             ],
             "action": "none",
             "offside": false,
@@ -364,6 +376,7 @@
             }
          },
          {
+            "playerID": 78883930303030030,
             "name": "Aiden Smith",
             "position": "ST",
             "rating": "88",
@@ -379,17 +392,17 @@
             },
             "startPOS": [
                440,
-               550
+               500
             ],
             "fitness": 100,
             "injured": false,
             "originPOS": [
                440,
-               550
+               500
             ],
             "relativePOS": [
                440,
-               550
+               500
             ],
             "action": "none",
             "offside": false,
@@ -400,7 +413,7 @@
             }
          }
       ],
-      "intent": "none"
+      "intent": "defend"
    },
    "pitchSize": [
       680,
@@ -413,12 +426,12 @@
          0
       ],
       "withPlayer": true,
-      "Player": "Peter Johnson",
+      "Player": "Louise Johnson",
       "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },
-   "half": 1,
+   "half": 2,
    "kickOffTeamStatistics": {
       "goals": 0,
       "shots": 0,

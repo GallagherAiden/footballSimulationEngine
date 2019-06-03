@@ -1,12 +1,11 @@
 {
-   "matchID": "78883930303030001",
    "kickOffTeam": {
-      "teamID": "78883930303030002",
+      "teamID": 78883930303030002,
       "name": "ThisTeam",
       "rating": 88,
       "players": [
          {
-            "playerID": "78883930303030100",
+            "playerID": 78883930303030004,
             "name": "Bill Johnson",
             "position": "GK",
             "rating": "75",
@@ -43,7 +42,7 @@
             }
          },
          {
-            "playerID": "78883930303030101",
+            "playerID": 78883930303030005,
             "name": "Fred Johnson",
             "position": "LB",
             "rating": "90",
@@ -80,7 +79,7 @@
             }
          },
          {
-            "playerID": "78883930303030102",
+            "playerID": 78883930303030005,
             "name": "George Johnson",
             "position": "CB",
             "rating": "84",
@@ -117,7 +116,7 @@
             }
          },
          {
-            "playerID": "78883930303030103",
+            "playerID": 78883930303030006,
             "name": "Jim Johnson",
             "position": "CB",
             "rating": "75",
@@ -154,7 +153,7 @@
             }
          },
          {
-            "playerID": "78883930303030104",
+            "playerID": 78883930303030007,
             "name": "Georgina Johnson",
             "position": "RB",
             "rating": "82",
@@ -191,7 +190,7 @@
             }
          },
          {
-            "playerID": "78883930303030105",
+            "playerID": 78883930303030008,
             "name": "Lucy Johnson",
             "position": "LM",
             "rating": "87",
@@ -228,7 +227,7 @@
             }
          },
          {
-            "playerID": "78883930303030106",
+            "playerID": 78883930303030009,
             "name": "Arthur Johnson",
             "position": "CM",
             "rating": "41",
@@ -265,7 +264,7 @@
             }
          },
          {
-            "playerID": "78883930303030107",
+            "playerID": 78883930303030011,
             "name": "Cameron Johnson",
             "position": "CM",
             "rating": "99",
@@ -302,7 +301,7 @@
             }
          },
          {
-            "playerID": "78883930303030108",
+            "playerID": 78883930303030012,
             "name": "Gill Johnson",
             "position": "RM",
             "rating": "79",
@@ -339,7 +338,7 @@
             }
          },
          {
-            "playerID": "78883930303030109",
+            "playerID": 78883930303030013,
             "name": "Peter Johnson",
             "position": "ST",
             "rating": "75",
@@ -376,7 +375,7 @@
             }
          },
          {
-            "playerID": "78883930303030110",
+            "playerID": 78883930303030014,
             "name": "Louise Johnson",
             "position": "ST",
             "rating": "88",
@@ -416,12 +415,12 @@
       "intent": "attack"
    },
    "secondTeam": {
-      "teamID": "78883930303030003",
+      "teamID": 78883930303030003,
       "name": "ThatTeam",
       "rating": 88,
       "players": [
          {
-            "playerID": "78883930303030200",
+            "playerID": 78883930303030015,
             "name": "Ian Smith",
             "position": "GK",
             "rating": "75",
@@ -458,7 +457,7 @@
             }
          },
          {
-            "playerID": "78883930303030201",
+            "playerID": 78883930303030016,
             "name": "Fred Smith",
             "position": "LB",
             "rating": "90",
@@ -495,7 +494,7 @@
             }
          },
          {
-            "playerID": "78883930303030202",
+            "playerID": 78883930303030017,
             "name": "Emma Smith",
             "position": "CB",
             "rating": "84",
@@ -532,7 +531,7 @@
             }
          },
          {
-            "playerID": "78883930303030203",
+            "playerID": 78883930303030018,
             "name": "Jim Smith",
             "position": "CB",
             "rating": "75",
@@ -569,7 +568,7 @@
             }
          },
          {
-            "playerID": "78883930303030204",
+            "playerID": 78883930303030019,
             "name": "Emily Smith",
             "position": "RB",
             "rating": "82",
@@ -606,7 +605,7 @@
             }
          },
          {
-            "playerID": "78883930303030205",
+            "playerID": 78883930303030020,
             "name": "Gregory Smith",
             "position": "LM",
             "rating": "87",
@@ -643,7 +642,7 @@
             }
          },
          {
-            "playerID": "78883930303030206",
+            "playerID": 78883930303030021,
             "name": "Arthur Smith",
             "position": "CM",
             "rating": "41",
@@ -680,7 +679,7 @@
             }
          },
          {
-            "playerID": "78883930303030207",
+            "playerID": 78883930303030022,
             "name": "Diane Smith",
             "position": "CM",
             "rating": "99",
@@ -717,7 +716,7 @@
             }
          },
          {
-            "playerID": "78883930303030208",
+            "playerID": 78883930303030023,
             "name": "Colin Smith",
             "position": "RM",
             "rating": "79",
@@ -754,7 +753,7 @@
             }
          },
          {
-            "playerID": "78883930303030209",
+            "playerID": 78883930303030024,
             "name": "Wayne Smith",
             "position": "ST",
             "rating": "75",
@@ -791,7 +790,7 @@
             }
          },
          {
-            "playerID": "78883930303030210",
+            "playerID": 78883930303030025,
             "name": "Aiden Smith",
             "position": "ST",
             "rating": "88",
@@ -841,8 +840,8 @@
          0
       ],
       "withPlayer": true,
-      "Player": "78883930303030109",
-      "withTeam": "78883930303030002",
+      "Player": "Peter Johnson",
+      "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },
