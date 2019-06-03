@@ -6,7 +6,7 @@ const setPos = require('../lib/setPositions')
 function runTest() {
   mocha.describe('intentPOSitionsDefence()', function() {
     mocha.it('kickoff team defensive players move towards ball on opposite side', async() => {
-      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf2.json')
+      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPositionATTinOwnHalf2.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       let ballPosition = matchDetails.ball.position
@@ -18,7 +18,7 @@ function runTest() {
       }
     })
     mocha.it('kickoff team defensive players move towards ball on opposite side with player near', async() => {
-      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf3.json')
+      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPositionATTinOwnHalf3.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerKOTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       let ballPosition = matchDetails.ball.position
@@ -35,7 +35,7 @@ function runTest() {
       }
     })
     mocha.it('secondteam defensive players move towards ball on opposite side', async() => {
-      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTinOwnHalf.json')
+      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPositionATTinOwnHalf.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       let ballPosition = matchDetails.ball.position
@@ -102,7 +102,7 @@ function runTest() {
       }
     })
     mocha.it('second team attacking from behind originPOS', async() => {
-      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTbehindOrigin2.json')
+      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPositionATTbehindOrigin2.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       for (let player of matchDetails.secondTeam.players) {
@@ -118,7 +118,7 @@ function runTest() {
       }
     })
     mocha.it('second team attacking from ahead of originPOS', async() => {
-      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPOSitionATTaheadOfOrigin2.json')
+      let matchDetails = await common.readFile('./test/input/boundaryPositions/intentPositionATTaheadOfOrigin2.json')
       let closestPlayer = await common.readFile('./test/input/closestPositions/closestPlayerSTInput.json')
       setPos.setIntentPosition(matchDetails, closestPlayer)
       for (let player of matchDetails.secondTeam.players) {
