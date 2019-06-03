@@ -1,0 +1,37 @@
+{
+  "playerID": "78883930303030101",
+  "name": "Bobbie Johnson",
+  "position": "LB",
+  "rating": "90",
+  "skill": {
+    "passing": "20",
+    "shooting": "20",
+    "saving": "20",
+    "tackling": "20",
+    "agility": "20",
+    "strength": "20",
+    "penalty_taking": "20",
+    "jumping": "235"
+  },
+  "currentPOS": [
+    82,
+    510
+  ],
+  "fitness": 92.085,
+  "injured": false,
+  "originPOS": [
+    80,
+    970
+  ],
+  "intentPOS": [
+    81,
+    510
+  ],
+  "action": "none",
+  "offside": false,
+  "hasBall": false,
+  "cards": {
+    "yellow": 0,
+    "red": 0
+  }
+}

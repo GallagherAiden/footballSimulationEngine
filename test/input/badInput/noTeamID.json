@@ -416,7 +416,6 @@
       "intent": "attack"
    },
    "secondTeam": {
-      "teamID": 78883930303030003,
       "name": "ThatTeam",
       "rating": 88,
       "players": [
@@ -842,6 +841,7 @@
       ],
       "withPlayer": true,
       "Player": "Peter Johnson",
+      "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },

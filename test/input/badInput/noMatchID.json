@@ -1,5 +1,4 @@
 {
-   "matchID": 78883930303030001,
    "kickOffTeam": {
       "teamID": 78883930303030002,
       "name": "ThisTeam",
@@ -842,6 +841,7 @@
       ],
       "withPlayer": true,
       "Player": "Peter Johnson",
+      "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },

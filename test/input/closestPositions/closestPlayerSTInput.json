@@ -1,0 +1,37 @@
+{
+  "playerID": "78883930303030102",
+  "name": "George Johnson",
+  "position": "CB",
+  "rating": "84",
+  "skill": {
+    "passing": "100",
+    "shooting": "100",
+    "tackling": "100",
+    "saving": "100",
+    "agility": "100",
+    "strength": "100",
+    "penalty_taking": "100",
+    "jumping": "212"
+  },
+  "currentPOS": [
+    274,
+    740
+  ],
+  "fitness": 96.97,
+  "injured": false,
+  "originPOS": [
+    230,
+    970
+  ],
+  "intentPOS": [
+    230,
+    787.5
+  ],
+  "action": "none",
+  "offside": false,
+  "hasBall": false,
+  "cards": {
+    "yellow": 0,
+    "red": 0
+  }
+}

@@ -1,9 +1,10 @@
 const mocha = require('mocha')
 const { expect } = require('chai')
 const validation = require('./lib/validate_tests')
+const common = require('../lib/common')
 
 //disable console errors in tests
-console.error = function() {}
+console.error = function() { }
 
 function runTest() {
   mocha.describe('testValidationOfInputData()', function() {
@@ -200,6 +201,72 @@ function runTest() {
       } catch (err) {
         expect(err).to.be.an('Error')
         expect(err.toString()).to.have.string('Provide Cards: yellow,red')
+      }
+    })
+  })
+  mocha.describe('testObjectIDsInitiateGame()', function() {
+    mocha.it('object id given to match', async() => {
+      let t1location = './init_config/team1.json'
+      let t2location = './init_config/team2.json'
+      let plocation = './init_config/pitch.json'
+      let output = await validation.initGame(t1location, t2location, plocation)
+      expect(output.matchID).to.be.an('number')
+      let idNumberBetweenOutliers = common.isBetween(output.matchID, 1000000000000, 99999999999999999)
+      expect(idNumberBetweenOutliers).to.eql(true)
+    })
+    mocha.it('object id given to team', async() => {
+      let t1location = './init_config/team1.json'
+      let t2location = './init_config/team2.json'
+      let plocation = './init_config/pitch.json'
+      let output = await validation.initGame(t1location, t2location, plocation)
+      expect(output.kickOffTeam.teamID).to.be.an('number')
+      let idNumberBetweenKOTOutliers = common.isBetween(output.kickOffTeam.teamID, 1000000000000, 99999999999999999)
+      expect(idNumberBetweenKOTOutliers).to.eql(true)
+      expect(output.secondTeam.teamID).to.be.an('number')
+      let idNumberBetweenSTOutliers = common.isBetween(output.secondTeam.teamID, 1000000000000, 99999999999999999)
+      expect(idNumberBetweenSTOutliers).to.eql(true)
+    })
+    mocha.it('object id given to players', async() => {
+      let t1location = './init_config/team1.json'
+      let t2location = './init_config/team2.json'
+      let plocation = './init_config/pitch.json'
+      let output = await validation.initGame(t1location, t2location, plocation)
+      for (let player of output.kickOffTeam.players) {
+        expect(player.playerID).to.be.an('number')
+        let idNumberBetweenOutliers = common.isBetween(player.playerID, 1000000000000, 99999999999999999)
+        expect(idNumberBetweenOutliers).to.eql(true)
+      }
+    })
+  })
+  mocha.describe('testObjectIDsIteration()', function() {
+    mocha.it('match id validation', async() => {
+      let providedItJson = './test/input/badInput/noMatchID.json'
+      try {
+        let outputIteration = await validation.playIteration(providedItJson)
+        expect(outputIteration).to.be.an('Error')
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('Please provide valid match details JSON')
+      }
+    })
+    mocha.it('team id validation', async() => {
+      let providedItJson = './test/input/badInput/noTeamID.json'
+      try {
+        let outputIteration = await validation.playIteration(providedItJson)
+        expect(outputIteration).to.be.an('Error')
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('No team ID given.')
+      }
+    })
+    mocha.it('player id validation', async() => {
+      let providedItJson = './test/input/badInput/noPlayerID.json'
+      try {
+        let outputIteration = await validation.playIteration(providedItJson)
+        expect(outputIteration).to.be.an('Error')
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('Player must contain JSON variable: playerID')
       }
     })
   })

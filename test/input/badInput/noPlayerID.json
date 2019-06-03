@@ -43,7 +43,6 @@
             }
          },
          {
-            "playerID": 78883930303030005,
             "name": "Fred Johnson",
             "position": "LB",
             "rating": "90",
@@ -842,6 +841,7 @@
       ],
       "withPlayer": true,
       "Player": "Peter Johnson",
+      "withTeam": "ThisTeam",
       "direction": "south",
       "ballOverIterations": []
    },
