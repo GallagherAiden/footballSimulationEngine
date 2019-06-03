@@ -37,8 +37,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030100"
+            }
          },
          {
             "name": "Bed Johnson",
@@ -74,8 +73,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030101"
+            }
          },
          {
             "name": "Borge Johnson",
@@ -111,8 +109,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030102"
+            }
          },
          {
             "name": "Reek Johnson",
@@ -148,8 +145,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030103"
+            }
          },
          {
             "name": "Hodor Johnson",
@@ -185,8 +181,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030104"
+            }
          },
          {
             "name": "Ham Johnson",
@@ -222,8 +217,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030105"
+            }
          },
          {
             "name": "Meena Johnson",
@@ -259,8 +253,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030106"
+            }
          },
          {
             "name": "Amelia Johnson",
@@ -296,8 +289,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030107"
+            }
          },
          {
             "name": "Feemer Johnson",
@@ -333,8 +325,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030108"
+            }
          },
          {
             "name": "Frederico Johnson",
@@ -370,8 +361,7 @@
             "cards": {
                "yellow": 1,
                "red": 0
-            },
-            "playerID": "78883930303030109"
+            }
          },
          {
             "name": "Juan Johnson",
@@ -407,12 +397,10 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030110"
+            }
          }
       ],
-      "intent": "attack",
-      "teamID": "78883930303030002"
+      "intent": "attack"
    },
    "secondTeam": {
       "name": "Dragons",
@@ -452,8 +440,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030200"
+            }
          },
          {
             "name": "Fred Johnson",
@@ -489,8 +476,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030201"
+            }
          },
          {
             "name": "George Johnson",
@@ -526,8 +512,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030202"
+            }
          },
          {
             "name": "Jim Johnson",
@@ -563,8 +548,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030203"
+            }
          },
          {
             "name": "Georgina Johnson",
@@ -600,8 +584,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030204"
+            }
          },
          {
             "name": "Lucy Johnson",
@@ -637,8 +620,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030205"
+            }
          },
          {
             "name": "Arthur Johnson",
@@ -674,8 +656,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030206"
+            }
          },
          {
             "name": "Cameron Johnson",
@@ -711,8 +692,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030207"
+            }
          },
          {
             "name": "Gill Johnson",
@@ -748,8 +728,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030208"
+            }
          },
          {
             "name": "Peter Johnson",
@@ -785,8 +764,7 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030209"
+            }
          },
          {
             "name": "Louise Johnson",
@@ -822,12 +800,10 @@
             "cards": {
                "yellow": 0,
                "red": 0
-            },
-            "playerID": "78883930303030210"
+            }
          }
       ],
-      "intent": "defend",
-      "teamID": "78883930303030003"
+      "intent": "defend"
    },
    "pitchSize": [
       680,
@@ -840,8 +816,8 @@
          0
       ],
       "withPlayer": true,
-      "Player": "78883930303030109",
-      "withTeam": "78883930303030002",
+      "Player": "Frederico Johnson",
+      "withTeam": "Slugs",
       "direction": "southwest",
       "ballOverIterations": []
    },
@@ -865,6 +841,5 @@
    "iterationLog": [
       "Closest Player to ball: Peter Johnson",
       "Closest Player to ball: Gill Johnson"
-   ],
-   "matchID": "78883930303030001"
+   ]
 }

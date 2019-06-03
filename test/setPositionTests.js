@@ -14,8 +14,8 @@ function runTest() {
       expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(goalKick).to.be.greaterThan(-1)
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(player.startPOS).to.eql([player.originPOS[0], player.originPOS[1] - 80])
+        if (player.name != nextJSON.secondTeam.players[0].name) {
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] - 80])
         }
       }
     })
@@ -31,13 +31,13 @@ function runTest() {
       expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.gt(insideHalf)
       expect(goalKick).to.be.greaterThan(-1)
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[0].playerID) {
-          expect(player.startPOS).to.eql([player.originPOS[0], player.originPOS[1] + 80])
+        if (player.name != nextJSON.kickOffTeam.players[0].name) {
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] + 80])
         }
       }
     })
   })
-  mocha.describe('testBoundariesForBottomGoalKickSecondHalf()', function() {
+  mocha.describe('testBoundariesForBottomGoalSecondHalf()', function() {
     mocha.it('expected Bottom Goal', async() => {
       let itlocation = './test/input/boundaryPositions/secondHalfGoalKick.json'
       let nextJSON = await setpieces.setBottomGoalKick(itlocation)
@@ -47,14 +47,14 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.secondTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(goalKick).to.be.greaterThan(-1)
-      for (let defencePlayer of nextJSON.kickOffTeam.players) {
-        if (defencePlayer.playerID != nextJSON.kickOffTeam.players[0].playerID) {
-          expect(defencePlayer.startPOS).to.eql([defencePlayer.originPOS[0], defencePlayer.originPOS[1] - 80])
+      for (let player of nextJSON.kickOffTeam.players) {
+        if (player.name != nextJSON.kickOffTeam.players[0].name) {
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] - 80])
         }
       }
     })
   })
-  mocha.describe('testBoundariesForTopGoalKickSecondHalf()', function() {
+  mocha.describe('testBoundariesForTopGoalSecondHalf()', function() {
     mocha.it('expected Top Goal', async() => {
       let itlocation = './test/input/boundaryPositions/secondHalfGoalKick.json'
       let nextJSON = await setpieces.setTopGoalKick(itlocation)
@@ -64,9 +64,9 @@ function runTest() {
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.gt(insideHalf)
       expect(goalKick).to.be.greaterThan(-1)
-      for (let defencePlayer of nextJSON.secondTeam.players) {
-        if (defencePlayer.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(defencePlayer.startPOS).to.eql([defencePlayer.originPOS[0], defencePlayer.originPOS[1] + 80])
+      for (let player of nextJSON.secondTeam.players) {
+        if (player.name != nextJSON.secondTeam.players[0].name) {
+          expect(player.currentPOS).to.eql([player.originPOS[0], player.originPOS[1] + 80])
         }
       }
     })
@@ -174,18 +174,18 @@ function runTest() {
       let pitchWidth = nextJSON.pitchSize[0]
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.teamID).to.eql(nextJSON.ball.withTeam)
+      expect(nextJSON.kickOffTeam.name).to.eql(nextJSON.ball.withTeam)
       expect(nextJSON.ball.position).to.eql([pitchWidth / 2, 60])
       expect(nextJSON.ball.direction).to.eql('north')
       expect(nextJSON.kickOffTeam.players[10].currentPOS).to.eql([pitchWidth / 2, 60])
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[10].playerID) {
-          expect(player.startPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.kickOffTeam.players[10].name) {
+          expect(player.currentPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].currentPOS[1])
         }
       }
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(player.startPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.secondTeam.players[0].name) {
+          expect(player.currentPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].currentPOS[1])
         }
       }
     })
@@ -195,18 +195,18 @@ function runTest() {
       let [pitchWidth, pitchHeight] = nextJSON.pitchSize
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.teamID).to.eql(nextJSON.ball.withTeam)
+      expect(nextJSON.kickOffTeam.name).to.eql(nextJSON.ball.withTeam)
       expect(nextJSON.ball.position).to.eql([pitchWidth / 2, pitchHeight - 60])
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.kickOffTeam.players[10].currentPOS).to.eql([pitchWidth / 2, pitchHeight - 60])
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[10].playerID) {
-          expect(player.startPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.kickOffTeam.players[10].name) {
+          expect(player.currentPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].currentPOS[1])
         }
       }
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(player.startPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.secondTeam.players[0].name) {
+          expect(player.currentPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].currentPOS[1])
         }
       }
     })
@@ -216,18 +216,18 @@ function runTest() {
       let pitchWidth = nextJSON.pitchSize[0]
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.teamID).to.eql(nextJSON.ball.withTeam)
+      expect(nextJSON.secondTeam.name).to.eql(nextJSON.ball.withTeam)
       expect(nextJSON.ball.position).to.eql([pitchWidth / 2, 60])
       expect(nextJSON.ball.direction).to.eql('north')
       expect(nextJSON.secondTeam.players[10].currentPOS).to.eql([pitchWidth / 2, 60])
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[10].playerID) {
-          expect(player.startPOS[1]).to.be.gt(nextJSON.secondTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.secondTeam.players[10].name) {
+          expect(player.currentPOS[1]).to.be.gt(nextJSON.secondTeam.players[10].currentPOS[1])
         }
       }
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[0].playerID) {
-          expect(player.startPOS[1]).to.be.gt(nextJSON.secondTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.kickOffTeam.players[0].name) {
+          expect(player.currentPOS[1]).to.be.gt(nextJSON.secondTeam.players[10].currentPOS[1])
         }
       }
     })
@@ -237,18 +237,18 @@ function runTest() {
       let [pitchWidth, pitchHeight] = nextJSON.pitchSize
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.secondTeam.teamID).to.eql(nextJSON.ball.withTeam)
+      expect(nextJSON.secondTeam.name).to.eql(nextJSON.ball.withTeam)
       expect(nextJSON.ball.position).to.eql([pitchWidth / 2, pitchHeight - 60])
       expect(nextJSON.ball.direction).to.eql('south')
       expect(nextJSON.secondTeam.players[10].currentPOS).to.eql([pitchWidth / 2, pitchHeight - 60])
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[10].playerID) {
-          expect(player.startPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.secondTeam.players[10].name) {
+          expect(player.currentPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].currentPOS[1])
         }
       }
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[0].playerID) {
-          expect(player.startPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].startPOS[1])
+        if (player.name != nextJSON.kickOffTeam.players[0].name) {
+          expect(player.currentPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].currentPOS[1])
         }
       }
     })
