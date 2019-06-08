@@ -428,6 +428,28 @@ function runTest() {
       expect(nextJSON.secondTeam.players[10].currentPOS).to.eql([440, 550])
     })
   })
+  mocha.describe('setPenalties()', function() {
+    mocha.it('in bottom penalty area', async() => {
+      let itlocation = './test/input/boundaryPositions/kickoffteambottompenalty.json'
+      let isInBottomPenaltyArea = await setpieces.inBottomPenalty(itlocation)
+      expect(isInBottomPenaltyArea).to.eql(true)
+    })
+    mocha.it('in top penalty area', async() => {
+      let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
+      let isInBottomPenaltyArea = await setpieces.inTopPenalty(itlocation)
+      expect(isInBottomPenaltyArea).to.eql(true)
+    })
+    mocha.it('not in bottom penalty area', async() => {
+      let itlocation = './test/input/boundaryPositions/intentPositionATTinOwnHalf.json'
+      let isInBottomPenaltyArea = await setpieces.inBottomPenalty(itlocation)
+      expect(isInBottomPenaltyArea).to.eql(false)
+    })
+    mocha.it('not in top penalty area', async() => {
+      let itlocation = './test/input/boundaryPositions/intentPositionATTinOwnHalf.json'
+      let isInBottomPenaltyArea = await setpieces.inTopPenalty(itlocation)
+      expect(isInBottomPenaltyArea).to.eql(false)
+    })
+  })
 }
 
 module.exports = {
