@@ -66,7 +66,7 @@ async function startSecondHalf(matchDetails) {
   let { kickOffTeam, secondTeam } = matchDetails
   setPositions.switchSide(matchDetails, kickOffTeam)
   setPositions.switchSide(matchDetails, secondTeam)
-  setPositions.removeBallFromAllPlayers(matchDetails)
+  common.removeBallFromAllPlayers(matchDetails)
   setVariables.resetPlayerPositions(matchDetails)
   setPositions.setBallSpecificGoalScoreValue(matchDetails, matchDetails.kickOffTeam)
   matchDetails.kickOffTeam.intent = `attack`

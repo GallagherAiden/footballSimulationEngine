@@ -63,7 +63,7 @@ async function removeBallFromAllPlayers(iterationFile) {
     .catch(function(err) {
       throw err.stack
     })
-  setPos.removeBallFromAllPlayers(matchDetails)
+  common.removeBallFromAllPlayers(matchDetails)
   return matchDetails
 }
 
@@ -166,7 +166,7 @@ async function inTopPenalty(iterationFile) {
     .catch(function(err) {
       throw err.stack
     })
-  return setPos.inTopPenalty(matchDetails)
+  return common.inTopPenalty(matchDetails, matchDetails.ball.position)
 }
 
 async function inBottomPenalty(iterationFile) {
@@ -174,9 +174,8 @@ async function inBottomPenalty(iterationFile) {
     .catch(function(err) {
       throw err.stack
     })
-  return setPos.inBottomPenalty(matchDetails)
+  return common.inBottomPenalty(matchDetails, matchDetails.ball.position)
 }
-
 
 
 module.exports = {

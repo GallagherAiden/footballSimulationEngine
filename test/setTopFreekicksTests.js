@@ -405,20 +405,14 @@ function runTest() {
         expect(thatPlayer.currentPOS).to.eql([midWayFromBalltoGoalX, firstWallPosition])
         firstWallPosition -= 2
       }
-      let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight]
       for (let num of [5, 6, 7, 8, 9, 10]) {
-        let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
-        let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
-        let thisXPOSST = secondTeam.players[num].currentPOS[0]
-        let thisYPOSST = secondTeam.players[num].currentPOS[1]
+        let kotCurrentPOS = kickOffTeam.players[num].currentPOS
+        let stCurrentPOS = secondTeam.players[num].currentPOS
 
         if (num != 5) {
-          expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
-          expect(true).to.eql(common.isBetween(thisYPOSKOT, boundaryY[0], boundaryY[1]))
+          expect(true).to.eql(common.inBottomPenalty(nextJSON, kotCurrentPOS))
         } else {
-          expect(true).to.eql(common.isBetween(thisXPOSST, boundaryX[0], boundaryX[1]))
-          expect(true).to.eql(common.isBetween(thisYPOSST, boundaryY[0], boundaryY[1]))
+          expect(true).to.eql(common.inBottomPenalty(nextJSON, stCurrentPOS))
         }
       }
     })
