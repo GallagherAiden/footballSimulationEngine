@@ -5,6 +5,8 @@
 - altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for
 - added 100+ test cases
 - cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
+- improvement to corners by putting players in the box
+- 
 ---
 ## Version 2.2.0
 - fix closestPlayer Report

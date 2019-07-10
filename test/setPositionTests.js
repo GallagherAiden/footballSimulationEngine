@@ -260,12 +260,16 @@ function runTest() {
 
       let nextJSON = await setpieces.setupTopLeftCorner(itlocation)
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
+      const [pitchWidth, pitchHeight] = nextJSON.pitchSize
       expect(nextJSON).to.be.an('object')
       for (let player of nextJSON.secondTeam.players) {
-        if (player.position == 'GK' || player.position == 'CB' || player.position == 'CM') {
+        if (player.position == 'GK' || player.position == 'CB') {
           expect(player.currentPOS[1]).to.be.greaterThan(insideHalf)
-        } else {
-          expect(player.currentPOS[1]).to.be.lessThan(insideHalf)
+        } else if (player.position != 'LB' && player.position != 'RB') {
+          expect(player.currentPOS[0]).to.be.greaterThan((pitchWidth / 4) + 5)
+          expect(player.currentPOS[0]).to.be.lessThan((pitchWidth - (pitchWidth / 4) - 5))
+          expect(player.currentPOS[1]).to.be.greaterThan(-1)
+          expect(player.currentPOS[1]).to.be.lessThan((pitchHeight / 6) + 7)
         }
       }
     })
@@ -274,12 +278,16 @@ function runTest() {
 
       let nextJSON = await setpieces.setupBottomLeftCorner(itlocation)
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
+      const [pitchWidth, pitchHeight] = nextJSON.pitchSize
       expect(nextJSON).to.be.an('object')
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.position == 'GK' || player.position == 'CB' || player.position == 'CM') {
+        if (player.position == 'GK' || player.position == 'CB') {
           expect(player.currentPOS[1]).to.be.lessThan(insideHalf)
-        } else {
-          expect(player.currentPOS[1]).to.be.greaterThan(insideHalf)
+        } else if (player.position != 'LB' && player.position != 'RB') {
+          expect(player.currentPOS[0]).to.be.greaterThan((pitchWidth / 4) + 5)
+          expect(player.currentPOS[0]).to.be.lessThan((pitchWidth - (pitchWidth / 4) - 5))
+          expect(player.currentPOS[1]).to.be.greaterThan(pitchHeight - (pitchHeight / 6) + 5)
+          expect(player.currentPOS[1]).to.be.lessThan(pitchHeight + 1)
         }
       }
     })
@@ -288,13 +296,16 @@ function runTest() {
 
       let nextJSON = await setpieces.setupBottomRightCorner(itlocation)
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
-
+      const [pitchWidth, pitchHeight] = nextJSON.pitchSize
       expect(nextJSON).to.be.an('object')
       for (let player of nextJSON.secondTeam.players) {
         if (player.position == 'GK' || player.position == 'CB') {
           expect(player.currentPOS[1]).to.be.lessThan(insideHalf)
-        } else {
-          expect(player.currentPOS[1]).to.be.greaterThan(insideHalf)
+        } else if (player.position != 'LB' && player.position != 'RB') {
+          expect(player.currentPOS[0]).to.be.greaterThan((pitchWidth / 4) + 5)
+          expect(player.currentPOS[0]).to.be.lessThan((pitchWidth - (pitchWidth / 4) - 5))
+          expect(player.currentPOS[1]).to.be.greaterThan(pitchHeight - (pitchHeight / 6) + 5)
+          expect(player.currentPOS[1]).to.be.lessThan(pitchHeight + 1)
         }
       }
     })
@@ -303,13 +314,16 @@ function runTest() {
 
       let nextJSON = await setpieces.setupTopRightCorner(itlocation)
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
-
+      const [pitchWidth, pitchHeight] = nextJSON.pitchSize
       expect(nextJSON).to.be.an('object')
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.position == 'GK' || player.position == 'CB' || player.position == 'CM') {
+        if (player.position == 'GK' || player.position == 'CB') {
           expect(player.currentPOS[1]).to.be.greaterThan(insideHalf)
-        } else {
-          expect(player.currentPOS[1]).to.be.lessThan(insideHalf)
+        } else if (player.position != 'LB' && player.position != 'RB') {
+          expect(player.currentPOS[0]).to.be.greaterThan((pitchWidth / 4) + 5)
+          expect(player.currentPOS[0]).to.be.lessThan((pitchWidth - (pitchWidth / 4) - 5))
+          expect(player.currentPOS[1]).to.be.greaterThan(-1)
+          expect(player.currentPOS[1]).to.be.lessThan((pitchHeight / 6) + 7)
         }
       }
     })
