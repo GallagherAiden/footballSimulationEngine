@@ -94,7 +94,7 @@ function runTest() {
   })
   mocha.describe('setSecondTeamGoalScored()', function() {
     mocha.it('second team in same position', async() => {
-      let itlocation = './init_config/iteration.json'
+      let itlocation = './init_config/iteration2.json'
       let nextJSON = await setpieces.setSecondTeamGoalScored(itlocation)
       expect(nextJSON.secondTeamStatistics.goals).to.eql(1)
       for (let player of nextJSON.secondTeam.players) {

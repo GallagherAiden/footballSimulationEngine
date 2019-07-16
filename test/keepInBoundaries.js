@@ -190,9 +190,10 @@ function runTest() {
   })
   mocha.describe('goalScored()', function() {
     mocha.it('expected second team goal scored', async() => {
-      let itlocation = './init_config/iteration.json'
+      let itlocation = './init_config/iteration2.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [330, -1])
-      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - ThatTeam')
+      console.log(nextJSON.iterationLog)
+      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Emily Smith - (ThatTeam)')
 
       expect(nextJSON).to.be.an('object')
       expect(goalLog).to.be.greaterThan(-1)
@@ -200,7 +201,7 @@ function runTest() {
     mocha.it('expected kick off team goal scored', async() => {
       let itlocation = './init_config/iteration.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [330, 1500])
-      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - ThisTeam')
+      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
       expect(goalLog).to.be.greaterThan(-1)
@@ -208,23 +209,23 @@ function runTest() {
     mocha.it('expected kick off team goal scored 2', async() => {
       let itlocation = './init_config/iteration.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [352, 1500])
-      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - ThisTeam')
+      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
       expect(goalLog).to.be.greaterThan(-1)
     })
-    mocha.it('expected kick off team goal scored', async() => {
+    mocha.it('expected kick off team goal scored 3', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [330, -1])
-      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - ThisTeam')
+      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
       expect(goalLog).to.be.greaterThan(-1)
     })
-    mocha.it('expected second team goal scored', async() => {
+    mocha.it('expected second team goal scored - own goal', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [349, 1500])
-      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - ThatTeam')
+      let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThatTeam)')
 
       expect(nextJSON).to.be.an('object')
       expect(goalLog).to.be.greaterThan(-1)

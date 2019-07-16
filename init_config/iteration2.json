@@ -378,7 +378,7 @@
             ],
             "action": "none",
             "offside": false,
-            "hasBall": true,
+            "hasBall": false,
             "goals": 0,
             "cards": {
                "yellow": 0,
@@ -614,7 +614,7 @@
             ],
             "action": "none",
             "offside": false,
-            "hasBall": false,
+            "hasBall": true,
             "goals": 0,
             "cards": {
                "yellow": 0,
@@ -866,7 +866,7 @@
       "Player": "78883930303030109",
       "withTeam": "78883930303030002",
       "direction": "south",
-      "lastTouch": "Peter Johnson",
+      "lastTouch": "Emily Smith",
       "ballOverIterations": []
    },
    "half": 1,
