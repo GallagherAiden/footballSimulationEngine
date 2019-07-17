@@ -146,7 +146,7 @@ function runTest() {
         let thisPlayer = secondTeam.players[num]
         let thatPlayer = kickOffTeam.players[num]
 
-        expect(thisPlayer.currentPOS[1]).to.lt(parseInt((pitchHeight * 0.25) - 70, 10))
+        expect(thisPlayer.currentPOS[1]).to.lt(parseInt((pitchHeight * 0.25) - 60, 10))
         expect(thatPlayer.currentPOS).to.eql([thatPlayer.originPOS[0], parseInt(pitchHeight * 0.5, 10)])
       }
     })
