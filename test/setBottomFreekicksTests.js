@@ -229,7 +229,7 @@ function runTest() {
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSST, boundaryX[0], boundaryX[1]))
           expect(true).to.eql(common.isBetween(thisYPOSST, boundaryY[0], boundaryY[1]))
-        }else{
+        } else {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
           expect(true).to.eql(common.isBetween(thisYPOSKOT, boundaryY[0], boundaryY[1]))
         }

@@ -220,7 +220,7 @@ function runTest() {
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-      let boundaryY = [pitchHeight - (pitchHeight / 6) - 5, pitchHeight +1]
+      let boundaryY = [pitchHeight - (pitchHeight / 6) - 5, pitchHeight + 1]
       for (let num of [5, 6, 7, 8, 9, 10]) {
         let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
         let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
@@ -267,7 +267,7 @@ function runTest() {
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight +1]
+      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight + 1]
       for (let num of [5, 6, 7, 8, 9, 10]) {
         let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
         let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
@@ -314,7 +314,7 @@ function runTest() {
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight +1]
+      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight + 1]
       for (let num of [5, 6, 7, 8, 9, 10]) {
         let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
         let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
@@ -361,7 +361,7 @@ function runTest() {
         playerSpace += 2
       }
       let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight +1]
+      let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight + 1]
       for (let num of [5, 6, 7, 8, 9, 10]) {
         let thisXPOSKOT = kickOffTeam.players[num].currentPOS[0]
         let thisYPOSKOT = kickOffTeam.players[num].currentPOS[1]
@@ -450,7 +450,7 @@ function runTest() {
         let thisXPOSST = secondTeam.players[num].currentPOS[0]
         let thisYPOSST = secondTeam.players[num].currentPOS[1]
         let boundaryX = [(pitchWidth / 4) - 7, (pitchWidth - (pitchWidth / 4) + 7)]
-        let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight +1]
+        let boundaryY = [pitchHeight - (pitchHeight / 6) + 4, pitchHeight + 1]
 
         if (num != 5) {
           expect(true).to.eql(common.isBetween(thisXPOSKOT, boundaryX[0], boundaryX[1]))
