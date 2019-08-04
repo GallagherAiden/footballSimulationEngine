@@ -6,7 +6,7 @@
 - added 100+ test cases
 - cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
 - improvement to corners by putting players in the box
-- 
+- players with red cards are removed from the pitch
 ---
 ## Version 2.2.0
 - fix closestPlayer Report

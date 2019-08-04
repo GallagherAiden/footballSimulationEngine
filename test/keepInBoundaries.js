@@ -192,7 +192,6 @@ function runTest() {
     mocha.it('expected second team goal scored', async() => {
       let itlocation = './init_config/iteration2.json'
       let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [330, -1])
-      console.log(nextJSON.iterationLog)
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Emily Smith - (ThatTeam)')
 
       expect(nextJSON).to.be.an('object')
