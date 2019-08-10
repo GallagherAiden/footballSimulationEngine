@@ -23,6 +23,11 @@ For examples of how this module can be used, see:
 - altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for
 - added 100+ test cases
 - cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
+- improvement to corners by putting players in the box
+- players with red cards are removed from the pitch
+- penalty taking improvements
+- skills used more intensively i.e. shooting can be both on/off target determined by skill
+- add player specific stats including tackles, passes, shots, saves and goals
 - [Full and Past changelogs are available here.](history.md)
 
 ---
