@@ -7,6 +7,9 @@
 - cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
 - improvement to corners by putting players in the box
 - players with red cards are removed from the pitch
+- penalty taking improvements
+- skills used more intensively i.e. shooting can be both on/off target determined by skill
+- add player specific stats including tackles, passes, shots, saves and goals
 ---
 ## Version 2.2.0
 - fix closestPlayer Report

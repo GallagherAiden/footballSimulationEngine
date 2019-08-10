@@ -200,7 +200,7 @@ function runTest() {
         expect(shJSON).to.be.an('Error')
       } catch (err) {
         expect(err).to.be.an('Error')
-        expect(err.toString()).to.have.string('Provide Cards: yellow,red')
+        expect(err.toString()).to.have.string('Player must contain JSON variable: stats')
       }
     })
   })

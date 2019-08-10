@@ -37,10 +37,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -75,10 +93,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -113,10 +149,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -151,10 +205,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -189,10 +261,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -227,10 +317,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -265,10 +373,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -303,10 +429,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -341,10 +485,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -379,10 +541,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -417,10 +597,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          }
       ],
@@ -463,10 +661,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -501,10 +717,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -539,10 +773,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -577,10 +829,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -615,10 +885,28 @@
             "action": "none",
             "offside": false,
             "hasBall": true,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -653,10 +941,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -691,10 +997,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -729,10 +1053,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -767,10 +1109,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -805,10 +1165,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          },
          {
@@ -843,10 +1221,28 @@
             "action": "none",
             "offside": false,
             "hasBall": false,
-            "goals": 0,
-            "cards": {
-               "yellow": 0,
-               "red": 0
+            "stats": {
+               "goals": 0,
+               "shots": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "cards": {
+                  "yellow": 0,
+                  "red": 0
+               },
+               "passes": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0
+               },
+               "tackles": {
+                  "total": 0,
+                  "on": 0,
+                  "off": 0,
+                  "fouls": 0
+               }
             }
          }
       ],

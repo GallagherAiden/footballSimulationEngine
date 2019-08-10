@@ -34,12 +34,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030100"
+                "playerID": "78883930303030100",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Fred Johnson",
@@ -72,12 +90,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030101"
+                "playerID": "78883930303030101",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "George Johnson",
@@ -110,12 +146,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030102"
+                "playerID": "78883930303030102",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Jim Johnson",
@@ -148,12 +202,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030103"
+                "playerID": "78883930303030103",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Georgina Johnson",
@@ -186,12 +258,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030104"
+                "playerID": "78883930303030104",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Lucy Johnson",
@@ -224,12 +314,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030105"
+                "playerID": "78883930303030105",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Arthur Johnson",
@@ -262,12 +370,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030106"
+                "playerID": "78883930303030106",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Cameron Johnson",
@@ -300,12 +426,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030107"
+                "playerID": "78883930303030107",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Gill Johnson",
@@ -338,12 +482,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030108"
+                "playerID": "78883930303030108",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Peter Johnson",
@@ -376,12 +538,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030109"
+                "playerID": "78883930303030109",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Louise Johnson",
@@ -414,12 +594,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030110"
+                "playerID": "78883930303030110",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             }
         ],
         "intent": "attack",
@@ -460,12 +658,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030200"
+                "playerID": "78883930303030200",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Fred Johnson",
@@ -498,12 +714,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030201"
+                "playerID": "78883930303030201",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "George Johnson",
@@ -536,12 +770,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030202"
+                "playerID": "78883930303030202",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Jim Johnson",
@@ -574,12 +826,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030203"
+                "playerID": "78883930303030203",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Georgina Johnson",
@@ -612,12 +882,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030204"
+                "playerID": "78883930303030204",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Lucy Johnson",
@@ -650,12 +938,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030205"
+                "playerID": "78883930303030205",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Arthur Johnson",
@@ -688,12 +994,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030206"
+                "playerID": "78883930303030206",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Cameron Johnson",
@@ -726,12 +1050,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030207"
+                "playerID": "78883930303030207",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Gill Johnson",
@@ -764,12 +1106,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030208"
+                "playerID": "78883930303030208",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Peter Johnson",
@@ -802,12 +1162,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030209"
+                "playerID": "78883930303030209",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             },
             {
                 "name": "Louise Johnson",
@@ -840,12 +1218,30 @@
                 "action": "none",
                 "offside": false,
                 "hasBall": false,
-                "goals": 0,
-                "cards": {
-                    "yellow": 0,
-                    "red": 0
-                },
-                "playerID": "78883930303030210"
+                "playerID": "78883930303030210",
+                "stats": {
+                    "goals": 0,
+                    "shots": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "red": 0
+                    },
+                    "passes": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0
+                    },
+                    "tackles": {
+                        "total": 0,
+                        "on": 0,
+                        "off": 0,
+                        "fouls": 0
+                    }
+                }
             }
         ],
         "intent": "attack",
