@@ -1,5 +1,8 @@
 # History of footballSimulationEngine
 
+## Version 3.0.1
+- added new test scripts
+
 ## Version 3.0.0
 - altered 'startPOS' to 'currentPOS' to better reflect what the variable is used for
 - altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for

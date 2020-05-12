@@ -464,6 +464,17 @@ function runTest() {
       expect(isInBottomPenaltyArea).to.eql(false)
     })
   })
+
+  mocha.describe('setGoalieHasBall()', function() {
+    mocha.it('checkGoalieHasBall', async() => {
+      let itlocation = './init_config/iteration.json'
+      let goalieHasBallSetup = await setpieces.goalieHasBall(itlocation)
+      expect(goalieHasBallSetup.kickOffTeam.players[0].hasBall).to.eql(true)
+      expect(goalieHasBallSetup.ball.withPlayer).to.eql(true)
+      expect(goalieHasBallSetup.ball.withTeam).to.eql('78883930303030002')
+      expect(goalieHasBallSetup.kickOffTeam.players[0].currentPOS).to.be.eql(goalieHasBallSetup.ball.position)
+    })
+  })
 }
 
 module.exports = {
