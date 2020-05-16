@@ -339,13 +339,59 @@ function runTest() {
     })
   })
   mocha.describe('topTeamPlayerHasBall()', function() {
-    mocha.it('...', async() => {
+    mocha.it('GK - opposition not near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomPenaltyBox.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.position = 'GK'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 50, 0, 0, 0, 0, 10, 0, 20, 20])
+    })
+    mocha.it('GK - opposition near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomPenaltyBox.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.position = 'GK'
+      opposition.players[3].currentPOS = [380, 999]
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 10, 0, 0, 0, 0, 10, 0, 40, 40])
+    })
+    mocha.it('Not GK - bottom corner boundary', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomPenaltyBox.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.currentPOS = [0, 1050]
+      matchDetails.ball.position = [0, 1050]
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 20, 80, 0, 0, 0, 0, 0, 0, 0])
+    })
+    mocha.it('Not GK - In Bottom Penalty Box', async() => {
       let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomPenaltyBox.json')
       let player = matchDetails.secondTeam.players[9]
       let team = matchDetails.secondTeam
       let opposition = matchDetails.kickOffTeam
       let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
-      expect(parameters).to.eql([0, 0, 0, 0, 0, 0, 0, 50, 50, 0, 0])
+      expect(parameters).to.eql([60, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0])
+    })
+    mocha.it('Not GK - In Bottom Third - no opp near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([70, 10, 10, 0, 0, 0, 0, 10, 0, 0, 0])
+    })
+    mocha.it('Not GK - In Bottom Third - opp near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInBottomThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      matchDetails.kickOffTeam.players[6].currentPOS = [378, 815]
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([30, 20, 20, 10, 0, 0, 0, 20, 0, 0, 0])
     })
   })
 }
