@@ -393,6 +393,130 @@ function runTest() {
       let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
       expect(parameters).to.eql([30, 20, 20, 10, 0, 0, 0, 20, 0, 0, 0])
     })
+    mocha.it('Middle Third - opp near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInMiddleThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      matchDetails.kickOffTeam.players[6].currentPOS = [378, 532]
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 20, 30, 20, 0, 0, 20, 0, 0, 0, 10])
+    })
+    mocha.it('Middle Third - no opp near - shooting > 85', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInMiddleThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([10, 10, 30, 0, 0, 0, 50, 0, 0, 0, 0])
+    })
+    mocha.it('Middle Third - no opp near - shooting < 85, LM', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInMiddleThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.skill.shooting = 50
+      player.position = 'LM'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 10, 10, 10, 0, 0, 0, 30, 40, 0, 0])
+    })
+    mocha.it('Middle Third - no opp near - shooting < 85, Striker', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInMiddleThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.skill.shooting = 50
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 0, 0, 0, 0, 0, 50, 50, 0, 0])
+    })
+    mocha.it('Middle Third - no opp near - shooting < 85, Defender', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInMiddleThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.skill.shooting = 50
+      player.position = 'LB'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 10, 0, 0, 0, 0, 60, 20, 0, 10])
+    })
+    mocha.it('Own Third - opp near', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInOwnThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      matchDetails.kickOffTeam.players[6].currentPOS = [378, 182]
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 0, 0, 0, 0, 0, 10, 0, 70, 20])
+    })
+    mocha.it('Own Third - no opp near - midfielder', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInOwnThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.position = 'LM'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 30, 0, 0, 0, 0, 30, 40, 0, 0])
+    })
+    mocha.it('Own Third - no opp near - striker', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInOwnThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.position = 'ST'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 0, 0, 0, 0, 0, 50, 50, 0, 0])
+    })
+    mocha.it('Own Third - no opp near - defender', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInOwnThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      player.position = 'RB'
+      let parameters = actions.topTeamPlayerHasBall(matchDetails, player, team, opposition)
+      expect(parameters).to.eql([0, 0, 40, 0, 0, 0, 0, 30, 0, 20, 10])
+    })
+  })
+  mocha.describe('findPossActions()', function() {
+    mocha.it('From Bottom', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/bottomTeamHasBallInTopPenaltyBox.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      let output = actions.findPossActions(player, team, opposition, 10, 10, matchDetails)
+      expect(output).to.eql([
+        { name: 'shoot', points: 60 },
+        { name: 'throughBall', points: 0 },
+        { name: 'pass', points: 0 },
+        { name: 'cross', points: 0 },
+        { name: 'tackle', points: 0 },
+        { name: 'intercept', points: 0 },
+        { name: 'slide', points: 0 },
+        { name: 'run', points: 40 },
+        { name: 'sprint', points: 0 },
+        { name: 'cleared', points: 0 },
+        { name: 'boot', points: 0 }
+      ])
+    })
+    mocha.it('From Bottom', async() => {
+      let matchDetails = await common.readFile('test/input/actionInputs/topTeamHasBallInOwnThird.json')
+      let player = matchDetails.secondTeam.players[9]
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      let output = actions.findPossActions(player, team, opposition, 10, 10, matchDetails)
+      expect(output).to.eql([
+        { name: 'shoot', points: 0 },
+        { name: 'throughBall', points: 0 },
+        { name: 'pass', points: 0 },
+        { name: 'cross', points: 0 },
+        { name: 'tackle', points: 0 },
+        { name: 'intercept', points: 0 },
+        { name: 'slide', points: 0 },
+        { name: 'run', points: 50 },
+        { name: 'sprint', points: 50 },
+        { name: 'cleared', points: 0 },
+        { name: 'boot', points: 0 }
+      ])
+    })
   })
 }
 
