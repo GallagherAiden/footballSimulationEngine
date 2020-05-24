@@ -3,6 +3,7 @@
 ## Version 3.0.1
 - added new test scripts
 - code fixes for assigning actions
+- code fixes for determining offside
 
 ## Version 3.0.0
 - altered 'startPOS' to 'currentPOS' to better reflect what the variable is used for

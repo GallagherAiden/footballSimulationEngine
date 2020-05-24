@@ -20,13 +20,50 @@ function runTest() {
       let team = matchDetails.secondTeam
       let opposition = matchDetails.kickOffTeam
       pMovement.checkOffside(team, opposition, matchDetails)
-      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(1)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(2)
       expect(matchDetails.kickOffTeam.players[9].offside).to.eql(true)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(true)
+    })
+    mocha.it('1 Player top offside w/ ball', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsideTopPosition1withBall.json')
+      let team = matchDetails.kickOffTeam
+      let opposition = matchDetails.secondTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(0)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(false)
+    })
+    mocha.it('1 Player top offside w/ ball switched', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsideTopPosition1withBall.json')
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(0)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(false)
+    })
+    mocha.it('1 Player btm offside w/ ball', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsideBtmPosition1withBall.json')
+      let team = matchDetails.kickOffTeam
+      let opposition = matchDetails.secondTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(0)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(false)
+    })
+    mocha.it('1 Player btm offside w/ ball switched', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsideBtmPosition1withBall.json')
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(0)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(false)
     })
     mocha.it('2 Player offside', async () => {
       let matchDetails = await common.readFile('test/input/offsideTests/offsidePosition2.json')
-      let team = matchDetails.secondTeam
-      let opposition = matchDetails.kickOffTeam
+      let team = matchDetails.kickOffTeam
+      let opposition = matchDetails.secondTeam
       pMovement.checkOffside(team, opposition, matchDetails)
       expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(2)
       expect(matchDetails.secondTeam.players[9].offside).to.eql(true)
@@ -43,6 +80,24 @@ function runTest() {
       expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(1)
       expect(matchDetails.secondTeam.players[9].offside).to.eql(false)
       expect(matchDetails.secondTeam.players[10].offside).to.eql(true)
+    })
+    mocha.it('Team 1 at top, 1 player offside', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsidePosition3.json')
+      let team = matchDetails.kickOffTeam
+      let opposition = matchDetails.secondTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(2)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(true)
+    })
+    mocha.it('Team 1 at bottom, 1 player offside', async () => {
+      let matchDetails = await common.readFile('test/input/offsideTests/offsidePosition3.json')
+      let team = matchDetails.secondTeam
+      let opposition = matchDetails.kickOffTeam
+      pMovement.checkOffside(team, opposition, matchDetails)
+      expect(JSON.stringify(matchDetails).split(`"offside":true`).length - 1).to.eql(2)
+      expect(matchDetails.kickOffTeam.players[9].offside).to.eql(false)
+      expect(matchDetails.kickOffTeam.players[10].offside).to.eql(true)
     })
     mocha.it('Goalkeeper has ball, no offside positions', async () => {
       let matchDetails = await common.readFile('test/input/offsideTests/onsideBottomPosition2GK.json')

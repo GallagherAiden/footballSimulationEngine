@@ -525,7 +525,7 @@
                 },
                 "currentPOS": [
                     368,
-                    11
+                    600
                 ],
                 "fitness": 99.59,
                 "injured": false,
@@ -540,7 +540,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "stats": {
                     "goals": 0,
                     "shots": {
@@ -581,7 +581,7 @@
                 },
                 "currentPOS": [
                     372,
-                    19
+                    600
                 ],
                 "fitness": 99.64,
                 "injured": false,
@@ -596,7 +596,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "stats": {
                     "goals": 0,
                     "shots": {
@@ -1150,7 +1150,7 @@
                 },
                 "currentPOS": [
                     280,
-                    500
+                    1019
                 ],
                 "fitness": 99.645,
                 "injured": false,
@@ -1206,7 +1206,7 @@
                 },
                 "currentPOS": [
                     440,
-                    500
+                    1020
                 ],
                 "fitness": 99.635,
                 "injured": false,
@@ -1221,7 +1221,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "stats": {
                     "goals": 0,
                     "shots": {
@@ -1256,15 +1256,15 @@
     ],
     "ball": {
         "position": [
-            372,
-            19
+            440,
+            1020
         ],
         "withPlayer": true,
-        "Player": 15271864119808414,
-        "withTeam": 30395458542605084,
-        "direction": "southeast",
+        "Player": 24362508272405100,
+        "withTeam": 19162341358685944,
+        "direction": "north",
         "ballOverIterations": [],
-        "lastTouch": "Louise Johnson"
+        "lastTouch": "Louise Jackson"
     },
     "half": 2,
     "kickOffTeamStatistics": {

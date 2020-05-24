@@ -428,7 +428,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": false,
+                "hasBall": true,
                 "stats": {
                     "goals": 0,
                     "shots": {
@@ -596,7 +596,7 @@
                 ],
                 "action": "none",
                 "offside": false,
-                "hasBall": true,
+                "hasBall": false,
                 "stats": {
                     "goals": 0,
                     "shots": {
@@ -1256,15 +1256,15 @@
     ],
     "ball": {
         "position": [
-            368,
-            12
+            420,
+            741
         ],
         "withPlayer": true,
-        "Player": 15271864119808414,
+        "Player": 22081892783113530,
         "withTeam": 30395458542605084,
         "direction": "southeast",
         "ballOverIterations": [],
-        "lastTouch": "Louise Johnson"
+        "lastTouch": "Cameron Johnson"
     },
     "half": 2,
     "kickOffTeamStatistics": {
