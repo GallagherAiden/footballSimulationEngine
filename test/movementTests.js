@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const mocha = require('mocha')
 const { expect } = require('chai')
 const pMovement = require('../lib/playerMovement')
@@ -191,7 +192,6 @@ function runTest() {
   mocha.describe('misc()', function() {
     mocha.it('updateInformation', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
-      let thisPlayer = matchDetails.secondTeam.players[4]
       let newPosition = [12, 32]
       pMovement.updateInformation(matchDetails, newPosition)
       expect(matchDetails.ball.position).to.eql([12, 32, 0])
@@ -297,6 +297,78 @@ function runTest() {
       expect(matchDetails.ball.withTeam).to.eql(``)
       expect(matchDetails.kickOffTeam.players[9].hasBall).to.eql(false)
       expect(matchDetails.ball.position).to.not.eql(thisPlayer.currentPOS)
+    })
+    mocha.it('checkProvidedAction - no ball, valid provided action', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      thisPlayer.action = `tackle`
+      let action = `run`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.eql(`tackle`)
+    })
+    mocha.it('checkProvidedAction - no ball, provided ball action', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let action = `run`
+      thisPlayer.action = `pass`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.eql(`run`)
+    })
+    mocha.it('checkProvidedAction - has ball, provided none ball action', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      let action = `run`
+      thisPlayer.action = `slide`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.not.eql(`slide`)
+    })
+    mocha.it('checkProvidedAction - has ball, provided none ball action intercept', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      let action = `run`
+      thisPlayer.action = `intercept`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.not.eql(`intercept`)
+    })
+    mocha.it('checkProvidedAction - has ball, provided ball action', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      let action = `run`
+      thisPlayer.action = `shoot`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.eql(`shoot`)
+    })
+    mocha.it('checkProvidedAction - none', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let action = `run`
+      thisPlayer.action = `none`
+      action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      expect(action).to.eql(`run`)
+    })
+    mocha.it('checkProvidedAction - nothing', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let action = `run`
+      thisPlayer.action = ``
+      try {
+        action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('Invalid player action for Cameron Johnson')
+      }
+    })
+    mocha.it('checkProvidedAction - invalid action', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let action = `run`
+      thisPlayer.action = `megs`
+      try {
+        action = pMovement.checkProvidedAction(matchDetails, thisPlayer, action)
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('Invalid player action for Cameron Johnson')
+      }
     })
   })
 }
