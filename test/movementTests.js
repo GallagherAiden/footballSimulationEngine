@@ -3,6 +3,7 @@ const mocha = require('mocha')
 const { expect } = require('chai')
 const pMovement = require('../lib/playerMovement')
 const common = require('../lib/common')
+const engine = require('../engine')
 
 function runTest() {
   mocha.describe('getMovement()', function() {
@@ -369,6 +370,274 @@ function runTest() {
         expect(err).to.be.an('Error')
         expect(err.toString()).to.have.string('Invalid player action for Cameron Johnson')
       }
+    })
+  })
+  mocha.describe('getSprintMovement()', function() {
+    mocha.it('Move NorthEast - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 20, 20)
+      let betweenX = common.isBetween(move[0], -3, 1)
+      let betweenY = common.isBetween(move[1], -3, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.98)
+    })
+    mocha.it('Move SouthWest - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, -20, -20)
+      let betweenX = common.isBetween(move[0], -1, 3)
+      let betweenY = common.isBetween(move[1], -1, 3)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.98)
+    })
+    mocha.it('Move Wait - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      thisPlayer.fitness = 29
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 0, 0)
+      let betweenX = common.isBetween(move[0], -1, 1)
+      let betweenY = common.isBetween(move[1], -1, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(29)
+    })
+    mocha.it('Top player with ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      thisPlayer.fitness = 29
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, -20, 10)
+      let betweenX = common.isBetween(move[0], -5, 5)
+      let betweenY = common.isBetween(move[1], 1, 5)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(29)
+    })
+    mocha.it('Bottom player with ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      thisPlayer.fitness = 31
+      thisPlayer.originPOS[1] = 720
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, -20, 10)
+      let betweenX = common.isBetween(move[0], -5, 5)
+      let betweenY = common.isBetween(move[1], -5, -1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(30.99)
+    })
+    mocha.it('Move SouthEast - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [10, 100]
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -1, 3)
+      let betweenY = common.isBetween(move[1], -1, 3)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.985)
+    })
+    mocha.it('Move NorthWest - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [600, 1000]
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -3, 1)
+      let betweenY = common.isBetween(move[1], -3, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.985)
+    })
+    mocha.it('Wait - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [230, 290]
+      let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -1, 1)
+      let betweenY = common.isBetween(move[1], -1, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.985)
+    })
+  })
+  mocha.describe('getRunMovement()', function() {
+    mocha.it('Move NorthEast - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, 20, 20)
+      let betweenX = common.isBetween(move[0], -2, 1)
+      let betweenY = common.isBetween(move[1], -2, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.985)
+    })
+    mocha.it('Move SouthWest - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, -20, -20)
+      let betweenX = common.isBetween(move[0], -1, 2)
+      let betweenY = common.isBetween(move[1], -1, 2)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.985)
+    })
+    mocha.it('Move Wait - close to ball ', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[7]
+      thisPlayer.fitness = 29
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, 0, 0)
+      let betweenX = common.isBetween(move[0], -1, 1)
+      let betweenY = common.isBetween(move[1], -1, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(28.995)
+    })
+    mocha.it('Top player with ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      thisPlayer.fitness = 19
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, -20, 10)
+      let betweenX = common.isBetween(move[0], -3, 1)
+      let betweenY = common.isBetween(move[1], -3, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(19)
+    })
+    mocha.it('Bottom player with ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[9]
+      thisPlayer.fitness = 31
+      thisPlayer.originPOS[1] = 720
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, -20, 10)
+      let betweenX = common.isBetween(move[0], -1, 3)
+      let betweenY = common.isBetween(move[1], -1, 3)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(30.995)
+    })
+    mocha.it('Move SouthEast - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [10, 100]
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -1, 3)
+      let betweenY = common.isBetween(move[1], -1, 3)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.99)
+    })
+    mocha.it('Move NorthWest - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [600, 1000]
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -3, 1)
+      let betweenY = common.isBetween(move[1], -3, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.99)
+    })
+    mocha.it('Wait - keep in formation', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      thisPlayer.currentPOS = [230, 290]
+      let move = pMovement.getRunMovement(matchDetails, thisPlayer, 40, 40)
+      let betweenX = common.isBetween(move[0], -1, 1)
+      let betweenY = common.isBetween(move[1], -1, 1)
+      expect(betweenX).to.eql(true)
+      expect(betweenY).to.eql(true)
+      expect(thisPlayer.fitness).to.eql(99.99)
+    })
+  })
+  mocha.describe('decideMovement()', function() {
+    mocha.it('completeSlide and same position as ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Peter Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].action = `slide`
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let slideInfo = matchDetails.iterationLog[2].indexOf(`Slide tackle attempted by: Louise Johnson`)
+      expect(slideInfo).to.be.greaterThan(-1)
+    })
+    mocha.it('completeTackle and same position as ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Peter Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].action = `tackle`
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let tackleInfo = matchDetails.iterationLog[2].indexOf(`Tackle attempted by: Louise Johnson`)
+      expect(tackleInfo).to.be.greaterThan(-1)
+    })
+    mocha.it('completeSlide and wiithin 3 of ball', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Peter Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].action = `slide`
+      matchDetails.kickOffTeam.players[10].currentPOS = [402, 519]
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let slideInfo = matchDetails.iterationLog[2].indexOf(`Slide tackle attempted by: Louise Johnson`)
+      expect(slideInfo).to.be.greaterThan(-1)
+    })
+    mocha.it('same position as ball not slide or tackle - setClosePlayerTakesBall', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Peter Johnson', position: 0 }
+      matchDetails.ball.withPlayer = false
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
+      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+    })
+    mocha.it('within 2 of ball not slide or tackle - setClosePlayerTakesBall', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Peter Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].currentPOS = [402, 519]
+      matchDetails.ball.withPlayer = false
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
+      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+    })
+    mocha.it('far from, not slide or tackle - setClosePlayerTakesBall', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Louise Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].currentPOS = [402, 519]
+      matchDetails.ball.withTeam = `78883930303030002`
+      matchDetails.ball.withPlayer = false
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
+      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+    })
+    mocha.it('far from, not slide or tackle - setClosePlayerTakesBall and offside true', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let closestPlayer = { name: 'Louise Johnson', position: 0 }
+      matchDetails.kickOffTeam.players[10].currentPOS = [402, 519]
+      matchDetails.kickOffTeam.players[10].offside = true
+      matchDetails.ball.withTeam = `78883930303030002`
+      matchDetails.ball.withPlayer = false
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let offsideInfo = matchDetails.iterationLog[2].indexOf(`Louise Johnson is offside`)
+      expect(offsideInfo).to.be.greaterThan(-1)
+    })
+    mocha.it('far from, not slide or tackle - setClosePlayerTakesBall and offside true', async() => {
+      let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
+      let thisPlayer = matchDetails.kickOffTeam.players[10]
+      matchDetails.kickOffTeam.players[10].offside = true
+      let team = JSON.parse(JSON.stringify(matchDetails.kickOffTeam))
+      team.name = `aaaa`
+      let opp = matchDetails.secondTeam
+      pMovement.setClosePlayerTakesBall(matchDetails, thisPlayer, team, opp)
+      let offsideInfo = matchDetails.iterationLog[2].indexOf(`Louise Johnson is offside`)
+      expect(offsideInfo).to.be.greaterThan(-1)
     })
   })
 }
