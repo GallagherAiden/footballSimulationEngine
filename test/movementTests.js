@@ -246,7 +246,7 @@ function runTest() {
       expect(matchDetails.ball.withTeam).to.eql(``)
       expect(matchDetails.kickOffTeam.players[9].hasBall).to.eql(false)
       expect(matchDetails.ball.position).to.not.eql(thisPlayer.currentPOS)
-      let ballLog = matchDetails.iterationLog[3].indexOf(`passed to new position:`)
+      let ballLog = matchDetails.iterationLog[4].indexOf(`passed to new position:`)
       expect(ballLog).to.be.greaterThan(-1)
     })
     mocha.it('ballPlayerActions - cross', async() => {
@@ -260,7 +260,7 @@ function runTest() {
       expect(matchDetails.ball.withTeam).to.eql(``)
       expect(matchDetails.kickOffTeam.players[9].hasBall).to.eql(false)
       expect(matchDetails.ball.position).to.not.eql(thisPlayer.currentPOS)
-      let ballLog = matchDetails.iterationLog[3].indexOf(`crossed to new position:`)
+      let ballLog = matchDetails.iterationLog[4].indexOf(`crossed to new position:`)
       expect(ballLog).to.be.greaterThan(-1)
     })
     mocha.it('ballPlayerActions - throughball', async() => {
@@ -638,6 +638,32 @@ function runTest() {
       pMovement.setClosePlayerTakesBall(matchDetails, thisPlayer, team, opp)
       let offsideInfo = matchDetails.iterationLog[2].indexOf(`Louise Johnson is offside`)
       expect(offsideInfo).to.be.greaterThan(-1)
+    })
+  })
+  mocha.describe('closestPlayerAction()', function() {
+    mocha.it('over 30', async() => {
+      let ballX = 31
+      let ballY = 31
+      ballX = pMovement.closestPlayerActionBallX(ballX)
+      ballY = pMovement.closestPlayerActionBallY(ballY)
+      expect(ballX).to.eql(29)
+      expect(ballY).to.eql(29)
+    })
+    mocha.it('under -30', async() => {
+      let ballX = -33
+      let ballY = -31
+      ballX = pMovement.closestPlayerActionBallX(ballX)
+      ballY = pMovement.closestPlayerActionBallY(ballY)
+      expect(ballX).to.eql(-29)
+      expect(ballY).to.eql(-29)
+    })
+    mocha.it('within 30s', async() => {
+      let ballX = -15
+      let ballY = 15
+      ballX = pMovement.closestPlayerActionBallX(ballX)
+      ballY = pMovement.closestPlayerActionBallY(ballY)
+      expect(ballX).to.eql(-15)
+      expect(ballY).to.eql(15)
     })
   })
 }
