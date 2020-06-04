@@ -3,7 +3,6 @@ const mocha = require('mocha')
 const { expect } = require('chai')
 const pMovement = require('../lib/playerMovement')
 const common = require('../lib/common')
-const engine = require('../engine')
 
 function runTest() {
   mocha.describe('getMovement()', function() {
