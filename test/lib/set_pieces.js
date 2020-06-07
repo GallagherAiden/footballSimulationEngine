@@ -177,6 +177,14 @@ async function inBottomPenalty(iterationFile) {
   return common.inBottomPenalty(matchDetails, matchDetails.ball.position)
 }
 
+async function goalieHasBall(iterationFile) {
+  let matchDetails = await common.readFile(iterationFile)
+    .catch(function(err) {
+      throw err.stack
+    })
+  return setPos.setGoalieHasBall(matchDetails, matchDetails.kickOffTeam.players[0])
+}
+
 
 module.exports = {
   setupTopPenalty,
@@ -199,5 +207,6 @@ module.exports = {
   setRightKickOffTeamThrowIn,
   setRightSecondTeamThrowIn,
   inTopPenalty,
-  inBottomPenalty
+  inBottomPenalty,
+  goalieHasBall
 }

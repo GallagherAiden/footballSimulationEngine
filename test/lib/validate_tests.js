@@ -1,5 +1,7 @@
 const common = require('../../lib/common')
 const engine = require('../../engine')
+const validate = require('../../lib/validate')
+const fs = require('fs')
 
 async function initGame(t1, t2, p) {
   let team1 = await common.readFile(t1)
@@ -21,8 +23,33 @@ async function setupSecondHalf(inputIteration) {
   return outputJSON
 }
 
+function validateArguments(a, b, c) {
+  return validate.validateArguments(a, b, c)
+}
+
+function validateTeam(team) {
+  validate.validateTeam(team)
+}
+
+function validateTeamSecondHalf(team) {
+  validate.validateTeamSecondHalf(team)
+}
+
+function readFile(filePath) {
+  return new Promise(function(resolve, reject) {
+    fs.readFile(filePath, 'utf8', function(err, data) {
+      if (err) reject(err)
+      else resolve(data)
+    })
+  })
+}
+
 module.exports = {
   initGame,
   playIteration,
-  setupSecondHalf
+  setupSecondHalf,
+  validateArguments,
+  validateTeam,
+  validateTeamSecondHalf,
+  readFile
 }

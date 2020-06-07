@@ -1,0 +1,18 @@
+{
+    "name": "Ball",
+    "position": "LB",
+    "rating": "100",
+    "skill": {
+      "passing": "100",
+      "shooting": "100",
+      "saving": "100",
+      "tackling": "100",
+      "agility": "100",
+      "strength": "100",
+      "penalty_taking": "100",
+      "jumping": "100"
+    },
+    "originPOS": [0, 200],
+    "currentPOS": [0, 200],
+    "injured": false
+  }

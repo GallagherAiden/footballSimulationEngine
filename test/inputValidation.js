@@ -270,6 +270,36 @@ function runTest() {
       }
     })
   })
+  mocha.describe('otherValidationTests()', function() {
+    mocha.it('Not enough paramaters in validate arguments', async() => {
+      try {
+        validation.validateArguments('', '')
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('Please provide two teams and a pitch')
+      }
+    })
+    mocha.it('validate team even if not in JSON format', async() => {
+      let team = await validation.readFile('./init_config/team1.json')
+      expect(validation.validateTeam(team)).to.not.be.an('Error')
+    })
+    mocha.it('validate team in second half even if not in JSON format', async() => {
+      let iteration = await common.readFile('./init_config/iteration.json')
+      let team = JSON.stringify(iteration.kickOffTeam)
+      expect(validation.validateTeamSecondHalf(team)).to.not.be.an('Error')
+    })
+    mocha.it('validate team in second half with no team name', async() => {
+      let iteration = await common.readFile('./init_config/iteration.json')
+      delete iteration.kickOffTeam.name
+      try {
+        let team = JSON.stringify(iteration.kickOffTeam)
+        expect(validation.validateTeamSecondHalf(team)).to.be.an('Error')
+      } catch (err) {
+        expect(err).to.be.an('Error')
+        expect(err.toString()).to.have.string('No team name given')
+      }
+    })
+  })
 }
 
 module.exports = {

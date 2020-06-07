@@ -1,0 +1,84 @@
+{
+  "thisArray": [
+    {
+      "position": [
+        600,
+        271
+      ],
+      "proximity": 7,
+      "name": "Gill Johnson"
+    },
+    {
+      "position": [
+        359,
+        526
+      ],
+      "proximity": 21,
+      "name": "Louise Johnson"
+    },
+    {
+      "position": [
+        420,
+        271
+      ],
+      "proximity": 173,
+      "name": "Cameron Johnson"
+    },
+    {
+      "position": [
+        600,
+        80
+      ],
+      "proximity": 184,
+      "name": "Georgina Johnson"
+    },
+    {
+      "position": [
+        420,
+        80
+      ],
+      "proximity": 364,
+      "name": "Jim Johnson"
+    },
+    {
+      "position": [
+        230,
+        270
+      ],
+      "proximity": 364,
+      "name": "Arthur Johnson"
+    },
+    {
+      "position": [
+        80,
+        272
+      ],
+      "proximity": 512,
+      "name": "Lucy Johnson"
+    },
+    {
+      "position": [
+        340,
+        0
+      ],
+      "proximity": 524,
+      "name": "Bill Johnson"
+    },
+    {
+      "position": [
+        230,
+        82
+      ],
+      "proximity": 552,
+      "name": "George Johnson"
+    },
+    {
+      "position": [
+        80,
+        80
+      ],
+      "proximity": 704,
+      "name": "Fred Johnson"
+    }
+  ]
+}
