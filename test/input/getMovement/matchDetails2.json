@@ -1262,7 +1262,11 @@
         "Player": "78883930303030109",
         "withTeam": "78883930303030002",
         "direction": "southwest",
-        "lastTouch": "Peter Johnson",
+        "lastTouch": {
+            "playerName": "Peter Johnson",
+            "playerID": 78883930303030109,
+            "teamID":  78883930303030002
+         },
         "ballOverIterations": []
     },
     "half": 1,

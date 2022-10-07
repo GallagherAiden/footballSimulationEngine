@@ -1,5 +1,13 @@
 # History of footballSimulationEngine
 
+## Version 4.0.0
+- fixed: red cards didn't send players off the pitch correctly
+- fixed: player skills incorrectly assigned for tackles and slide tackles
+- fixed: corners and goal kicks not correctly assigned / calculated
+- fixed: intentPOS sometimes returned as null
+- fixed: second half returned kickoffTeam with the ball, now secondTeam
+- new: added ability to set the width of the goal to make the game more customisable
+
 ## Version 3.0.1
 - added new test scripts
 - code fixes for assigning actions

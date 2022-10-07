@@ -70,7 +70,8 @@ function runTest() {
       let pitch = await common.readFile('./init_config/pitch.json')
       let testPitchData = {
         'pitchWidth': 680,
-        'pitchHeight': 1050
+        'pitchHeight': 1050,
+        'goalWidth': 90
       }
       expect(pitch).to.eql(testPitchData)
       try {

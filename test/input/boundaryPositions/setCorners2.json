@@ -1,6 +1,8 @@
 {
+    "matchID": "78883930303030001",
     "kickOffTeam": {
         "name": "ThisTeam",
+        "teamID": "78883930303030002",
         "rating": 88,
         "players": [
             {
@@ -403,6 +405,7 @@
         "intent": "attack"
     },
     "secondTeam": {
+        "teamID": "78883930303030003",
         "name": "ThatTeam",
         "rating": 88,
         "players": [
@@ -807,7 +810,8 @@
     },
     "pitchSize": [
         680,
-        1050
+        1050,
+        90
     ],
     "ball": {
         "position": [
@@ -818,6 +822,11 @@
         "Player": "",
         "withTeam": "",
         "direction": "wait",
+        "lastTouch": {
+            "playerName": "",
+            "playerID": "",
+            "teamID": "78883930303030003"
+         },
         "ballOverIterations": []
     },
     "half": 2,

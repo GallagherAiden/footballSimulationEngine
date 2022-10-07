@@ -1250,7 +1250,8 @@
    },
    "pitchSize": [
       680,
-      1050
+      1050,
+      90
    ],
    "ball": {
       "position": [
@@ -1262,7 +1263,11 @@
       "Player": "78883930303030109",
       "withTeam": "78883930303030002",
       "direction": "south",
-      "lastTouch": "Emily Smith",
+      "lastTouch": {
+         "playerName": "Emily Smith",
+         "playerID": 78883930303030204,
+         "teamID": 78883930303030003
+      },
       "ballOverIterations": []
    },
    "half": 1,

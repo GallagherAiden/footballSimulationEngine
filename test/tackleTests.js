@@ -3,6 +3,7 @@ const mocha = require('mocha')
 const { expect } = require('chai')
 const actions = require('../lib/actions')
 const common = require('../lib/common')
+const playerMovement = require('../lib/playerMovement')
 
 function runTest() {
   mocha.describe('testFoulIntensity()', function() {
@@ -150,7 +151,7 @@ function runTest() {
       let testTeam = matchDetails.secondTeam
       let testOpposition = matchDetails.kickOffTeam
       actions.setPostTackleBall(matchDetails, testTeam, testOpposition, testPlayer)
-      expect(matchDetails.ball.lastTouch).to.eql('Emily Smith')
+      expect(matchDetails.ball.lastTouch.playerName).to.eql('Emily Smith')
       expect(matchDetails.ball.position).to.eql([600, 970])
       expect(matchDetails.ball.Player).to.eql('78883930303030204')
       expect(matchDetails.ball.withPlayer).to.eql(true)
@@ -311,6 +312,38 @@ function runTest() {
       })
       x++
     }
+  })
+  mocha.describe('checkCards()', function() {
+    mocha.it('completeSlide - test 1', async() => {
+      let matchDetails = await common.readFile('test/input/tackleTests/completeSlide.json')
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      let thisPlayer = matchDetails.kickOffTeam.players[8]
+      matchDetails = playerMovement.completeSlide(matchDetails, thisPlayer, team, opp)
+      if (matchDetails.kickOffTeam.players[8].stats.cards.red == 1) {
+        expect(matchDetails.kickOffTeam.players[8].currentPOS).to.eql(['NP', 'NP'])
+      }
+    })
+    mocha.it('completeSlide - test 2', async() => {
+      let matchDetails = await common.readFile('test/input/tackleTests/completeSlide.json')
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      let thisPlayer = matchDetails.kickOffTeam.players[6]
+      matchDetails = playerMovement.completeSlide(matchDetails, thisPlayer, team, opp)
+      if (matchDetails.kickOffTeam.players[8].stats.cards.red == 1) {
+        expect(matchDetails.kickOffTeam.players[8].currentPOS).to.eql(['NP', 'NP'])
+      }
+    })
+    mocha.it('completeSlide - test 3', async() => {
+      let matchDetails = await common.readFile('test/input/tackleTests/completeSlide.json')
+      let team = matchDetails.kickOffTeam
+      let opp = matchDetails.secondTeam
+      let thisPlayer = matchDetails.kickOffTeam.players[2]
+      matchDetails = playerMovement.completeSlide(matchDetails, thisPlayer, team, opp)
+      if (matchDetails.kickOffTeam.players[8].stats.cards.red == 1) {
+        expect(matchDetails.kickOffTeam.players[8].currentPOS).to.eql(['NP', 'NP'])
+      }
+    })
   })
 }
 

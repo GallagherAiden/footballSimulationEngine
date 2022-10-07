@@ -1,10 +1,5 @@
 # Football Simulation Engine
 ---
-##NEWSFLASH!
-A recent update to 'startPOS' and 'relativePOS' to 'currentPOS' and 'intentPOS' respectively are MAJOR changes in v3.0.0 and beyond. This change is _not yet in NPM_ but will be as of the release of v3.0.0
-
-If you wish to continue using 'startPOS' and 'relativePOS' you should use v2.2.0 https://github.com/GallagherAiden/footballSimulationEngine/releases/tag/v2.2.0
----
 ## Overview
 This module was designed to allow the simulation of football (soccer) matches between two teams. This module allows for an iterative football match to be played out given initial "state" of players. 
 
@@ -15,19 +10,16 @@ The module consists of three functions that:
 
 For examples of how this module can be used, see:
 * [A narrated video of a match.](https://youtu.be/yxTXFrAZCdY)
-* [An example Node implementation of a Football Simulator with a GUI](https://github.com/GallagherAiden/footballsimulationexample)
-* [An example Node implementation for the 2018 World Cup](https://github.com/GallagherAiden/worldcup2018simulator)
+* [An example Node implementation of a Football Simulator with a GUI](https://github.com/GallagherAiden/footballsimulationexample) Note: not test on latest version
+* [An example Node implementation for the 2018 World Cup](https://github.com/GallagherAiden/worldcup2018simulator) Note: not test on latest version
 ---
-## Latest Version (3.0.0)
-- altered 'startPOS' to 'currentPOS' to better reflect what the variable is used for
-- altered 'relativePOS' to 'intentPOS' to better reflect what what the variable is used for
-- added 100+ test cases
-- cleaned 'setPositions.js' and created/cleaned 'setFreekicks.js' to improve readability and reduce duplication
-- improvement to corners by putting players in the box
-- players with red cards are removed from the pitch
-- penalty taking improvements
-- skills used more intensively i.e. shooting can be both on/off target determined by skill
-- add player specific stats including tackles, passes, shots, saves and goals
+## Latest Version (4.0.0)
+- fixed: red cards didn't send players off the pitch correctly
+- fixed: player skills incorrectly assigned for tackles and slide tackles
+- fixed: corners and goal kicks not correctly assigned / calculated
+- fixed: intentPOS sometimes returned as null
+- fixed: second half returned kickoffTeam with the ball, now secondTeam
+- new: added ability to set the width of the goal to make the game more customisable
 - [Full and Past changelogs are available here.](history.md)
 
 ---
@@ -122,11 +114,12 @@ Each team must have the following information and contain 11 players.
 ```
 
 #### Example Pitch JSON
-Pitch has been tested for width of 120 - 680 and height of 600 - 1050. The below is the current provided pitch size.
+Pitch has been tested for width of 120 - 680 and height of 600 - 1050 and a goal width of 90. The below is the current provided pitch size.
 ```
 {
 	"pitchWidth": 680,
-	"pitchHeight": 1050
+	"pitchHeight": 1050,
+  goalWidth: 90
 }
 ```
 
@@ -172,6 +165,11 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
      Player: 'Joe Bloggs',
      withTeam: 'Team2',
      direction: 'south' },
+     lastTouch: {
+         playerName: 'Peter Johnson',
+         playerID: 78883930303030109,
+         teamID: 72464187147564590
+      },
      ballOverIterations: []
   half: 1,
   kickOffTeamStatistics:

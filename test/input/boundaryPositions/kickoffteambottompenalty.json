@@ -831,7 +831,8 @@
    },
    "pitchSize": [
       680,
-      1050
+      1050,
+      90
    ],
    "ball": {
       "position": [
@@ -843,6 +844,11 @@
       "Player": "78883930303030109",
       "withTeam": "78883930303030002",
       "direction": "south",
+      "lastTouch": {
+         "playerName": "Peter Johnson",
+         "playerID": 78883930303030109,
+         "teamID": 78883930303030002
+     },
       "ballOverIterations": []
    },
    "half": 1,

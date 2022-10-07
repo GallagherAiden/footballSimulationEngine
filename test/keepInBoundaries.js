@@ -6,20 +6,20 @@ const common = require('../lib/common')
 function runTest() {
   mocha.describe('testBoundariesForCorners1()', function() {
     mocha.it('expected Top Left Corner', async() => {
-      let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [15, -1])
+      let itlocation = './test/input/keepInBoundaries/topLeftCorner.json'
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '53137486250364320', [25, -1])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
-      let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
+      let cornerLog = nextJSON.iterationLog.indexOf('Corner to - Dragons')
 
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
     mocha.it('expected Top Right Corner', async() => {
-      let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [400, -1])
+      let itlocation = './test/input/keepInBoundaries/topRightCorner.json'
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '53137486250364320', [558, -1])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
-      let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
+      let cornerLog = nextJSON.iterationLog.indexOf('Corner to - Dragons')
 
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.lessThan(insideHalf)
@@ -27,7 +27,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Left Corner', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [15, 100000])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [15, 100000])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
@@ -37,7 +37,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Right Corner', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [400, 100000])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [400, 100000])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
@@ -49,7 +49,7 @@ function runTest() {
   mocha.describe('testBoundariesForCorners2()', function() {
     mocha.it('expected Top Left Corner', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [15, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [15, -1])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
@@ -59,7 +59,7 @@ function runTest() {
     })
     mocha.it('expected Top Right Corner', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [400, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [400, -1])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThisTeam')
 
@@ -69,7 +69,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Left Corner', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [15, 100000])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [15, 100000])
       let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
@@ -79,19 +79,17 @@ function runTest() {
     })
     mocha.it('expected Bottom Right Corner', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [400, 100000])
-      let insideHalf = parseInt(nextJSON.pitchSize[1] / 2, 10)
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [400, 100000])
       let cornerLog = nextJSON.iterationLog.indexOf('Corner to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
-      expect(nextJSON.kickOffTeam.players[0].currentPOS[1]).to.be.greaterThan(insideHalf)
       expect(cornerLog).to.be.greaterThan(-1)
     })
   })
   mocha.describe('set throw in()', function() {
     mocha.it('expected kick off team throw in left', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [-1, 200])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [-1, 200])
       let throwLog = nextJSON.iterationLog.indexOf('Throw in to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -99,7 +97,7 @@ function runTest() {
     })
     mocha.it('expected kick off team throw in right', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [8000, 200])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [8000, 200])
       let throwLog = nextJSON.iterationLog.indexOf('Throw in to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -107,7 +105,7 @@ function runTest() {
     })
     mocha.it('expected second team throw in left', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [-1, 200])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [-1, 200])
       let throwLog = nextJSON.iterationLog.indexOf('Throw in to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -115,7 +113,7 @@ function runTest() {
     })
     mocha.it('expected second team throw in right', async() => {
       let itlocation = './test/input/boundaryPositions/setCorners2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [8000, 200])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [8000, 200])
       let throwLog = nextJSON.iterationLog.indexOf('Throw in to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -125,7 +123,7 @@ function runTest() {
   mocha.describe('goalKicks()', function() {
     mocha.it('expected Top Goal Kick', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [10, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [10, -1])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -133,7 +131,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Goal Kick', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [10, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [10, 1500])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -141,7 +139,7 @@ function runTest() {
     })
     mocha.it('expected Top Goal Kick 2', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [500, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [500, -1])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -149,7 +147,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Goal Kick 2', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [500, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [500, 1500])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -157,7 +155,7 @@ function runTest() {
     })
     mocha.it('expected Top Goal Kick 3', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [50, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [50, -1])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -165,7 +163,7 @@ function runTest() {
     })
     mocha.it('expected Top Goal Kick 4', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteambottompenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [400, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [400, -1])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -173,7 +171,7 @@ function runTest() {
     })
     mocha.it('expected Bottom Goal Kick 5', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteambottompenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [500, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [500, 1500])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThatTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -181,7 +179,7 @@ function runTest() {
     })
     mocha.it('expected Top Goal Kick 6', async() => {
       let itlocation = './test/input/boundaryPositions/secondteambottompenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [40, 1100])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [40, 1100])
       let cornerLog = nextJSON.iterationLog.indexOf('Goal Kick to - ThisTeam')
 
       expect(nextJSON).to.be.an('object')
@@ -191,7 +189,7 @@ function runTest() {
   mocha.describe('goalScored()', function() {
     mocha.it('expected second team goal scored', async() => {
       let itlocation = './init_config/iteration2.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [330, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030002', [330, -1])
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Emily Smith - (ThatTeam)')
 
       expect(nextJSON).to.be.an('object')
@@ -199,7 +197,7 @@ function runTest() {
     })
     mocha.it('expected kick off team goal scored', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [330, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [330, 1500])
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
@@ -207,7 +205,7 @@ function runTest() {
     })
     mocha.it('expected kick off team goal scored 2', async() => {
       let itlocation = './init_config/iteration.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [352, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [352, 1500])
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
@@ -215,7 +213,7 @@ function runTest() {
     })
     mocha.it('expected kick off team goal scored 3', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThatTeam', [330, -1])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '78883930303030003', [330, -1])
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThisTeam)')
 
       expect(nextJSON).to.be.an('object')
@@ -223,7 +221,7 @@ function runTest() {
     })
     mocha.it('expected second team goal scored - own goal', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [349, 1500])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '53137486250364320', [349, 1500])
       let goalLog = nextJSON.iterationLog.indexOf('Goal Scored by - Peter Johnson - (ThatTeam)')
 
       expect(nextJSON).to.be.an('object')
@@ -233,7 +231,7 @@ function runTest() {
   mocha.describe('no boundary()', function() {
     mocha.it('returns unchanged matchDetails', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
-      let nextJSON = await setpieces.keepInBoundaries(itlocation, 'ThisTeam', [349, 200])
+      let nextJSON = await setpieces.keepInBoundaries(itlocation, '53137486250364320', [349, 200])
       let matchDetails = await common.readFile(itlocation)
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.ballIntended).to.eql([349, 200])

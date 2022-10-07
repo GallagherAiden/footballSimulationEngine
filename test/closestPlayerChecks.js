@@ -17,7 +17,7 @@ function runTest() {
         'position': 10000
       }
       playerMovement.closestPlayerToBall(closestPlayerA, matchInfo.kickOffTeam, matchInfo)
-      expect(closestPlayerA).to.eql({ name: 'Jim Johnson', position: 28 })
+      expect(closestPlayerA).to.eql({ name: 'Arthur Johnson', position: 101 })
       playerMovement.closestPlayerToBall(closestPlayerB, matchInfo.secondTeam, matchInfo)
       expect(closestPlayerB).to.eql({ name: 'Wayne Smith', position: 229 })
     })
@@ -33,7 +33,7 @@ function runTest() {
         'position': 10000
       }
       playerMovement.closestPlayerToBall(closestPlayerA, matchInfo.kickOffTeam, matchInfo)
-      expect(closestPlayerA).to.eql({ name: 'Jim Johnson', position: 26 })
+      expect(closestPlayerA).to.eql({ name: 'Arthur Johnson', position: 97 })
       playerMovement.closestPlayerToBall(closestPlayerB, matchInfo.secondTeam, matchInfo)
       expect(closestPlayerB).to.eql({ name: 'Wayne Smith', position: 227 })
     })
@@ -49,9 +49,9 @@ function runTest() {
         'position': 10000
       }
       playerMovement.closestPlayerToBall(closestPlayerA, matchInfo.kickOffTeam, matchInfo)
-      expect(closestPlayerA).to.eql({ name: 'Louise Johnson', position: 160.5 })
+      expect(closestPlayerA).to.eql({ name: 'Louise Johnson', position: 162.5 })
       playerMovement.closestPlayerToBall(closestPlayerB, matchInfo.secondTeam, matchInfo)
-      expect(closestPlayerB).to.eql({ name: 'Jim Smith', position: 55.5 })
+      expect(closestPlayerB).to.eql({ name: 'Emily Smith', position: 66.5 })
     })
     mocha.it('find the closest player to the ball - test 4', async() => {
       let inputIteration = './test/input/closestPositions/closest4.json'

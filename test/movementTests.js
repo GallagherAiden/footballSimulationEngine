@@ -431,8 +431,8 @@ function runTest() {
       let thisPlayer = matchDetails.kickOffTeam.players[6]
       thisPlayer.currentPOS = [10, 100]
       let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 40, 40)
-      let betweenX = common.isBetween(move[0], -1, 3)
-      let betweenY = common.isBetween(move[1], -1, 3)
+      let betweenX = common.isBetween(move[0], -3, 0)
+      let betweenY = common.isBetween(move[1], -3, 0)
       expect(betweenX).to.eql(true)
       expect(betweenY).to.eql(true)
       expect(thisPlayer.fitness).to.eql(99.985)
@@ -453,8 +453,8 @@ function runTest() {
       let thisPlayer = matchDetails.kickOffTeam.players[6]
       thisPlayer.currentPOS = [230, 290]
       let move = pMovement.getSprintMovement(matchDetails, thisPlayer, 40, 40)
-      let betweenX = common.isBetween(move[0], -1, 1)
-      let betweenY = common.isBetween(move[1], -1, 1)
+      let betweenX = common.isBetween(move[0], -3, 0)
+      let betweenY = common.isBetween(move[1], -3, 0)
       expect(betweenX).to.eql(true)
       expect(betweenY).to.eql(true)
       expect(thisPlayer.fitness).to.eql(99.985)
@@ -520,8 +520,8 @@ function runTest() {
       let thisPlayer = matchDetails.kickOffTeam.players[6]
       thisPlayer.currentPOS = [10, 100]
       let move = pMovement.getRunMovement(matchDetails, thisPlayer, 40, 40)
-      let betweenX = common.isBetween(move[0], -1, 3)
-      let betweenY = common.isBetween(move[1], -1, 3)
+      let betweenX = common.isBetween(move[0], -2, 0)
+      let betweenY = common.isBetween(move[1], -2, 0)
       expect(betweenX).to.eql(true)
       expect(betweenY).to.eql(true)
       expect(thisPlayer.fitness).to.eql(99.99)
@@ -542,8 +542,8 @@ function runTest() {
       let thisPlayer = matchDetails.kickOffTeam.players[6]
       thisPlayer.currentPOS = [230, 290]
       let move = pMovement.getRunMovement(matchDetails, thisPlayer, 40, 40)
-      let betweenX = common.isBetween(move[0], -1, 1)
-      let betweenY = common.isBetween(move[1], -1, 1)
+      let betweenX = common.isBetween(move[0], -2, 0)
+      let betweenY = common.isBetween(move[1], -2, 0)
       expect(betweenX).to.eql(true)
       expect(betweenY).to.eql(true)
       expect(thisPlayer.fitness).to.eql(99.99)
@@ -589,7 +589,7 @@ function runTest() {
       let opp = matchDetails.secondTeam
       matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
       expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
     })
     mocha.it('within 2 of ball not slide or tackle - setClosePlayerTakesBall', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -600,7 +600,7 @@ function runTest() {
       let opp = matchDetails.secondTeam
       matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
       expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
     })
     mocha.it('far from, not slide or tackle - setClosePlayerTakesBall', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -612,7 +612,7 @@ function runTest() {
       let opp = matchDetails.secondTeam
       matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
       expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch).to.eql(`Louise Johnson`)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
     })
     mocha.it('far from, not slide or tackle - setClosePlayerTakesBall and offside true', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')

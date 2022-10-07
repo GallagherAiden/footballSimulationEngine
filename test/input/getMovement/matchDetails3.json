@@ -1262,7 +1262,11 @@
         "Player": "78883930303030205",
         "withTeam": "78883930303030003",
         "direction": "southwest",
-        "lastTouch": "Gregory Smith",
+        "lastTouch": {
+            "playerName": "Gregory  Smith",
+            "playerID": 78883930303030205,
+            "teamID":  78883930303030003
+         },
         "ballOverIterations": []
     },
     "half": 1,

@@ -207,13 +207,13 @@ function runTest() {
       let player = { 'position': 'CM', 'currentPOS': [320, 15], 'originPOS': [320, 5] }
       let matchDetails = { 'pitchSize': [680, 1050], 'ball': { 'withPlayer': false } }
       let parameters = actions.playerDoesNotHaveBall(player, 15, 12, matchDetails)
-      expect(parameters).to.be.eql([0, 0, 0, 0, 0, 0, 0, 60, 40, 0, 0])
+      expect(parameters).to.be.eql([0, 0, 0, 0, 0, 0, 0, 20, 80, 0, 0])
     })
     mocha.it('Midfielder - within 20 - No Player has ball - intercept run sprint', async() => {
       let player = { 'position': 'CM', 'currentPOS': [320, 15], 'originPOS': [320, 5] }
       let matchDetails = { 'pitchSize': [680, 1050], 'ball': { 'withPlayer': true } }
       let parameters = actions.playerDoesNotHaveBall(player, 15, 12, matchDetails)
-      expect(parameters).to.be.eql([0, 0, 0, 0, 0, 40, 0, 30, 30, 0, 0])
+      expect(parameters).to.be.eql([0, 0, 0, 0, 40, 0, 20, 10, 30, 0, 0])
     })
     mocha.it('Striker - over 20 - No Player has ball - intercept run sprint', async() => {
       let player = { 'position': 'ST', 'currentPOS': [320, 15], 'originPOS': [320, 5] }

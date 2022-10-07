@@ -46,6 +46,10 @@ async function playIteration(matchDetails) {
   common.matchInjury(matchDetails, kickOffTeam)
   common.matchInjury(matchDetails, secondTeam)
   matchDetails = ballMovement.moveBall(matchDetails)
+  if (matchDetails.endIteration == true) {
+    delete matchDetails.endIteration
+    return matchDetails
+  }
   playerMovement.closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails)
   playerMovement.closestPlayerToBall(closestPlayerB, secondTeam, matchDetails)
   kickOffTeam = playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
@@ -68,9 +72,10 @@ async function startSecondHalf(matchDetails) {
   setPositions.switchSide(matchDetails, secondTeam)
   common.removeBallFromAllPlayers(matchDetails)
   setVariables.resetPlayerPositions(matchDetails)
-  setPositions.setBallSpecificGoalScoreValue(matchDetails, matchDetails.kickOffTeam)
-  matchDetails.kickOffTeam.intent = `attack`
-  matchDetails.secondTeam.intent = `defend`
+  setPositions.setBallSpecificGoalScoreValue(matchDetails, matchDetails.secondTeam)
+  matchDetails.iterationLog = [`Second Half Started: ${matchDetails.secondTeam.name} to kick offs`]
+  matchDetails.kickOffTeam.intent = `defend`
+  matchDetails.secondTeam.intent = `attack`
   matchDetails.half++
   return matchDetails
 }
