@@ -1,5 +1,14 @@
 # History of footballSimulationEngine
 
+## Version 5.0.0
+- new: added player height to the game and made jumping additional height reached
+- new: added player skill 'perception'
+- new: added 'handball'
+- new: [started - body part ball hit. When the ball is not deflected but is controlled by the player, keep the ball at the right height...
+
+to do, determine if they control it on their next move, put it to the floor, kick it / head it or w/e. header should be less powerful! bodyPart: 'shin', deflection: true -> remove these after action resolved]
+- updated: [not started - improve intentPOS]
+
 ## Version 4.0.0
 - fixed: red cards didn't send players off the pitch correctly
 - fixed: player skills incorrectly assigned for tackles and slide tackles

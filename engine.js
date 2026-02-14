@@ -59,6 +59,7 @@ async function playIteration(matchDetails) {
   if (matchDetails.ball.ballOverIterations.length == 0 || matchDetails.ball.withTeam != '') {
     playerMovement.checkOffside(kickOffTeam, secondTeam, matchDetails)
   }
+  // console.log(matchDetails)
   return matchDetails
 }
 
