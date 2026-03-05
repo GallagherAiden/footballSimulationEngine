@@ -43,10 +43,10 @@ function runTest() {
       expect(number).to.eql(150)
     })
     mocha.it('calculate power', async() => {
-      let number = common.calculatePower(1)
+      let number = common.calculatePower(1, 1055)
       expect(number).to.be.gt(0)
       expect(number).to.be.lt(6)
-      number = common.calculatePower(10)
+      number = common.calculatePower(10, 1055)
       expect(number).to.be.gt(0)
       expect(number).to.be.lt(51)
     })

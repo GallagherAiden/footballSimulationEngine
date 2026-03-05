@@ -1575,7 +1575,9 @@
         "lastTouch": {
             "playerName": "Arthur Johnson",
             "playerID": 64657425870370696,
-            "teamID": 81767156210551460
+            "teamID": 81767156210551460,
+            "bodyPart": "",
+            "deflection": false
         }
     },
     "half": 1,

@@ -4,9 +4,11 @@
 - new: added player height to the game and made jumping additional height reached
 - new: added player skill 'perception'
 - new: added 'handball'
-- new: [started - body part ball hit. When the ball is not deflected but is controlled by the player, keep the ball at the right height...
-
-to do, determine if they control it on their next move, put it to the floor, kick it / head it or w/e. header should be less powerful! bodyPart: 'shin', deflection: true -> remove these after action resolved]
+- new: improved zaxis for gravity over time and friction
+- new: state which part of the body was hit by the deflection and during normal attack
+- updated: scaled the power, gravity and roll of the ball on grass. Made all ball movement linked to power
+- new: linked power to both strength and ratioed to the pitchHeight
+- to do: ... never actually hits head, should only pick knee etc. when not being kicked
 - updated: [not started - improve intentPOS]
 
 ## Version 4.0.0

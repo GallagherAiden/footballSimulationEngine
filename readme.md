@@ -168,7 +168,8 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
      lastTouch: {
          playerName: 'Peter Johnson',
          playerID: 78883930303030109,
-         teamID: 72464187147564590
+         teamID: 72464187147564590,
+         bodyPart: ''
       },
      ballOverIterations: []
   half: 1,
