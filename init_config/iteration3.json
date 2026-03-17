@@ -21,9 +21,9 @@
                 },
                 "currentPOS": [
                     60,
-                    0
+                    1
                 ],
-                "fitness": 99.64,
+                "fitness": 99.635,
                 "height": 175,
                 "injured": false,
                 "playerID": 97307049016501460,
@@ -33,7 +33,7 @@
                 ],
                 "intentPOS": [
                     60,
-                    0
+                    12.600000000000001
                 ],
                 "action": "none",
                 "offside": false,
@@ -82,7 +82,7 @@
                     30,
                     20
                 ],
-                "fitness": 99.705,
+                "fitness": 99.7,
                 "height": 175,
                 "injured": false,
                 "playerID": 42361825898672020,
@@ -91,8 +91,8 @@
                     20
                 ],
                 "intentPOS": [
-                    30,
-                    20
+                    34.788897449072024,
+                    33.568542772370726
                 ],
                 "action": "none",
                 "offside": false,
@@ -137,10 +137,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    50,
+                    51,
                     20
                 ],
-                "fitness": 99.725,
+                "fitness": 99.72,
                 "height": 175,
                 "injured": false,
                 "playerID": 59978254119485340,
@@ -149,8 +149,8 @@
                     20
                 ],
                 "intentPOS": [
-                    50,
-                    20
+                    51.71770096418351,
+                    34.600458195559824
                 ],
                 "action": "none",
                 "offside": false,
@@ -196,9 +196,9 @@
                 },
                 "currentPOS": [
                     68,
-                    20
+                    21
                 ],
-                "fitness": 99.72,
+                "fitness": 99.71,
                 "height": 175,
                 "injured": false,
                 "playerID": 87934472597066140,
@@ -207,8 +207,8 @@
                     20
                 ],
                 "intentPOS": [
-                    70,
-                    20
+                    66.62134699848461,
+                    34.648188141101045
                 ],
                 "action": "none",
                 "offside": false,
@@ -253,10 +253,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    88,
+                    87,
                     20
                 ],
-                "fitness": 99.7,
+                "fitness": 99.695,
                 "height": 175,
                 "injured": false,
                 "playerID": 15264969524493898,
@@ -265,8 +265,8 @@
                     20
                 ],
                 "intentPOS": [
-                    90,
-                    20
+                    83.48214523105334,
+                    33.71491626287379
                 ],
                 "action": "none",
                 "offside": false,
@@ -311,10 +311,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    57,
-                    126
+                    58,
+                    124
                 ],
-                "fitness": 99.66,
+                "fitness": 99.65,
                 "height": 175,
                 "injured": false,
                 "playerID": 85699762236514800,
@@ -323,8 +323,8 @@
                     120
                 ],
                 "intentPOS": [
-                    30,
-                    120
+                    58.03029437251523,
+                    118.7879393923934
                 ],
                 "action": "none",
                 "offside": false,
@@ -370,9 +370,9 @@
                 },
                 "currentPOS": [
                     60,
-                    129
+                    128
                 ],
-                "fitness": 99.66,
+                "fitness": 99.65,
                 "height": 175,
                 "injured": false,
                 "playerID": 64657425870370696,
@@ -381,8 +381,8 @@
                     120
                 ],
                 "intentPOS": [
-                    50,
-                    120
+                    60,
+                    120.936
                 ],
                 "action": "none",
                 "offside": false,
@@ -428,9 +428,9 @@
                 },
                 "currentPOS": [
                     60,
-                    130
+                    129
                 ],
-                "fitness": 99.655,
+                "fitness": 99.645,
                 "height": 175,
                 "injured": false,
                 "playerID": 76397282357395410,
@@ -439,8 +439,8 @@
                     120
                 ],
                 "intentPOS": [
-                    70,
-                    120
+                    60,
+                    121.66666666666667
                 ],
                 "action": "none",
                 "offside": false,
@@ -485,10 +485,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    65,
-                    132
+                    63,
+                    130
                 ],
-                "fitness": 99.685,
+                "fitness": 99.675,
                 "height": 175,
                 "injured": false,
                 "playerID": 11083603702825572,
@@ -497,8 +497,8 @@
                     120
                 ],
                 "intentPOS": [
-                    90,
-                    120
+                    63.36612080580656,
+                    123.17705235135543
                 ],
                 "action": "none",
                 "offside": false,
@@ -543,8 +543,8 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    50,
-                    257
+                    51,
+                    256
                 ],
                 "fitness": 99.68,
                 "height": 175,
@@ -555,8 +555,8 @@
                     270
                 ],
                 "intentPOS": [
-                    50,
-                    270
+                    52.5,
+                    245.25
                 ],
                 "action": "none",
                 "offside": false,
@@ -602,9 +602,9 @@
                 },
                 "currentPOS": [
                     69,
-                    242
+                    241
                 ],
-                "fitness": 99.7,
+                "fitness": 99.695,
                 "height": 175,
                 "injured": false,
                 "playerID": 78382960278366020,
@@ -613,8 +613,8 @@
                     270
                 ],
                 "intentPOS": [
-                    70,
-                    270
+                    68.69508725225903,
+                    237.35855039549864
                 ],
                 "action": "none",
                 "offside": false,
@@ -669,9 +669,9 @@
                 },
                 "currentPOS": [
                     60,
-                    503
+                    502
                 ],
-                "fitness": 99.67,
+                "fitness": 99.665,
                 "height": 175,
                 "injured": false,
                 "playerID": 68393137796147610,
@@ -681,7 +681,7 @@
                 ],
                 "intentPOS": [
                     60,
-                    484
+                    474.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -727,10 +727,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    30,
+                    31,
                     485
                 ],
-                "fitness": 99.7,
+                "fitness": 99.695,
                 "height": 175,
                 "injured": false,
                 "playerID": 6754692249434428,
@@ -739,8 +739,8 @@
                     520
                 ],
                 "intentPOS": [
-                    30,
-                    465
+                    37.5,
+                    457.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -788,7 +788,7 @@
                     50,
                     488
                 ],
-                "fitness": 99.675,
+                "fitness": 99.67,
                 "height": 175,
                 "injured": false,
                 "playerID": 12295737289091196,
@@ -797,8 +797,8 @@
                     520
                 ],
                 "intentPOS": [
-                    50,
-                    468
+                    52.5,
+                    457.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -844,9 +844,9 @@
                 },
                 "currentPOS": [
                     70,
-                    490
+                    489
                 ],
-                "fitness": 99.695,
+                "fitness": 99.69,
                 "height": 175,
                 "injured": false,
                 "playerID": 66284703458271310,
@@ -855,8 +855,8 @@
                     520
                 ],
                 "intentPOS": [
-                    70,
-                    470
+                    67.5,
+                    457.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -901,10 +901,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    89,
+                    87,
                     491
                 ],
-                "fitness": 99.72,
+                "fitness": 99.71,
                 "height": 175,
                 "injured": false,
                 "playerID": 56302628617489290,
@@ -913,8 +913,8 @@
                     520
                 ],
                 "intentPOS": [
-                    90,
-                    471
+                    82.5,
+                    457.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -959,10 +959,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    30,
-                    381
+                    31,
+                    380
                 ],
-                "fitness": 99.73,
+                "fitness": 99.725,
                 "height": 175,
                 "injured": false,
                 "playerID": 7600983122286238,
@@ -971,8 +971,8 @@
                     420
                 ],
                 "intentPOS": [
-                    30,
-                    361
+                    37.5,
+                    372.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -1017,10 +1017,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    50,
-                    391
+                    51,
+                    390
                 ],
-                "fitness": 99.7,
+                "fitness": 99.695,
                 "height": 175,
                 "injured": false,
                 "playerID": 57846921107225420,
@@ -1029,8 +1029,8 @@
                     420
                 ],
                 "intentPOS": [
-                    50,
-                    371
+                    52.5,
+                    372.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -1076,9 +1076,9 @@
                 },
                 "currentPOS": [
                     68,
-                    386
+                    385
                 ],
-                "fitness": 99.735,
+                "fitness": 99.73,
                 "height": 175,
                 "injured": false,
                 "playerID": 2533868141485079,
@@ -1087,8 +1087,8 @@
                     420
                 ],
                 "intentPOS": [
-                    70,
-                    367
+                    67.5,
+                    372.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -1136,7 +1136,7 @@
                     90,
                     382
                 ],
-                "fitness": 99.695,
+                "fitness": 99.685,
                 "height": 175,
                 "injured": false,
                 "playerID": 5974084011644635,
@@ -1145,8 +1145,8 @@
                     420
                 ],
                 "intentPOS": [
-                    90,
-                    363
+                    82.5,
+                    372.75
                 ],
                 "action": "none",
                 "offside": false,
@@ -1191,10 +1191,10 @@
                     "jumping": "36"
                 },
                 "currentPOS": [
-                    53,
+                    55,
                     229
                 ],
-                "fitness": 99.685,
+                "fitness": 99.675,
                 "height": 175,
                 "injured": false,
                 "playerID": 18533784019037588,
@@ -1203,8 +1203,8 @@
                     270
                 ],
                 "intentPOS": [
-                    50,
-                    210
+                    53.48164809497015,
+                    220.46794803195743
                 ],
                 "action": "none",
                 "offside": false,
@@ -1250,9 +1250,9 @@
                 },
                 "currentPOS": [
                     60,
-                    222
+                    221
                 ],
-                "fitness": 99.665,
+                "fitness": 99.655,
                 "height": 175,
                 "injured": false,
                 "playerID": 14211332589304448,
@@ -1262,7 +1262,7 @@
                 ],
                 "intentPOS": [
                     60,
-                    108
+                    105
                 ],
                 "action": "none",
                 "offside": false,
@@ -1304,18 +1304,14 @@
     "ball": {
         "position": [
             60,
-            108
+            105,
+            1
         ],
         "withPlayer": false,
         "Player": "",
         "withTeam": "",
         "direction": "north",
         "ballOverIterations": [
-            [
-                60,
-                105,
-                1
-            ],
             [
                 60,
                 102,
@@ -1577,7 +1573,8 @@
             "playerID": 64657425870370696,
             "teamID": 81767156210551460,
             "bodyPart": "",
-            "deflection": false
+            "deflection": false,
+            "iterations": null
         }
     },
     "half": 1,
@@ -1606,8 +1603,15 @@
         "fouls": 0
     },
     "iterationLog": [
-        "ball still moving from previous kick: 60,108",
-        "Closest Player to ball: Arthur Johnson",
-        "Closest Player to ball: Aiden Smith"
+        "Ball start position: 60,108",
+        "ball still moving from previous kick: 60,105,1",
+        "Closest Player to ball: Lucy Johnson",
+        "Closest Player to ball: Aiden Smith",
+        "Ball end position: 60,105,1"
+    ],
+    "ballIntended": [
+        60,
+        105,
+        1
     ]
 }

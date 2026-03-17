@@ -18,14 +18,14 @@ function runTest() {
       expect(initJSON).to.be.an('object')
     })
     mocha.it('playIteration returns an Object', async() => {
-      let providedItJson = './init_config/iteration.json'
+      let providedItJson = './init_config/iteration3.json'
 
       let outputIteration = await validation.playIteration(providedItJson)
 
       expect(outputIteration).to.be.an('object')
     })
     mocha.it('start second half returns an Object', async() => {
-      let providedItJson = './init_config/iteration.json'
+      let providedItJson = './init_config/iteration3.json'
 
       let shJSON = await validation.setupSecondHalf(providedItJson)
 
@@ -89,6 +89,7 @@ function runTest() {
         let output = await validation.initGame(t1location, t2location, plocation)
         expect(output).to.be.an('Error')
       } catch (err) {
+        console.log(err)
         expect(err).to.be.an('Error')
         let expectedString = 'Provide skills: passing,shooting,tackling,saving,agility,strength,penalty_taking,jumping'
         expect(err.toString()).to.have.string(expectedString)
@@ -199,6 +200,7 @@ function runTest() {
         let shJSON = await validation.setupSecondHalf(providedItJson)
         expect(shJSON).to.be.an('Error')
       } catch (err) {
+        console.log(err)
         expect(err).to.be.an('Error')
         expect(err.toString()).to.have.string('Player must contain JSON variable: stats')
       }

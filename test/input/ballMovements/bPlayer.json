@@ -2,12 +2,16 @@
     "name": "Ball",
     "position": "LB",
     "rating": "100",
+    "fitness": "100",
+    "height": "160",
     "skill": {
       "passing": "100",
       "shooting": "100",
       "saving": "100",
       "tackling": "100",
+      "perception": "100",
       "agility": "100",
+      "control": "100",
       "strength": "100",
       "penalty_taking": "100",
       "jumping": "100"

@@ -152,7 +152,7 @@ function runTest() {
       let testOpposition = matchDetails.kickOffTeam
       actions.setPostTackleBall(matchDetails, testTeam, testOpposition, testPlayer)
       expect(matchDetails.ball.lastTouch.playerName).to.eql('Emily Smith')
-      expect(matchDetails.ball.position).to.eql([600, 970])
+      expect(matchDetails.ball.position).to.eql([600, 970, 0])
       expect(matchDetails.ball.Player).to.eql('78883930303030204')
       expect(matchDetails.ball.withPlayer).to.eql(true)
     })

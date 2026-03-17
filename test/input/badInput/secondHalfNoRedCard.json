@@ -25,6 +25,7 @@
                1050
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                340,
@@ -62,6 +63,7 @@
                970
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                80,
@@ -99,6 +101,7 @@
                970
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                230,
@@ -136,6 +139,7 @@
                970
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                420,
@@ -173,6 +177,7 @@
                970
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                600,
@@ -210,6 +215,7 @@
                780
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                80,
@@ -247,6 +253,7 @@
                780
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                230,
@@ -284,6 +291,7 @@
                780
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                420,
@@ -321,6 +329,7 @@
                780
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                600,
@@ -358,6 +367,7 @@
                525
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                280,
@@ -395,6 +405,7 @@
                525
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                440,
@@ -440,6 +451,7 @@
                0
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                340,
@@ -477,6 +489,7 @@
                80
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                80,
@@ -514,6 +527,7 @@
                80
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                230,
@@ -551,6 +565,7 @@
                80
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                420,
@@ -588,6 +603,7 @@
                80
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                600,
@@ -625,6 +641,7 @@
                270
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                80,
@@ -662,6 +679,7 @@
                270
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                230,
@@ -699,6 +717,7 @@
                270
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                420,
@@ -736,6 +755,7 @@
                270
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                600,
@@ -773,6 +793,7 @@
                500
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                280,
@@ -810,6 +831,7 @@
                500
             ],
             "fitness": 100,
+            "height": 120,
             "injured": false,
             "originPOS": [
                440,

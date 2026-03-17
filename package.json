@@ -1,6 +1,6 @@
 {
   "name": "footballsimulationengine",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "an engine for simulating football matches",
   "main": "engine.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "chai": "^4.3.6",
     "eslint": "^7.32.0",
     "eslint-config-unu": "^1.2.4",
+    "eslint-plugin-import": "^2.32.0",
     "lodash": "^4.17.21",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0"

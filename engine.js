@@ -7,6 +7,7 @@ const setVariables = require('./lib/setVariables')
 const playerMovement = require('./lib/playerMovement')
 const ballMovement = require('./lib/ballMovement')
 const validate = require('./lib/validate')
+const actions = require('./lib/actions')
 
 //------------------------
 //    Functions
@@ -42,6 +43,7 @@ async function playIteration(matchDetails) {
   validate.validateTeamSecondHalf(matchDetails.secondTeam)
   validate.validatePlayerPositions(matchDetails)
   matchDetails.iterationLog = []
+  matchDetails.iterationLog.push(`Ball start position: ${matchDetails.ball.position}`)
   let { kickOffTeam, secondTeam } = matchDetails
   common.matchInjury(matchDetails, kickOffTeam)
   common.matchInjury(matchDetails, secondTeam)
@@ -52,14 +54,39 @@ async function playIteration(matchDetails) {
   }
   playerMovement.closestPlayerToBall(closestPlayerA, kickOffTeam, matchDetails)
   playerMovement.closestPlayerToBall(closestPlayerB, secondTeam, matchDetails)
-  kickOffTeam = playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
-  secondTeam = playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails)
-  matchDetails.kickOffTeam = kickOffTeam
-  matchDetails.secondTeam = secondTeam
+  let koTeamMoves = playerMovement.decideMovement(closestPlayerA, kickOffTeam, secondTeam, matchDetails)
+  let stMoves = playerMovement.decideMovement(closestPlayerB, secondTeam, kickOffTeam, matchDetails)
+  let koTeamMovesBallMoves = actions.extractBallActions(koTeamMoves, 'ball')
+  let koTeamAllOtherMoves = actions.extractBallActions(koTeamMoves, 'movement')
+  let stMovesBallMoves = actions.extractBallActions(stMoves, 'ball')
+  let stAllOtherMoves = actions.extractBallActions(stMoves, 'movement')
+  matchDetails.kickOffTeam = playerMovement.movePlayers(koTeamAllOtherMoves, kickOffTeam, secondTeam, matchDetails)
+  matchDetails.secondTeam = playerMovement.movePlayers(stAllOtherMoves, secondTeam, kickOffTeam, matchDetails)
+
+  let allBallMoves = [...koTeamMovesBallMoves, ...stMovesBallMoves]
+  let validBallMoves = allBallMoves.filter(m => m.player.hasBall === true)
+  if (validBallMoves.length > 0) {
+    const chosenMove = validBallMoves[common.getRandomNumber(0, validBallMoves.length - 1)]
+    const { player } = chosenMove
+    let team, opp
+    if (player.teamID === kickOffTeam.teamID) {
+      team = kickOffTeam
+      opp = secondTeam
+    } else {
+      team = secondTeam
+      opp = kickOffTeam
+    }
+    if (team.teamID === kickOffTeam.teamID) {
+      matchDetails.kickOffTeam = playerMovement.executeBallAction(chosenMove, team, opp, matchDetails)
+    } else {
+      matchDetails.secondTeam = playerMovement.executeBallAction(chosenMove, team, opp, matchDetails)
+    }
+  }
   if (matchDetails.ball.ballOverIterations.length == 0 || matchDetails.ball.withTeam != '') {
     playerMovement.checkOffside(kickOffTeam, secondTeam, matchDetails)
   }
-  // console.log(matchDetails)
+  matchDetails.iterationLog.push(`Ball end position: ${matchDetails.ball.position}`)
+    console.log(JSON.stringify(matchDetails))
   return matchDetails
 }
 

@@ -13,13 +13,25 @@ For examples of how this module can be used, see:
 * [An example Node implementation of a Football Simulator with a GUI](https://github.com/GallagherAiden/footballsimulationexample) Note: not test on latest version
 * [An example Node implementation for the 2018 World Cup](https://github.com/GallagherAiden/worldcup2018simulator) Note: not test on latest version
 ---
-## Latest Version (4.0.0)
-- fixed: red cards didn't send players off the pitch correctly
-- fixed: player skills incorrectly assigned for tackles and slide tackles
-- fixed: corners and goal kicks not correctly assigned / calculated
-- fixed: intentPOS sometimes returned as null
-- fixed: second half returned kickoffTeam with the ball, now secondTeam
-- new: added ability to set the width of the goal to make the game more customisable
+## Version 5.0.0
+- new: added player height to the game and made jumping additional height reached
+- new: added player skill perception
+- new: added handball
+- new: improved z-axis for gravity over time and friction
+- new: state which part of the body was hit during deflection and normal play
+- updated: scaled ball power, gravity and roll on grass. All ball movement now linked to kick power
+- new: linked kick power to player strength and scaled to pitchHeight
+- updated: separated player movement decisions from ball actions to prevent multiple players interacting with the ball in the same iteration
+- new: added logic to ensure only one player can execute a ball action per iteration
+- updated: ball actions are now blocked while the ball is already travelling (ballOverIterations)
+- updated: improved possession handling so ball ownership is cleared correctly after kicks
+- updated: refactored iteration flow to process:
+   - ball movement
+   - player movement
+   - single ball interaction
+- updated: improved penalty setup to guarantee the taker is on the pitch and correctly assigned the ball
+- fixed: players could attempt ball actions while the ball was already in flight
+- fixed: multiple ball kicks could be triggered in the same iteration
 - [Full and Past changelogs are available here.](history.md)
 
 ---
@@ -92,21 +104,27 @@ Each team must have the following information and contain 11 players.
 {
   "name": "Team1",
   "players": [{
-      "name": "Player",
+      "name": "Bill Johnson",
       "position": "GK",
-      "rating": "99",
+      "rating": "75",
       "skill": {
-        "passing": "99",
-        "shooting": "99",
-        "tackling": "99",
-        "saving": "99",
-        "agility": "99",
-        "strength": "99",
-        "penalty_taking": "99",
-        "jumping": "300"
+        "passing": "20",
+        "shooting": "12",
+        "tackling": "20",
+        "saving": "20",
+        "agility": "20",
+        "strength": "20",
+        "penalty_taking": "43",
+        "perception": "75",
+        "jumping": "30",
+        "control": "60"
       },
-      "currentPOS": [60,0],
+      "currentPOS": [
+        340,
+        0
+      ],
       "fitness": 100,
+      "height": 200,
       "injured": false
     }...],
   "manager": "Aiden"
@@ -159,19 +177,25 @@ v2.1.0 - ball movement added so that a kicked ball makes movements over time. Th
      manager: 'Joe',
      intent: 'attack' },
   pitchSize: [ 120, 600 ],
-  ball:
-   { position: [ 76, 314, 0 ],
-     withPlayer: true,
-     Player: 'Joe Bloggs',
-     withTeam: 'Team2',
-     direction: 'south' },
-     lastTouch: {
-         playerName: 'Peter Johnson',
+  ball: {
+      position: [
+         340,
+         525,
+         0
+      ],
+      withPlayer: true,
+      Player: 78883930303030109,
+      withTeam: 78883930303030002,
+      direction: south,
+      lastTouch: {
+         playerName: Peter Johnson,
          playerID: 78883930303030109,
          teamID: 72464187147564590,
-         bodyPart: ''
+         bodyPart: shin,
+         deflection: true,
+         iterations: null
       },
-     ballOverIterations: []
+      ballOverIterations: []
   half: 1,
   kickOffTeamStatistics:
    { goals: 0,
@@ -196,29 +220,55 @@ Any and all player objects may be altered between iterations. Including the rela
 Action should be - 'null' if the simulation is to be run normally. This can be overriden with any of the following actions:
 'shoot', 'throughBall', 'pass', 'cross', 'tackle', 'intercept', 'slide', 'run', 'sprint', 'cleared', 'boot'. The player must have the ball in order to complete ball specific actions like 'shoot'. Any invalid actions will result in the simulation running as normal.
 ```
-{ name: 'Louise Johnson',
-    position: 'ST',
-    rating: '88',
-    skill:
-     { passing: '20',
-       shooting: '20',
-       tackling: '20',
-       saving: '20',
-       agility: '20',
-       strength: '20',
-       penalty_taking: '20',
-       jumping: '280' },
-    currentPOS: [ 60, 300 ],
-    fitness: 100,
-    injured: false,
-    originPOS: [ 70, 270 ],
-    intentPOS: [ 70, 270 ],
-    action: 'none',
-    offside: false,
-    cards: {
-      yellow: 0,
-      red: 0
-    }
-    hasBall: true }
+{
+  playerID: 78883930303030210,
+  name: Aiden Smith,
+  position: ST,
+  rating: 88,
+  skill: {
+     passing: 73,
+     shooting: 61,
+     tackling: 44,
+     saving: 10,
+     agility: 43,
+     strength: 88,
+     penalty_taking: 77,
+     perception: 75,
+     jumping: 52,
+     control: 60
+  },
+  currentPOS: [440,550],
+  fitness: 100,
+  height: 175,
+  injured: false,
+  originPOS: [440,550],
+  intentPOS: [440,550],
+  action: none,
+  offside: false,
+  hasBall: false,
+  stats: {
+     goals: 0,
+     shots: {
+        total: 0,
+        on: 0,
+        off: 0
+     },
+     cards: {
+        yellow: 0,
+        red: 0
+     },
+     passes: {
+        total: 0,
+        on: 0,
+        off: 0
+    },
+     tackles: {
+        total: 0,
+        on: 0,
+        off: 0,
+        fouls: 0
+   }
+  }
+}
 ```
 ---

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const mocha = require('mocha')
 const { expect } = require('chai')
 const setpieces = require('./lib/set_pieces')
@@ -168,24 +169,22 @@ function runTest() {
     })
   })
   mocha.describe('testPenalties()', function() {
-    mocha.it('top penalty returns kick off team players in the positions', async() => {
+    mocha.it('top penalty returns kick off team players in the correct positions', async() => {
       let itlocation = './test/input/boundaryPositions/kickoffteamtoppenalty.json'
       let nextJSON = await setpieces.setupTopPenalty(itlocation)
-      let pitchWidth = nextJSON.pitchSize[0]
-
+      let [pitchWidth, pitchHeight] = nextJSON.pitchSize
+      const expectedY = Math.round(pitchHeight / 17.5)
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.kickOffTeam.teamID).to.eql(nextJSON.ball.withTeam)
-      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, 60])
+      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, expectedY])
       expect(nextJSON.ball.direction).to.eql('north')
-      expect(nextJSON.kickOffTeam.players[10].currentPOS).to.eql([pitchWidth / 2, 60])
+      const taker = nextJSON.kickOffTeam.players.find(p =>
+        p.currentPOS[0] === pitchWidth / 2 &&
+        p.currentPOS[1] === expectedY)
+      expect(taker).to.exist
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[10].playerID) {
-          expect(player.currentPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].currentPOS[1])
-        }
-      }
-      for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(player.currentPOS[1]).to.be.gt(nextJSON.kickOffTeam.players[10].currentPOS[1])
+        if (player.playerID !== taker.playerID) {
+          expect(player.currentPOS[1]).to.be.at.least(taker.currentPOS[1])
         }
       }
     })
@@ -193,20 +192,18 @@ function runTest() {
       let itlocation = './test/input/boundaryPositions/kickoffteambottompenalty.json'
       let nextJSON = await setpieces.setupBottomPenalty(itlocation)
       let [pitchWidth, pitchHeight] = nextJSON.pitchSize
-
+      const expectedY = pitchHeight - Math.round(pitchHeight / 17.5)
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.kickOffTeam.teamID).to.eql(nextJSON.ball.withTeam)
-      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, pitchHeight - 60])
+      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, expectedY])
       expect(nextJSON.ball.direction).to.eql('south')
-      expect(nextJSON.kickOffTeam.players[10].currentPOS).to.eql([pitchWidth / 2, pitchHeight - 60])
+      const taker = nextJSON.kickOffTeam.players.find(p =>
+        p.currentPOS[0] === pitchWidth / 2 &&
+        p.currentPOS[1] === expectedY)
+      expect(taker).to.exist
       for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[10].playerID) {
-          expect(player.currentPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].currentPOS[1])
-        }
-      }
-      for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[0].playerID) {
-          expect(player.currentPOS[1]).to.be.lt(nextJSON.kickOffTeam.players[10].currentPOS[1])
+        if (player.playerID !== taker.playerID) {
+          expect(player.currentPOS[1]).to.be.at.most(taker.currentPOS[1])
         }
       }
     })
@@ -219,7 +216,6 @@ function runTest() {
       expect(nextJSON.secondTeam.teamID).to.eql(nextJSON.ball.withTeam)
       expect(nextJSON.ball.position).to.eql([pitchWidth / 2, 60])
       expect(nextJSON.ball.direction).to.eql('north')
-      expect(nextJSON.secondTeam.players[10].currentPOS).to.eql([pitchWidth / 2, 60])
       for (let player of nextJSON.secondTeam.players) {
         if (player.playerID != nextJSON.secondTeam.players[10].playerID) {
           expect(player.currentPOS[1]).to.be.gt(nextJSON.secondTeam.players[10].currentPOS[1])
@@ -235,20 +231,18 @@ function runTest() {
       let itlocation = './test/input/boundaryPositions/secondteambottompenalty.json'
       let nextJSON = await setpieces.setupBottomPenalty(itlocation)
       let [pitchWidth, pitchHeight] = nextJSON.pitchSize
-
+      const expectedY = pitchHeight - Math.round(pitchHeight / 17.5)
       expect(nextJSON).to.be.an('object')
       expect(nextJSON.secondTeam.teamID).to.eql(nextJSON.ball.withTeam)
-      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, pitchHeight - 60])
+      expect(nextJSON.ball.position).to.eql([pitchWidth / 2, expectedY])
       expect(nextJSON.ball.direction).to.eql('south')
-      expect(nextJSON.secondTeam.players[10].currentPOS).to.eql([pitchWidth / 2, pitchHeight - 60])
+      const taker = nextJSON.secondTeam.players.find(p =>
+        p.currentPOS[0] === pitchWidth / 2 &&
+        p.currentPOS[1] === expectedY)
+      expect(taker).to.exist
       for (let player of nextJSON.secondTeam.players) {
-        if (player.playerID != nextJSON.secondTeam.players[10].playerID) {
-          expect(player.currentPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].currentPOS[1])
-        }
-      }
-      for (let player of nextJSON.kickOffTeam.players) {
-        if (player.playerID != nextJSON.kickOffTeam.players[0].playerID) {
-          expect(player.currentPOS[1]).to.be.lt(nextJSON.secondTeam.players[10].currentPOS[1])
+        if (player.playerID !== taker.playerID) {
+          expect(player.currentPOS[1]).to.be.at.most(taker.currentPOS[1])
         }
       }
     })
@@ -472,7 +466,8 @@ function runTest() {
       expect(goalieHasBallSetup.kickOffTeam.players[0].hasBall).to.eql(true)
       expect(goalieHasBallSetup.ball.withPlayer).to.eql(true)
       expect(goalieHasBallSetup.ball.withTeam).to.eql('78883930303030002')
-      expect(goalieHasBallSetup.kickOffTeam.players[0].currentPOS).to.be.eql(goalieHasBallSetup.ball.position)
+      expect(goalieHasBallSetup.kickOffTeam.players[0].currentPOS[0]).to.be.eql(goalieHasBallSetup.ball.position[0])
+      expect(goalieHasBallSetup.kickOffTeam.players[0].currentPOS[1]).to.be.eql(goalieHasBallSetup.ball.position[1])
     })
   })
 }

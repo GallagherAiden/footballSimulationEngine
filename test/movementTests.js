@@ -245,7 +245,7 @@ function runTest() {
       expect(matchDetails.ball.withTeam).to.eql(``)
       expect(matchDetails.kickOffTeam.players[9].hasBall).to.eql(false)
       expect(matchDetails.ball.position).to.not.eql(thisPlayer.currentPOS)
-      let ballLog = matchDetails.iterationLog[4].indexOf(`passed to new position:`)
+      let ballLog = matchDetails.iterationLog[5].indexOf(`passed to new position:`)
       expect(ballLog).to.be.greaterThan(-1)
     })
     mocha.it('ballPlayerActions - cross', async() => {
@@ -556,9 +556,9 @@ function runTest() {
       matchDetails.kickOffTeam.players[10].action = `slide`
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      let slideInfo = matchDetails.iterationLog[2].indexOf(`Slide tackle attempted by: Louise Johnson`)
-      expect(slideInfo).to.be.greaterThan(-1)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let { action } = actions[10].player
+      expect(action).to.eql(`slide`)
     })
     mocha.it('completeTackle and same position as ball', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -566,9 +566,9 @@ function runTest() {
       matchDetails.kickOffTeam.players[10].action = `tackle`
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      let tackleInfo = matchDetails.iterationLog[2].indexOf(`Tackle attempted by: Louise Johnson`)
-      expect(tackleInfo).to.be.greaterThan(-1)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let { action } = actions[10].player
+      expect(action).to.eql(`tackle`)
     })
     mocha.it('completeSlide and wiithin 3 of ball', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -577,9 +577,9 @@ function runTest() {
       matchDetails.kickOffTeam.players[10].currentPOS = [402, 519]
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      let slideInfo = matchDetails.iterationLog[2].indexOf(`Slide tackle attempted by: Louise Johnson`)
-      expect(slideInfo).to.be.greaterThan(-1)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let { action } = actions[10].player
+      expect(action).to.eql(`slide`)
     })
     mocha.it('same position as ball not slide or tackle - setClosePlayerTakesBall', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -587,9 +587,9 @@ function runTest() {
       matchDetails.ball.withPlayer = false
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(actions[10].player.hasBall).to.eql(false)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Gregory Smith`)
     })
     mocha.it('within 2 of ball not slide or tackle - setClosePlayerTakesBall', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -598,9 +598,9 @@ function runTest() {
       matchDetails.ball.withPlayer = false
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(actions[10].player.hasBall).to.eql(false)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Gregory Smith`)
     })
     mocha.it('far from, not slide or tackle - setClosePlayerTakesBall', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -610,9 +610,9 @@ function runTest() {
       matchDetails.ball.withPlayer = false
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      expect(matchDetails.kickOffTeam.players[10].hasBall).to.eql(true)
-      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Louise Johnson`)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      expect(actions[10].player.hasBall).to.eql(false)
+      expect(matchDetails.ball.lastTouch.playerName).to.eql(`Gregory Smith`)
     })
     mocha.it('far from, not slide or tackle - setClosePlayerTakesBall and offside true', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')
@@ -623,9 +623,9 @@ function runTest() {
       matchDetails.ball.withPlayer = false
       let team = matchDetails.kickOffTeam
       let opp = matchDetails.secondTeam
-      matchDetails.kickOffTeam = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
-      let offsideInfo = matchDetails.iterationLog[2].indexOf(`Louise Johnson is offside`)
-      expect(offsideInfo).to.be.greaterThan(-1)
+      let actions = pMovement.decideMovement(closestPlayer, team, opp, matchDetails)
+      let offsideInfo = actions[10].player.offside
+      expect(offsideInfo).to.eql(true)
     })
     mocha.it('far from, not slide or tackle - setClosePlayerTakesBall and offside true', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails3.json')

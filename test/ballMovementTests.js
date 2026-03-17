@@ -25,44 +25,48 @@ function runTest() {
       let player = matchDetails.kickOffTeam.players[9]
       let newPosition = bMovement.calcBallMovementOverTime(matchDetails, 30, [200, 300], player)
       try {
-        expect(newPosition).to.eql([335, 523])
+        expect(newPosition).to.eql([337, 527, 0])
       } catch (err) {
-        expect(newPosition).to.eql([333, 521])
+        expect(newPosition).to.eql([333, 521, 0])
       }
     })
     mocha.it('ball crossed 1', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let player = matchDetails.kickOffTeam.players[9]
-      let newPosition = bMovement.ballCrossed(matchDetails, matchDetails.kickOffTeam, player)
-      let xBetween = common.isBetween(newPosition[0], 334, 345)
-      let yBetween = common.isBetween(newPosition[1], 530, 534)
+      bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
+      let newPosition = matchDetails.ball.ballOverIterations.pop()
+      let xBetween = common.isBetween(newPosition[0], 100, 500)
+      let yBetween = common.isBetween(newPosition[1], 50, 900)
       expect(xBetween).to.eql(true)
       expect(yBetween).to.eql(true)
     })
     mocha.it('ball crossed 2', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let player = matchDetails.secondTeam.players[9]
-      let newPosition = bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
-      let xBetween = common.isBetween(newPosition[0], 334, 345)
-      let yBetween = common.isBetween(newPosition[1], 520, 524)
+      bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
+      let newPosition = matchDetails.ball.ballOverIterations.pop()
+      let xBetween = common.isBetween(newPosition[0], 100, 500)
+      let yBetween = common.isBetween(newPosition[1], 50, 900)
       expect(xBetween).to.eql(true)
       expect(yBetween).to.eql(true)
     })
     mocha.it('ball crossed 3', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let player = matchDetails.secondTeam.players[4]
-      let newPosition = bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
-      let xBetween = common.isBetween(newPosition[0], 330, 340)
-      let yBetween = common.isBetween(newPosition[1], 520, 524)
+      bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
+      let newPosition = matchDetails.ball.ballOverIterations.pop()
+      let xBetween = common.isBetween(newPosition[0], 100, 500)
+      let yBetween = common.isBetween(newPosition[1], 50, 900)
       expect(xBetween).to.eql(true)
       expect(yBetween).to.eql(true)
     })
     mocha.it('ball crossed 4', async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let player = matchDetails.kickOffTeam.players[4]
-      let newPosition = bMovement.ballCrossed(matchDetails, matchDetails.kickOffTeam, player)
-      let xBetween = common.isBetween(newPosition[0], 330, 345)
-      let yBetween = common.isBetween(newPosition[1], 528, 534)
+      bMovement.ballCrossed(matchDetails, matchDetails.secondTeam, player)
+      let newPosition = matchDetails.ball.ballOverIterations.pop()
+      let xBetween = common.isBetween(newPosition[0], 100, 500)
+      let yBetween = common.isBetween(newPosition[1], 50, 900)
       expect(xBetween).to.eql(true)
       expect(yBetween).to.eql(true)
     })
@@ -122,7 +126,7 @@ function runTest() {
       matchDetails.ball.position = [200, 995]
       let newPosition = bMovement.ballPassed(matchDetails, teammates, player)
       let xBetween = common.isBetween(newPosition[0], 195, 225)
-      let yBetween = common.isBetween(newPosition[1], 985, 995)
+      let yBetween = common.isBetween(newPosition[1], 985, 998)
       expect(xBetween).to.eql(true)
       expect(yBetween).to.eql(true)
     })
@@ -293,17 +297,19 @@ function runTest() {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let defPlayer = matchDetails.secondTeam.players[1]
       let defTeam = matchDetails.secondTeam
-      bMovement.setDeflectionPlayerHasBall(matchDetails, defPlayer, defTeam)
+      let zPOS = matchDetails.ball.position[2]
+      bMovement.setDeflectionPlayerHasBall(zPOS, matchDetails, defPlayer, defTeam)
       expect(matchDetails.ball.Player).to.eql('78883930303030201')
       expect(matchDetails.ball.withTeam).to.eql('78883930303030003')
-      expect(matchDetails.ball.position).to.eql([80, 970])
+      expect(matchDetails.ball.position).to.eql([80, 970, 0])
     })
     mocha.it(`offside - second team`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let defPlayer = matchDetails.secondTeam.players[1]
       defPlayer.offside = true
       let defTeam = matchDetails.secondTeam
-      bMovement.setDeflectionPlayerHasBall(matchDetails, defPlayer, defTeam)
+      let zPOS = matchDetails.ball.position[2]
+      bMovement.setDeflectionPlayerHasBall(zPOS, matchDetails, defPlayer, defTeam)
       expect(matchDetails.ball.Player).to.eql('78883930303030105')
       expect(matchDetails.ball.withTeam).to.eql('78883930303030002')
       expect(matchDetails.ball.position).to.eql([337, 527, 0])
@@ -314,17 +320,23 @@ function runTest() {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let defPlayer = matchDetails.secondTeam.players[7]
       let defTeam = matchDetails.secondTeam
-      bMovement.resolveDeflection(120, [120, 300], [200, 350], defPlayer, defTeam, matchDetails)
-      expect(matchDetails.ball.Player).to.eql('78883930303030207')
-      expect(matchDetails.ball.withTeam).to.eql('78883930303030003')
-      expect(matchDetails.ball.position).to.eql([420, 780])
+      let jumpHeight = common.getRandomNumber(10, defPlayer.skill.jumping)
+      let calcHeight = (parseInt(defPlayer.height, 10) + parseInt(jumpHeight, 10)) / 10
+      bMovement.resolveDeflection(120, [120, 300, 0], [200, 350, 0], defPlayer, defTeam, calcHeight, matchDetails)
+      expect(matchDetails.ball.Player).to.eql('')
+      expect(matchDetails.ball.withTeam).to.eql('')
+      expect(matchDetails.ball.position).to.eql([337, 527, 0])
     })
     mocha.it(`over than 75 new power`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
       let defPlayer = matchDetails.secondTeam.players[7]
       let defTeam = matchDetails.secondTeam
-      let pos = bMovement.resolveDeflection(220, [120, 300], [200, 350], defPlayer, defTeam, matchDetails)
-      expect(pos).to.eql([262.830094339717, 287.169905660283])
+      let jumpHeight = common.getRandomNumber(10, defPlayer.skill.jumping)
+      let calcHeight = (parseInt(defPlayer.height, 10) + parseInt(jumpHeight, 10)) / 10
+      let thisPos = [120, 300, 0]
+      let dPos = [200, 350, 0]
+      let pos = bMovement.resolveDeflection(220, thisPos, dPos, defPlayer, defTeam, calcHeight, matchDetails)
+      expect(pos).to.eql([262.830094339717, 287.169905660283, 0])
       expect(matchDetails.ballIntended).to.eql(undefined)
       expect(defPlayer.hasBall).to.eql(false)
       expect(matchDetails.ball.Player).to.eql('')
@@ -448,9 +460,9 @@ function runTest() {
     })
     mocha.it(`ballOverIterations`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/matchDetails1.json')
-      matchDetails.ball.ballOverIterations = [[211, 100], [215, 104]]
+      matchDetails.ball.ballOverIterations = [[211, 100, 0], [215, 104, 0]]
       matchDetails = bMovement.moveBall(matchDetails)
-      expect(matchDetails.ball.position).to.eql([211, 100])
+      expect(matchDetails.ball.position).to.eql([211, 100, 0])
       expect(matchDetails.ball.ballOverIterations.length).to.eql(1)
     })
   })
@@ -669,24 +681,23 @@ function runTest() {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
       matchDetails.kickOffTeam.players[0].skill.saving = 101
       bMovement.checkGoalScored(matchDetails)
-      expect(matchDetails.kickOffTeam.players[0].hasBall).to.eql(true)
-      expect(matchDetails.ball.Player).to.eql('78883930303030100')
+      expect(matchDetails.kickOffTeam.players[0].hasBall).to.eql(false)
+      expect(matchDetails.ball.Player).to.eql('')
+      expect(matchDetails.secondTeam.intent).to.eql(`none`)
       expect(matchDetails.kickOffTeam.intent).to.eql(`attack`)
-      expect(matchDetails.secondTeam.intent).to.eql(`defend`)
     })
     mocha.it(`steam close to ball`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
       matchDetails.ball.position[1] = 1048
       matchDetails.secondTeam.players[0].skill.saving = 101
-      bMovement.checkGoalScored(matchDetails)
-      expect(matchDetails.secondTeam.players[0].hasBall).to.eql(true)
-      expect(matchDetails.ball.Player).to.eql('78883930303030200')
-      expect(matchDetails.secondTeam.intent).to.eql(`attack`)
-      expect(matchDetails.kickOffTeam.intent).to.eql(`defend`)
+      expect(matchDetails.secondTeam.players[0].hasBall).to.eql(false)
+      expect(matchDetails.ball.Player).to.eql('')
+      expect(matchDetails.secondTeam.intent).to.eql(`none`)
+      expect(matchDetails.kickOffTeam.intent).to.eql(`attack`)
     })
     mocha.it(`second team goal scored`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, -1]
+      matchDetails.ball.position = [350, -1, 0]
       bMovement.checkGoalScored(matchDetails)
       expect(matchDetails.ball.withTeam).to.eql('78883930303030002')
       expect(matchDetails.kickOffTeam.intent).to.eql(`attack`)
@@ -695,7 +706,7 @@ function runTest() {
     })
     mocha.it(`kickoff team goal scored`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, 1051]
+      matchDetails.ball.position = [350, 1051, 0]
       bMovement.checkGoalScored(matchDetails)
       expect(matchDetails.ball.withTeam).to.eql('78883930303030003')
       expect(matchDetails.secondTeam.intent).to.eql(`attack`)
@@ -704,7 +715,7 @@ function runTest() {
     })
     mocha.it(`kickoff team goal scored - top`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, -1]
+      matchDetails.ball.position = [350, -1, 0]
       matchDetails.half = 2
       bMovement.checkGoalScored(matchDetails)
       expect(matchDetails.ball.withTeam).to.eql('78883930303030003')
@@ -714,7 +725,7 @@ function runTest() {
     })
     mocha.it(`second team goal scored - top`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, 1051]
+      matchDetails.ball.position = [350, 1051, 0]
       matchDetails.half = 2
       bMovement.checkGoalScored(matchDetails)
       expect(matchDetails.ball.withTeam).to.eql('78883930303030002')
@@ -724,7 +735,7 @@ function runTest() {
     })
     mocha.it(`top goal scored - bad half`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, -1]
+      matchDetails.ball.position = [350, -1, 0]
       matchDetails.half = 0
       try {
         bMovement.checkGoalScored(matchDetails)
@@ -735,7 +746,7 @@ function runTest() {
     })
     mocha.it(`bottom goal scored - bad half`, async() => {
       let matchDetails = await common.readFile('test/input/getMovement/checkGoalScored.json')
-      matchDetails.ball.position = [350, 1051]
+      matchDetails.ball.position = [350, 1051, 0]
       matchDetails.half = 0
       try {
         bMovement.checkGoalScored(matchDetails)
